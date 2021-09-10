@@ -1,24 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Caritapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="141" y="50"/>
+        </scene>
+        <!--BDA2-->
+        <scene sceneID="4qk-4A-umO">
+            <objects>
+                <viewController title="BDA2" id="kSh-fE-NNt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bmN-Oy-lnJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="nLQ-kc-N1W" userLabel="Main">
+                                <rect key="frame" x="0.0" y="39" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgH-Bx-buq" userLabel="Row1">
+                                        <rect key="frame" x="31" y="0.0" width="352" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donacion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FER-HA-pcl">
+                                                <rect key="frame" x="0.0" y="20.5" width="211" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="FER-HA-pcl" firstAttribute="width" secondItem="kgH-Bx-buq" secondAttribute="width" multiplier="0.6" id="AZt-Y6-Mlg"/>
+                                            <constraint firstItem="FER-HA-pcl" firstAttribute="height" secondItem="kgH-Bx-buq" secondAttribute="height" multiplier="0.5" id="HRO-sz-1KC"/>
+                                            <constraint firstItem="FER-HA-pcl" firstAttribute="centerY" secondItem="kgH-Bx-buq" secondAttribute="centerY" id="K8C-ZS-Oie"/>
+                                            <constraint firstItem="FER-HA-pcl" firstAttribute="leading" secondItem="kgH-Bx-buq" secondAttribute="leading" id="gRF-PI-Erp"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHX-df-TW0" userLabel="Row2">
+                                        <rect key="frame" x="31" y="69.5" width="352" height="41"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2YC-yO-4qh">
+                                                <rect key="frame" x="141" y="4" width="211" height="33"/>
+                                                <state key="normal" title="Finalizar donacion"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="2YC-yO-4qh" secondAttribute="trailing" id="d3l-lM-p1z"/>
+                                            <constraint firstItem="2YC-yO-4qh" firstAttribute="width" secondItem="CHX-df-TW0" secondAttribute="width" multiplier="0.6" id="f4t-Kx-h7W"/>
+                                            <constraint firstItem="2YC-yO-4qh" firstAttribute="centerY" secondItem="CHX-df-TW0" secondAttribute="centerY" id="fdA-i2-iMv"/>
+                                            <constraint firstItem="2YC-yO-4qh" firstAttribute="height" secondItem="CHX-df-TW0" secondAttribute="height" multiplier="0.8" id="zNd-iI-VqY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="R5f-QI-XLE"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="CHX-df-TW0" firstAttribute="centerX" secondItem="nLQ-kc-N1W" secondAttribute="centerX" id="2ls-Pd-Gb6"/>
+                                    <constraint firstItem="kgH-Bx-buq" firstAttribute="centerX" secondItem="nLQ-kc-N1W" secondAttribute="centerX" id="46E-Sv-8JN"/>
+                                    <constraint firstItem="kgH-Bx-buq" firstAttribute="top" secondItem="nLQ-kc-N1W" secondAttribute="top" id="U5b-lO-yr8"/>
+                                    <constraint firstItem="kgH-Bx-buq" firstAttribute="width" secondItem="nLQ-kc-N1W" secondAttribute="width" multiplier="0.85" id="eyg-uM-CYP"/>
+                                    <constraint firstItem="CHX-df-TW0" firstAttribute="height" secondItem="nLQ-kc-N1W" secondAttribute="height" multiplier="0.05" id="fx9-gP-zk2"/>
+                                    <constraint firstItem="CHX-df-TW0" firstAttribute="width" secondItem="nLQ-kc-N1W" secondAttribute="width" multiplier="0.85" id="hog-eI-Fgl"/>
+                                    <constraint firstItem="CHX-df-TW0" firstAttribute="top" secondItem="kgH-Bx-buq" secondAttribute="bottom" multiplier="0.85" id="jdA-DD-2f4"/>
+                                    <constraint firstItem="kgH-Bx-buq" firstAttribute="height" secondItem="nLQ-kc-N1W" secondAttribute="height" multiplier="0.1" id="oGs-pP-ke1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OEH-qS-HU2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEG-eA-4Qx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36" y="-624"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
