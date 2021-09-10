@@ -1,24 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Caritapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="94"/>
+        </scene>
+        <!--Donation View Controller-->
+        <scene sceneID="3sb-Gx-59B">
+            <objects>
+                <viewController id="ek1-fj-y0l" customClass="DonationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d5C-t6-ykN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5z-do-Ny9" userLabel="Main" colorLabel="IBBuiltInLabel-Blue">
+                                <rect key="frame" x="0.0" y="91" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wy7-ca-NXh" userLabel="Row1">
+                                        <rect key="frame" x="0.0" y="20" width="414" height="65.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nueva donación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jr-WR-uvZ" userLabel="textDonation">
+                                                <rect key="frame" x="155" y="22" width="123" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="2jr-WR-uvZ" firstAttribute="centerX" secondItem="wy7-ca-NXh" secondAttribute="centerX" id="9UG-FM-NMP"/>
+                                            <constraint firstItem="2jr-WR-uvZ" firstAttribute="height" secondItem="wy7-ca-NXh" secondAttribute="height" id="TeP-aB-BWU"/>
+                                            <constraint firstItem="2jr-WR-uvZ" firstAttribute="top" secondItem="wy7-ca-NXh" secondAttribute="top" constant="20" symbolic="YES" id="Xml-pQ-bBh"/>
+                                            <constraint firstItem="2jr-WR-uvZ" firstAttribute="width" secondItem="wy7-ca-NXh" secondAttribute="width" id="bM3-yt-5ST"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hE6-0u-4Yj" userLabel="Row2">
+                                        <rect key="frame" x="0.0" y="85.5" width="414" height="65.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Donador" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UW0-rk-V2x" userLabel="donorText">
+                                                <rect key="frame" x="20" y="20" width="66" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vD1-46-yC1" userLabel="donorTextField">
+                                                <rect key="frame" x="165.5" y="13" width="248.5" height="65.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="vD1-46-yC1" secondAttribute="trailing" id="54H-wW-lbF"/>
+                                            <constraint firstItem="vD1-46-yC1" firstAttribute="top" secondItem="hE6-0u-4Yj" secondAttribute="top" constant="13" id="fhm-9J-nDg"/>
+                                            <constraint firstItem="vD1-46-yC1" firstAttribute="height" secondItem="hE6-0u-4Yj" secondAttribute="height" id="okA-RV-t9B"/>
+                                            <constraint firstItem="vD1-46-yC1" firstAttribute="width" secondItem="hE6-0u-4Yj" secondAttribute="width" multiplier="0.6" id="w5E-18-bka"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="wy7-ca-NXh" firstAttribute="height" secondItem="m5z-do-Ny9" secondAttribute="height" multiplier="0.08" id="1e1-lQ-dZS"/>
+                                    <constraint firstItem="wy7-ca-NXh" firstAttribute="top" secondItem="m5z-do-Ny9" secondAttribute="top" constant="20" symbolic="YES" id="E9S-5X-L9c"/>
+                                    <constraint firstItem="hE6-0u-4Yj" firstAttribute="top" secondItem="wy7-ca-NXh" secondAttribute="bottom" id="FCx-dJ-33s"/>
+                                    <constraint firstItem="hE6-0u-4Yj" firstAttribute="height" secondItem="m5z-do-Ny9" secondAttribute="height" multiplier="0.08" id="KwL-YZ-VQ5"/>
+                                    <constraint firstItem="wy7-ca-NXh" firstAttribute="width" secondItem="m5z-do-Ny9" secondAttribute="width" id="McG-l1-P3e"/>
+                                    <constraint firstItem="hE6-0u-4Yj" firstAttribute="width" secondItem="m5z-do-Ny9" secondAttribute="width" id="Zfn-76-EZE"/>
+                                    <constraint firstItem="hE6-0u-4Yj" firstAttribute="leading" secondItem="m5z-do-Ny9" secondAttribute="leading" id="baE-2w-cUd"/>
+                                    <constraint firstItem="wy7-ca-NXh" firstAttribute="leading" secondItem="m5z-do-Ny9" secondAttribute="leading" id="dxX-jR-cCq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pSN-4e-ge0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m5z-do-Ny9" firstAttribute="centerX" secondItem="pSN-4e-ge0" secondAttribute="centerX" id="3C4-6M-3pQ"/>
+                            <constraint firstItem="m5z-do-Ny9" firstAttribute="height" secondItem="pSN-4e-ge0" secondAttribute="height" id="8bk-Bh-Ng9"/>
+                            <constraint firstItem="m5z-do-Ny9" firstAttribute="top" secondItem="pSN-4e-ge0" secondAttribute="top" constant="47" id="kvU-py-DQR"/>
+                            <constraint firstItem="m5z-do-Ny9" firstAttribute="width" secondItem="pSN-4e-ge0" secondAttribute="width" id="vbv-1y-g4V"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="163-2Z-mb4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="94"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
