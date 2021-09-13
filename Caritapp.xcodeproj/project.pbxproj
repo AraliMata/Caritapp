@@ -15,7 +15,10 @@
 		8D06FF8826EADC6500782CD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D06FF8626EADC6500782CD8 /* LaunchScreen.storyboard */; };
 		8D06FF9326EADC6500782CD8 /* CaritappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF9226EADC6500782CD8 /* CaritappTests.swift */; };
 		8D06FF9E26EADC6500782CD8 /* CaritappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF9D26EADC6500782CD8 /* CaritappUITests.swift */; };
-		8D55B39A26EAF50C002A4205 /* newDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55B39926EAF50C002A4205 /* newDonationViewController.swift */; };
+		ABD2575B26EAF575007D866A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2575A26EAF575007D866A /* CalendarViewController.swift */; };
+		
+    8D55B39A26EAF50C002A4205 /* newDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55B39926EAF50C002A4205 /* newDonationViewController.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +53,11 @@
 		8D06FF9926EADC6500782CD8 /* CaritappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaritappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D06FF9D26EADC6500782CD8 /* CaritappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaritappUITests.swift; sourceTree = "<group>"; };
 		8D06FF9F26EADC6500782CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+
+		ABD2575A26EAF575007D866A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+
 		8D55B39926EAF50C002A4205 /* newDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newDonationViewController.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +115,7 @@
 				8D06FF8426EADC6500782CD8 /* Assets.xcassets */,
 				8D06FF8626EADC6500782CD8 /* LaunchScreen.storyboard */,
 				8D06FF8926EADC6500782CD8 /* Info.plist */,
+				ABD2575A26EAF575007D866A /* CalendarViewController.swift */,
 				8D55B39926EAF50C002A4205 /* newDonationViewController.swift */,
 			);
 			path = Caritapp;
@@ -261,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABD2575B26EAF575007D866A /* CalendarViewController.swift in Sources */,
 				8D06FF8026EADC6500782CD8 /* ViewController.swift in Sources */,
 				8D06FF7C26EADC6500782CD8 /* AppDelegate.swift in Sources */,
 				8D06FF7E26EADC6500782CD8 /* SceneDelegate.swift in Sources */,
