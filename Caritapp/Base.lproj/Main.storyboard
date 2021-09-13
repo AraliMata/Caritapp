@@ -21,88 +21,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="94"/>
+            <point key="canvasLocation" x="141" y="50"/>
         </scene>
-        <!--Donation View Controller-->
-        <scene sceneID="3sb-Gx-59B">
+        <!--BDA2-->
+        <scene sceneID="4qk-4A-umO">
             <objects>
-                <viewController id="ek1-fj-y0l" customClass="DonationViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="d5C-t6-ykN">
+                <viewController title="BDA2" id="kSh-fE-NNt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bmN-Oy-lnJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5z-do-Ny9" userLabel="Main" colorLabel="IBBuiltInLabel-Blue">
-                                <rect key="frame" x="0.0" y="91" width="414" height="818"/>
+                            <view contentMode="scaleToFill" id="nLQ-kc-N1W" userLabel="Main">
+                                <rect key="frame" x="0.0" y="39" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wy7-ca-NXh" userLabel="Row1">
-                                        <rect key="frame" x="0.0" y="20" width="414" height="65.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgH-Bx-buq" userLabel="Row1">
+                                        <rect key="frame" x="31" y="0.0" width="352" height="82"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nueva donación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jr-WR-uvZ" userLabel="textDonation">
-                                                <rect key="frame" x="155" y="22" width="123" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donacion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FER-HA-pcl">
+                                                <rect key="frame" x="0.0" y="20.5" width="211" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="2jr-WR-uvZ" firstAttribute="centerX" secondItem="wy7-ca-NXh" secondAttribute="centerX" id="9UG-FM-NMP"/>
-                                            <constraint firstItem="2jr-WR-uvZ" firstAttribute="height" secondItem="wy7-ca-NXh" secondAttribute="height" id="TeP-aB-BWU"/>
-                                            <constraint firstItem="2jr-WR-uvZ" firstAttribute="top" secondItem="wy7-ca-NXh" secondAttribute="top" constant="20" symbolic="YES" id="Xml-pQ-bBh"/>
-                                            <constraint firstItem="2jr-WR-uvZ" firstAttribute="width" secondItem="wy7-ca-NXh" secondAttribute="width" id="bM3-yt-5ST"/>
+                                            <constraint firstItem="FER-HA-pcl" firstAttribute="width" secondItem="kgH-Bx-buq" secondAttribute="width" multiplier="0.6" id="AZt-Y6-Mlg"/>
+                                            <constraint firstItem="FER-HA-pcl" firstAttribute="height" secondItem="kgH-Bx-buq" secondAttribute="height" multiplier="0.5" id="HRO-sz-1KC"/>
+                                            <constraint firstItem="FER-HA-pcl" firstAttribute="centerY" secondItem="kgH-Bx-buq" secondAttribute="centerY" id="K8C-ZS-Oie"/>
+                                            <constraint firstItem="FER-HA-pcl" firstAttribute="leading" secondItem="kgH-Bx-buq" secondAttribute="leading" id="gRF-PI-Erp"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hE6-0u-4Yj" userLabel="Row2">
-                                        <rect key="frame" x="0.0" y="85.5" width="414" height="65.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHX-df-TW0" userLabel="Row2">
+                                        <rect key="frame" x="31" y="69.5" width="352" height="41"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Donador" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UW0-rk-V2x" userLabel="donorText">
-                                                <rect key="frame" x="20" y="20" width="66" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vD1-46-yC1" userLabel="donorTextField">
-                                                <rect key="frame" x="165.5" y="13" width="248.5" height="65.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2YC-yO-4qh">
+                                                <rect key="frame" x="141" y="4" width="211" height="33"/>
+                                                <state key="normal" title="Finalizar donacion"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="vD1-46-yC1" secondAttribute="trailing" id="54H-wW-lbF"/>
-                                            <constraint firstItem="vD1-46-yC1" firstAttribute="top" secondItem="hE6-0u-4Yj" secondAttribute="top" constant="13" id="fhm-9J-nDg"/>
-                                            <constraint firstItem="vD1-46-yC1" firstAttribute="height" secondItem="hE6-0u-4Yj" secondAttribute="height" id="okA-RV-t9B"/>
-                                            <constraint firstItem="vD1-46-yC1" firstAttribute="width" secondItem="hE6-0u-4Yj" secondAttribute="width" multiplier="0.6" id="w5E-18-bka"/>
+                                            <constraint firstAttribute="trailing" secondItem="2YC-yO-4qh" secondAttribute="trailing" id="d3l-lM-p1z"/>
+                                            <constraint firstItem="2YC-yO-4qh" firstAttribute="width" secondItem="CHX-df-TW0" secondAttribute="width" multiplier="0.6" id="f4t-Kx-h7W"/>
+                                            <constraint firstItem="2YC-yO-4qh" firstAttribute="centerY" secondItem="CHX-df-TW0" secondAttribute="centerY" id="fdA-i2-iMv"/>
+                                            <constraint firstItem="2YC-yO-4qh" firstAttribute="height" secondItem="CHX-df-TW0" secondAttribute="height" multiplier="0.8" id="zNd-iI-VqY"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <viewLayoutGuide key="safeArea" id="R5f-QI-XLE"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="wy7-ca-NXh" firstAttribute="height" secondItem="m5z-do-Ny9" secondAttribute="height" multiplier="0.08" id="1e1-lQ-dZS"/>
-                                    <constraint firstItem="wy7-ca-NXh" firstAttribute="top" secondItem="m5z-do-Ny9" secondAttribute="top" constant="20" symbolic="YES" id="E9S-5X-L9c"/>
-                                    <constraint firstItem="hE6-0u-4Yj" firstAttribute="top" secondItem="wy7-ca-NXh" secondAttribute="bottom" id="FCx-dJ-33s"/>
-                                    <constraint firstItem="hE6-0u-4Yj" firstAttribute="height" secondItem="m5z-do-Ny9" secondAttribute="height" multiplier="0.08" id="KwL-YZ-VQ5"/>
-                                    <constraint firstItem="wy7-ca-NXh" firstAttribute="width" secondItem="m5z-do-Ny9" secondAttribute="width" id="McG-l1-P3e"/>
-                                    <constraint firstItem="hE6-0u-4Yj" firstAttribute="width" secondItem="m5z-do-Ny9" secondAttribute="width" id="Zfn-76-EZE"/>
-                                    <constraint firstItem="hE6-0u-4Yj" firstAttribute="leading" secondItem="m5z-do-Ny9" secondAttribute="leading" id="baE-2w-cUd"/>
-                                    <constraint firstItem="wy7-ca-NXh" firstAttribute="leading" secondItem="m5z-do-Ny9" secondAttribute="leading" id="dxX-jR-cCq"/>
+                                    <constraint firstItem="CHX-df-TW0" firstAttribute="centerX" secondItem="nLQ-kc-N1W" secondAttribute="centerX" id="2ls-Pd-Gb6"/>
+                                    <constraint firstItem="kgH-Bx-buq" firstAttribute="centerX" secondItem="nLQ-kc-N1W" secondAttribute="centerX" id="46E-Sv-8JN"/>
+                                    <constraint firstItem="kgH-Bx-buq" firstAttribute="top" secondItem="nLQ-kc-N1W" secondAttribute="top" id="U5b-lO-yr8"/>
+                                    <constraint firstItem="kgH-Bx-buq" firstAttribute="width" secondItem="nLQ-kc-N1W" secondAttribute="width" multiplier="0.85" id="eyg-uM-CYP"/>
+                                    <constraint firstItem="CHX-df-TW0" firstAttribute="height" secondItem="nLQ-kc-N1W" secondAttribute="height" multiplier="0.05" id="fx9-gP-zk2"/>
+                                    <constraint firstItem="CHX-df-TW0" firstAttribute="width" secondItem="nLQ-kc-N1W" secondAttribute="width" multiplier="0.85" id="hog-eI-Fgl"/>
+                                    <constraint firstItem="CHX-df-TW0" firstAttribute="top" secondItem="kgH-Bx-buq" secondAttribute="bottom" multiplier="0.85" id="jdA-DD-2f4"/>
+                                    <constraint firstItem="kgH-Bx-buq" firstAttribute="height" secondItem="nLQ-kc-N1W" secondAttribute="height" multiplier="0.1" id="oGs-pP-ke1"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="pSN-4e-ge0"/>
+                        <viewLayoutGuide key="safeArea" id="OEH-qS-HU2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="m5z-do-Ny9" firstAttribute="centerX" secondItem="pSN-4e-ge0" secondAttribute="centerX" id="3C4-6M-3pQ"/>
-                            <constraint firstItem="m5z-do-Ny9" firstAttribute="height" secondItem="pSN-4e-ge0" secondAttribute="height" id="8bk-Bh-Ng9"/>
-                            <constraint firstItem="m5z-do-Ny9" firstAttribute="top" secondItem="pSN-4e-ge0" secondAttribute="top" constant="47" id="kvU-py-DQR"/>
-                            <constraint firstItem="m5z-do-Ny9" firstAttribute="width" secondItem="pSN-4e-ge0" secondAttribute="width" id="vbv-1y-g4V"/>
-                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="163-2Z-mb4" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEG-eA-4Qx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="94"/>
+            <point key="canvasLocation" x="-36" y="-624"/>
+
         </scene>
     </scenes>
     <resources>
