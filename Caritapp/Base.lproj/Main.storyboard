@@ -41,6 +41,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donacion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FER-HA-pcl">
                                                 <rect key="frame" x="0.0" y="20.5" width="211" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
+
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -91,6 +92,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEG-eA-4Qx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-36" y="-624"/>
+
         </scene>
     </scenes>
     <resources>
