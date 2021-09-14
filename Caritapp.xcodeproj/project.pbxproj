@@ -15,10 +15,13 @@
 		8D06FF8826EADC6500782CD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D06FF8626EADC6500782CD8 /* LaunchScreen.storyboard */; };
 		8D06FF9326EADC6500782CD8 /* CaritappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF9226EADC6500782CD8 /* CaritappTests.swift */; };
 		8D06FF9E26EADC6500782CD8 /* CaritappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF9D26EADC6500782CD8 /* CaritappUITests.swift */; };
+		8D1E66FA26F14B46007BE4D1 /* ListProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E66F926F14B46007BE4D1 /* ListProductsViewController.swift */; };
+		8D1E66FF26F14BB8007BE4D1 /* EditProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E66FE26F14BB8007BE4D1 /* EditProductViewController.swift */; };
+		8D1E670426F14BE5007BE4D1 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E670326F14BE5007BE4D1 /* ProductViewController.swift */; };
+		8D1E670926F14C67007BE4D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E670826F14C67007BE4D1 /* HomeViewController.swift */; };
+		8D1E670E26F14C82007BE4D1 /* HomeDonorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E670D26F14C82007BE4D1 /* HomeDonorViewController.swift */; };
+		8D55B39A26EAF50C002A4205 /* newDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55B39926EAF50C002A4205 /* newDonationViewController.swift */; };
 		ABD2575B26EAF575007D866A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2575A26EAF575007D866A /* CalendarViewController.swift */; };
-		
-    8D55B39A26EAF50C002A4205 /* newDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55B39926EAF50C002A4205 /* newDonationViewController.swift */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,11 +56,13 @@
 		8D06FF9926EADC6500782CD8 /* CaritappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaritappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D06FF9D26EADC6500782CD8 /* CaritappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaritappUITests.swift; sourceTree = "<group>"; };
 		8D06FF9F26EADC6500782CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-
-		ABD2575A26EAF575007D866A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-
+		8D1E66F926F14B46007BE4D1 /* ListProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductsViewController.swift; sourceTree = "<group>"; };
+		8D1E66FE26F14BB8007BE4D1 /* EditProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductViewController.swift; sourceTree = "<group>"; };
+		8D1E670326F14BE5007BE4D1 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		8D1E670826F14C67007BE4D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8D1E670D26F14C82007BE4D1 /* HomeDonorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDonorViewController.swift; sourceTree = "<group>"; };
 		8D55B39926EAF50C002A4205 /* newDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newDonationViewController.swift; sourceTree = "<group>"; };
-
+		ABD2575A26EAF575007D866A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +122,11 @@
 				8D06FF8926EADC6500782CD8 /* Info.plist */,
 				ABD2575A26EAF575007D866A /* CalendarViewController.swift */,
 				8D55B39926EAF50C002A4205 /* newDonationViewController.swift */,
+				8D1E66F926F14B46007BE4D1 /* ListProductsViewController.swift */,
+				8D1E66FE26F14BB8007BE4D1 /* EditProductViewController.swift */,
+				8D1E670326F14BE5007BE4D1 /* ProductViewController.swift */,
+				8D1E670826F14C67007BE4D1 /* HomeViewController.swift */,
+				8D1E670D26F14C82007BE4D1 /* HomeDonorViewController.swift */,
 			);
 			path = Caritapp;
 			sourceTree = "<group>";
@@ -269,10 +279,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D1E66FF26F14BB8007BE4D1 /* EditProductViewController.swift in Sources */,
 				ABD2575B26EAF575007D866A /* CalendarViewController.swift in Sources */,
 				8D06FF8026EADC6500782CD8 /* ViewController.swift in Sources */,
 				8D06FF7C26EADC6500782CD8 /* AppDelegate.swift in Sources */,
+				8D1E670E26F14C82007BE4D1 /* HomeDonorViewController.swift in Sources */,
 				8D06FF7E26EADC6500782CD8 /* SceneDelegate.swift in Sources */,
+				8D1E670926F14C67007BE4D1 /* HomeViewController.swift in Sources */,
+				8D1E66FA26F14B46007BE4D1 /* ListProductsViewController.swift in Sources */,
+				8D1E670426F14BE5007BE4D1 /* ProductViewController.swift in Sources */,
 				8D55B39A26EAF50C002A4205 /* newDonationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
