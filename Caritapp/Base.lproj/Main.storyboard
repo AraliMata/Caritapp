@@ -54,10 +54,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                </viewController>
+                </viewController>  -->
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="94"/> -->
+            <point key="canvasLocation" x="139" y="94"/>
 
         </scene>
         <!--BDA2-->
