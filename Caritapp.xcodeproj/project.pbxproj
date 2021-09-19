@@ -22,6 +22,9 @@
 		8D1E670E26F14C82007BE4D1 /* HomeDonorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E670D26F14C82007BE4D1 /* HomeDonorViewController.swift */; };
 		8D55B39A26EAF50C002A4205 /* newDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55B39926EAF50C002A4205 /* newDonationViewController.swift */; };
 		ABD2575B26EAF575007D866A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2575A26EAF575007D866A /* CalendarViewController.swift */; };
+		ABE8BC1D26F7CF5B00707223 /* HistorialDonacionesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */; };
+		ABE8BC2226F7CF7000707223 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC2126F7CF7000707223 /* LogInController.swift */; };
+		ABE8BC2726F7CF9E00707223 /* CalendarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC2626F7CF9E00707223 /* CalendarioController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		8D1E670D26F14C82007BE4D1 /* HomeDonorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDonorViewController.swift; sourceTree = "<group>"; };
 		8D55B39926EAF50C002A4205 /* newDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newDonationViewController.swift; sourceTree = "<group>"; };
 		ABD2575A26EAF575007D866A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialDonacionesController.swift; sourceTree = "<group>"; };
+		ABE8BC2126F7CF7000707223 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
+		ABE8BC2626F7CF9E00707223 /* CalendarioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,9 @@
 				8D1E670326F14BE5007BE4D1 /* ProductViewController.swift */,
 				8D1E670826F14C67007BE4D1 /* HomeViewController.swift */,
 				8D1E670D26F14C82007BE4D1 /* HomeDonorViewController.swift */,
+				ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */,
+				ABE8BC2126F7CF7000707223 /* LogInController.swift */,
+				ABE8BC2626F7CF9E00707223 /* CalendarioController.swift */,
 			);
 			path = Caritapp;
 			sourceTree = "<group>";
@@ -280,8 +289,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D1E66FF26F14BB8007BE4D1 /* EditProductViewController.swift in Sources */,
+				ABE8BC2226F7CF7000707223 /* LogInController.swift in Sources */,
 				ABD2575B26EAF575007D866A /* CalendarViewController.swift in Sources */,
+				ABE8BC2726F7CF9E00707223 /* CalendarioController.swift in Sources */,
 				8D06FF8026EADC6500782CD8 /* ViewController.swift in Sources */,
+				ABE8BC1D26F7CF5B00707223 /* HistorialDonacionesController.swift in Sources */,
 				8D06FF7C26EADC6500782CD8 /* AppDelegate.swift in Sources */,
 				8D1E670E26F14C82007BE4D1 /* HomeDonorViewController.swift in Sources */,
 				8D06FF7E26EADC6500782CD8 /* SceneDelegate.swift in Sources */,
