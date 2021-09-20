@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1115,12 +1114,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foG-Xa-l0o">
-                                        <rect key="frame" x="92.5" y="145" width="146" height="21"/>
+                                        <rect key="frame" x="92.5" y="160" width="146" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVH-FN-Cwm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVH-FN-Cwm">
                                         <rect key="frame" x="83" y="230" width="165.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -1132,8 +1131,8 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4b-Lb-ATi">
-                                        <rect key="frame" x="120.5" y="310" width="90" height="30"/>
-                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <rect key="frame" x="99.5" y="330" width="132" height="39"/>
+                                        <color key="backgroundColor" red="0.046492169649999998" green="0.65193145809999997" blue="0.54139779320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Iniciar sesion">
                                             <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                         </state>
@@ -1147,28 +1146,28 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="fVH-FN-Cwm" firstAttribute="height" secondItem="1o2-SH-56n" secondAttribute="height" multiplier="0.0321101" id="1pL-o8-T4p"/>
-                                    <constraint firstItem="zAO-kk-k5E" firstAttribute="leading" secondItem="1o2-SH-56n" secondAttribute="leading" constant="116.5" id="1sP-IQ-7sV"/>
                                     <constraint firstItem="IFa-2x-ciI" firstAttribute="top" secondItem="1o2-SH-56n" secondAttribute="top" constant="100" id="2Xy-dc-iaT"/>
+                                    <constraint firstItem="x3n-HX-keE" firstAttribute="centerX" secondItem="1o2-SH-56n" secondAttribute="centerX" id="3gn-KE-CGV"/>
                                     <constraint firstItem="zAO-kk-k5E" firstAttribute="width" secondItem="1o2-SH-56n" secondAttribute="width" multiplier="0.75" id="7As-QA-Dem"/>
-                                    <constraint firstItem="foG-Xa-l0o" firstAttribute="top" secondItem="IFa-2x-ciI" secondAttribute="bottom" constant="15" id="8Q8-v4-27q"/>
+                                    <constraint firstItem="foG-Xa-l0o" firstAttribute="top" secondItem="IFa-2x-ciI" secondAttribute="bottom" constant="30" id="8Q8-v4-27q"/>
                                     <constraint firstItem="foG-Xa-l0o" firstAttribute="width" secondItem="1o2-SH-56n" secondAttribute="width" multiplier="0.441088" id="9Em-M5-M8f"/>
                                     <constraint firstItem="w4b-Lb-ATi" firstAttribute="top" secondItem="zAO-kk-k5E" secondAttribute="bottom" constant="15" id="C9h-8c-KvR"/>
-                                    <constraint firstItem="fVH-FN-Cwm" firstAttribute="leading" secondItem="1o2-SH-56n" secondAttribute="leading" constant="144.5" id="Dt5-mt-dYB"/>
+                                    <constraint firstItem="foG-Xa-l0o" firstAttribute="centerX" secondItem="1o2-SH-56n" secondAttribute="centerX" id="HB7-8w-Blf"/>
+                                    <constraint firstItem="w4b-Lb-ATi" firstAttribute="centerX" secondItem="1o2-SH-56n" secondAttribute="centerX" id="Kt2-VX-ifC"/>
                                     <constraint firstItem="x3n-HX-keE" firstAttribute="height" secondItem="1o2-SH-56n" secondAttribute="height" multiplier="0.0519878" id="Kzn-Fd-vWn"/>
                                     <constraint firstItem="fVH-FN-Cwm" firstAttribute="width" secondItem="1o2-SH-56n" secondAttribute="width" multiplier="0.5" id="Met-kx-Qtx"/>
-                                    <constraint firstItem="foG-Xa-l0o" firstAttribute="leading" secondItem="1o2-SH-56n" secondAttribute="leading" constant="92.5" id="PAa-ww-pru"/>
-                                    <constraint firstItem="fVH-FN-Cwm" firstAttribute="top" secondItem="x3n-HX-keE" secondAttribute="bottom" constant="15" id="PPh-Cn-shS"/>
+                                    <constraint firstItem="fVH-FN-Cwm" firstAttribute="top" secondItem="x3n-HX-keE" secondAttribute="bottom" constant="20" id="PPh-Cn-shS"/>
                                     <constraint firstItem="zAO-kk-k5E" firstAttribute="top" secondItem="fVH-FN-Cwm" secondAttribute="bottom" constant="10" id="UKG-WB-ESE"/>
                                     <constraint firstItem="IFa-2x-ciI" firstAttribute="leading" secondItem="1o2-SH-56n" secondAttribute="leading" constant="117.5" id="VqQ-sW-qS4"/>
-                                    <constraint firstItem="w4b-Lb-ATi" firstAttribute="height" secondItem="1o2-SH-56n" secondAttribute="height" multiplier="0.0458716" id="c7s-0K-ChY"/>
-                                    <constraint firstItem="x3n-HX-keE" firstAttribute="leading" secondItem="1o2-SH-56n" secondAttribute="leading" constant="116.5" id="jfr-hd-gc7"/>
+                                    <constraint firstItem="fVH-FN-Cwm" firstAttribute="centerX" secondItem="1o2-SH-56n" secondAttribute="centerX" id="XOc-EQ-wP0"/>
+                                    <constraint firstItem="w4b-Lb-ATi" firstAttribute="height" secondItem="1o2-SH-56n" secondAttribute="height" multiplier="0.06" id="c7s-0K-ChY"/>
                                     <constraint firstItem="x3n-HX-keE" firstAttribute="top" secondItem="foG-Xa-l0o" secondAttribute="bottom" constant="15" id="jhj-st-Y40"/>
-                                    <constraint firstItem="w4b-Lb-ATi" firstAttribute="width" secondItem="1o2-SH-56n" secondAttribute="width" multiplier="0.271903" id="kDs-Yq-0H1"/>
-                                    <constraint firstItem="w4b-Lb-ATi" firstAttribute="leading" secondItem="1o2-SH-56n" secondAttribute="leading" constant="120.5" id="l7S-RP-sPt"/>
+                                    <constraint firstItem="w4b-Lb-ATi" firstAttribute="width" secondItem="1o2-SH-56n" secondAttribute="width" multiplier="0.4" id="kDs-Yq-0H1"/>
                                     <constraint firstItem="x3n-HX-keE" firstAttribute="width" secondItem="1o2-SH-56n" secondAttribute="width" multiplier="0.75" id="n3O-zn-9li"/>
                                     <constraint firstItem="foG-Xa-l0o" firstAttribute="height" secondItem="1o2-SH-56n" secondAttribute="height" multiplier="0.0321101" id="r6B-RI-XT9"/>
                                     <constraint firstItem="IFa-2x-ciI" firstAttribute="width" secondItem="1o2-SH-56n" secondAttribute="width" multiplier="0.29003" id="rqg-G1-x5U"/>
                                     <constraint firstItem="zAO-kk-k5E" firstAttribute="height" secondItem="1o2-SH-56n" secondAttribute="height" multiplier="0.0519878" id="sMM-kt-qjx"/>
+                                    <constraint firstItem="zAO-kk-k5E" firstAttribute="centerX" secondItem="1o2-SH-56n" secondAttribute="centerX" id="wTN-dO-kek"/>
                                     <constraint firstItem="IFa-2x-ciI" firstAttribute="height" secondItem="1o2-SH-56n" secondAttribute="height" multiplier="0.0458716" id="yMr-uu-ff0"/>
                                 </constraints>
                             </view>
@@ -1796,9 +1795,6 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
