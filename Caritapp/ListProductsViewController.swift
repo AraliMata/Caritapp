@@ -9,6 +9,8 @@ import UIKit
 
 class ListProductsViewController: UIViewController {
 
+    @IBOutlet weak var tableProductsView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

@@ -50,75 +50,6 @@
             </objects>
             <point key="canvasLocation" x="139" y="94"/>
         </scene>
-        <!--BDA2-->
-        <scene sceneID="4qk-4A-umO">
-            <objects>
-                <viewController title="BDA2" id="kSh-fE-NNt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bmN-Oy-lnJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" id="nLQ-kc-N1W" userLabel="Main">
-                                <rect key="frame" x="0.0" y="39" width="414" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgH-Bx-buq" userLabel="Row1">
-                                        <rect key="frame" x="31" y="0.0" width="352" height="82"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donacion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FER-HA-pcl">
-                                                <rect key="frame" x="0.0" y="20.5" width="211" height="41"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="FER-HA-pcl" firstAttribute="width" secondItem="kgH-Bx-buq" secondAttribute="width" multiplier="0.6" id="AZt-Y6-Mlg"/>
-                                            <constraint firstItem="FER-HA-pcl" firstAttribute="height" secondItem="kgH-Bx-buq" secondAttribute="height" multiplier="0.5" id="HRO-sz-1KC"/>
-                                            <constraint firstItem="FER-HA-pcl" firstAttribute="centerY" secondItem="kgH-Bx-buq" secondAttribute="centerY" id="K8C-ZS-Oie"/>
-                                            <constraint firstItem="FER-HA-pcl" firstAttribute="leading" secondItem="kgH-Bx-buq" secondAttribute="leading" id="gRF-PI-Erp"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHX-df-TW0" userLabel="Row2">
-                                        <rect key="frame" x="31" y="69.5" width="352" height="41"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2YC-yO-4qh">
-                                                <rect key="frame" x="141" y="4" width="211" height="33"/>
-                                                <state key="normal" title="Finalizar donacion"/>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="2YC-yO-4qh" secondAttribute="trailing" id="d3l-lM-p1z"/>
-                                            <constraint firstItem="2YC-yO-4qh" firstAttribute="width" secondItem="CHX-df-TW0" secondAttribute="width" multiplier="0.6" id="f4t-Kx-h7W"/>
-                                            <constraint firstItem="2YC-yO-4qh" firstAttribute="centerY" secondItem="CHX-df-TW0" secondAttribute="centerY" id="fdA-i2-iMv"/>
-                                            <constraint firstItem="2YC-yO-4qh" firstAttribute="height" secondItem="CHX-df-TW0" secondAttribute="height" multiplier="0.8" id="zNd-iI-VqY"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <viewLayoutGuide key="safeArea" id="R5f-QI-XLE"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="CHX-df-TW0" firstAttribute="centerX" secondItem="nLQ-kc-N1W" secondAttribute="centerX" id="2ls-Pd-Gb6"/>
-                                    <constraint firstItem="kgH-Bx-buq" firstAttribute="centerX" secondItem="nLQ-kc-N1W" secondAttribute="centerX" id="46E-Sv-8JN"/>
-                                    <constraint firstItem="kgH-Bx-buq" firstAttribute="top" secondItem="nLQ-kc-N1W" secondAttribute="top" id="U5b-lO-yr8"/>
-                                    <constraint firstItem="kgH-Bx-buq" firstAttribute="width" secondItem="nLQ-kc-N1W" secondAttribute="width" multiplier="0.85" id="eyg-uM-CYP"/>
-                                    <constraint firstItem="CHX-df-TW0" firstAttribute="height" secondItem="nLQ-kc-N1W" secondAttribute="height" multiplier="0.05" id="fx9-gP-zk2"/>
-                                    <constraint firstItem="CHX-df-TW0" firstAttribute="width" secondItem="nLQ-kc-N1W" secondAttribute="width" multiplier="0.85" id="hog-eI-Fgl"/>
-                                    <constraint firstItem="CHX-df-TW0" firstAttribute="top" secondItem="kgH-Bx-buq" secondAttribute="bottom" multiplier="0.85" id="jdA-DD-2f4"/>
-                                    <constraint firstItem="kgH-Bx-buq" firstAttribute="height" secondItem="nLQ-kc-N1W" secondAttribute="height" multiplier="0.1" id="oGs-pP-ke1"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="OEH-qS-HU2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aEG-eA-4Qx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1784.057971014493" y="-624.10714285714278"/>
-        </scene>
         <!--Home-->
         <scene sceneID="OeJ-N7-FMJ">
             <objects>
@@ -152,7 +83,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHl-Xe-0Mz" userLabel="Row2">
                                         <rect key="frame" x="0.0" y="182" width="414" height="81.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1z-0e-wjp" userLabel="Registrar recepción">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1z-0e-wjp" userLabel="registrarRecepcion">
                                                 <rect key="frame" x="103.5" y="20" width="207" height="49"/>
                                                 <color key="backgroundColor" red="0.046492169649999998" green="0.65193145809999997" blue="0.54139779320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
@@ -170,7 +101,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcf-tL-BE2" userLabel="Row3">
                                         <rect key="frame" x="0.0" y="263.5" width="414" height="82"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h25-hu-fHO" userLabel="verificar_mercancia">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h25-hu-fHO" userLabel="verificarMercancia">
                                                 <rect key="frame" x="103.5" y="20" width="207" height="49"/>
                                                 <color key="backgroundColor" red="0.046492169649999998" green="0.65193145809999997" blue="0.54139779320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
@@ -188,7 +119,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDm-wR-Baa" userLabel="Row5">
                                         <rect key="frame" x="0.0" y="427" width="414" height="82"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RjR-vx-JgD" userLabel="historial_donaciones">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RjR-vx-JgD" userLabel="historialDonaciones">
                                                 <rect key="frame" x="103.5" y="20" width="207" height="49.5"/>
                                                 <color key="backgroundColor" red="0.046492169649999998" green="0.65193145809999997" blue="0.54139779320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
@@ -254,6 +185,12 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="calendario" destination="fxE-0y-m7q" id="PsE-cw-ZgD"/>
+                        <outlet property="historialDonaciones" destination="RjR-vx-JgD" id="97N-lb-syA"/>
+                        <outlet property="registrarRecepcion" destination="y1z-0e-wjp" id="er5-Qe-4xR"/>
+                        <outlet property="verificarMercancia" destination="h25-hu-fHO" id="dtB-76-e6r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAz-cN-2wG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -292,7 +229,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIT-TC-dYk" userLabel="Row2">
                                         <rect key="frame" x="0.0" y="182" width="414" height="81.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LrP-lG-FIa" userLabel="crear_donacion">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LrP-lG-FIa" userLabel="crearDonacion">
                                                 <rect key="frame" x="103.5" y="20" width="207" height="49"/>
                                                 <color key="backgroundColor" red="0.046492169649999998" green="0.65193145809999997" blue="0.54139779320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
@@ -310,7 +247,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-DP-Unr" userLabel="Row3">
                                         <rect key="frame" x="0.0" y="263.5" width="414" height="82"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bmt-Uj-7ym" userLabel="corregir_donacion">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bmt-Uj-7ym" userLabel="corregirDonacion">
                                                 <rect key="frame" x="103.5" y="20" width="207" height="49"/>
                                                 <color key="backgroundColor" red="0.046492169649999998" green="0.65193145809999997" blue="0.54139779320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
@@ -347,6 +284,10 @@
                         <viewLayoutGuide key="safeArea" id="xRl-Ka-uAV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="corregirDonacion" destination="bmt-Uj-7ym" id="9xO-pl-hZC"/>
+                        <outlet property="crearDonacion" destination="LrP-lG-FIa" id="J3I-X2-mPw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xKP-DN-wgi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -526,7 +467,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g6i-bK-dg6" userLabel="detino_textField">
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g6i-bK-dg6" userLabel="destino_textField">
                                                 <rect key="frame" x="219" y="8.5" width="145" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -580,7 +521,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1PN-0S-HW8">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1PN-0S-HW8" userLabel="switchRecibido">
                                                 <rect key="frame" x="261" y="14" width="85" height="29"/>
                                                 <color key="tintColor" red="0.046492169649999998" green="0.65193145809999997" blue="0.54139779320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </switch>
@@ -675,6 +616,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="1On-pT-sJ7"/>
+                    <connections>
+                        <outlet property="artic_textField" destination="2FX-1d-XQL" id="v9Q-be-kEB"/>
+                        <outlet property="cantRec_textField" destination="ImU-ux-zp4" id="8ia-M4-ZvQ"/>
+                        <outlet property="cantSup_textField" destination="IJx-a8-6KD" id="O0B-n8-oWD"/>
+                        <outlet property="destino_textField" destination="g6i-bK-dg6" id="BeQ-x2-TwU"/>
+                        <outlet property="precioTot_textField" destination="I0A-A5-RaL" id="Nva-7h-uW9"/>
+                        <outlet property="precioUn_textField" destination="7s6-e8-16w" id="mhK-88-qGI"/>
+                        <outlet property="switchRecibido" destination="1PN-0S-HW8" id="RH1-Ha-b8F"/>
+                        <outlet property="udm_textField" destination="tPy-eL-J7l" id="cHy-7k-tt7"/>
+                        <outlet property="upc_textField" destination="LOH-jc-P44" id="uT4-NH-ZI7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i0h-xO-bRI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -719,7 +671,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ext-Tp-aX6" userLabel="upc_textField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ext-Tp-aX6" userLabel="upcEdit_textField">
                                                 <rect key="frame" x="219" y="8.5" width="145" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -746,7 +698,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yDh-h2-dfM" userLabel="udm_textField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yDh-h2-dfM" userLabel="udmEdit_textField">
                                                 <rect key="frame" x="219" y="8.5" width="145" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -773,7 +725,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QMb-Xc-zik" userLabel="artic_textField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QMb-Xc-zik" userLabel="articEdit_textField">
                                                 <rect key="frame" x="219" y="8.5" width="145" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -800,7 +752,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vcw-vI-DMs" userLabel="cantSup_textField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vcw-vI-DMs" userLabel="cantSupEdit_textField">
                                                 <rect key="frame" x="219" y="8.5" width="145" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -827,7 +779,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jR1-cS-Pp0" userLabel="cantRec_textField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jR1-cS-Pp0" userLabel="cantRecEdit_textField">
                                                 <rect key="frame" x="219" y="8.5" width="145" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -854,7 +806,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dfb-gt-WhU" userLabel="detino_textField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dfb-gt-WhU" userLabel="detinoEdit_textField">
                                                 <rect key="frame" x="219" y="8.5" width="145" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -881,7 +833,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5SN-sm-vg8" userLabel="precioUn_textField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5SN-sm-vg8" userLabel="precioUnEdit_textField">
                                                 <rect key="frame" x="219" y="8.5" width="145" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -908,7 +860,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k4P-X5-6EE">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k4P-X5-6EE" userLabel="recibidoEditSwitch">
                                                 <rect key="frame" x="261" y="14" width="85" height="29"/>
                                                 <color key="tintColor" red="0.046492169649999998" green="0.65193145809999997" blue="0.54139779320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </switch>
@@ -934,7 +886,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1mN-tZ-lcZ" userLabel="precioTot_textField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1mN-tZ-lcZ" userLabel="precioTotEdit_textField">
                                                 <rect key="frame" x="219" y="8.5" width="145" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -955,7 +907,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9le-Ws-d3L">
                                         <rect key="frame" x="0.0" y="719" width="414" height="65.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qj-pA-sVj" userLabel="guardarBtn">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qj-pA-sVj" userLabel="guardarEditBtn">
                                                 <rect key="frame" x="103.5" y="20" width="207" height="45.5"/>
                                                 <color key="backgroundColor" red="0.046492169649999998" green="0.65193145809999997" blue="0.54139779320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -1026,6 +978,18 @@
                         <viewLayoutGuide key="safeArea" id="nnC-cj-3uo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="articEdit_textField" destination="QMb-Xc-zik" id="EDN-K9-lzN"/>
+                        <outlet property="cantRecEdit_textField" destination="jR1-cS-Pp0" id="DiX-ap-U8g"/>
+                        <outlet property="cantSupEdit_textField" destination="Vcw-vI-DMs" id="AvV-cU-JjX"/>
+                        <outlet property="detinoEdit_textField" destination="Dfb-gt-WhU" id="0gW-5x-e9i"/>
+                        <outlet property="guardarEditBtn" destination="6qj-pA-sVj" id="XEV-Kn-B1Q"/>
+                        <outlet property="precioTotEdit_textField" destination="1mN-tZ-lcZ" id="Nxo-WC-vMG"/>
+                        <outlet property="precioUnEdit_textField" destination="5SN-sm-vg8" id="K93-av-foC"/>
+                        <outlet property="recibidoEditSwitch" destination="k4P-X5-6EE" id="ljx-wH-Rjc"/>
+                        <outlet property="udmEdit_textField" destination="yDh-h2-dfM" id="FOX-2X-RaM"/>
+                        <outlet property="upcEdit_textField" destination="Ext-Tp-aX6" id="nCK-tZ-JTm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc4-fb-Rfa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1039,7 +1003,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U98-oI-5Vg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U98-oI-5Vg" userLabel="tableProductsView">
                                 <rect key="frame" x="0.0" y="80" width="414" height="782"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1048,6 +1012,9 @@
                         <viewLayoutGuide key="safeArea" id="9Ma-j4-rv1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="tableProductsView" destination="U98-oI-5Vg" id="gQa-jf-ddE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMM-pv-M6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

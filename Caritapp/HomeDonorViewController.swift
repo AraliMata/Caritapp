@@ -9,6 +9,10 @@ import UIKit
 
 class HomeDonorViewController: UIViewController {
 
+    @IBOutlet weak var crearDonacion: UIButton!
+    
+    @IBOutlet weak var corregirDonacion: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
