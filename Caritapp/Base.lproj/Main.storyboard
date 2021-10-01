@@ -48,12 +48,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="94"/>
+            <point key="canvasLocation" x="-458" y="94"/>
         </scene>
         <!--Home-->
         <scene sceneID="OeJ-N7-FMJ">
             <objects>
-                <viewController title="Home" id="hV3-1r-ZKX" customClass="HomeViewController" customModule="Caritapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hV3-1r-ZKX" customClass="HomeViewController" customModule="Caritapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UnW-jA-1iz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,6 +106,9 @@
                                                 <color key="backgroundColor" red="0.046492169649999998" green="0.65193145809999997" blue="0.54139779320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Verificar mercancía"/>
+                                                <connections>
+                                                    <segue destination="iwn-UH-gEm" kind="show" identifier="verificarMercanciaSegue" id="iQl-mR-iQb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -124,6 +127,9 @@
                                                 <color key="backgroundColor" red="0.046492169649999998" green="0.65193145809999997" blue="0.54139779320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Historial de donaciones"/>
+                                                <connections>
+                                                    <segue destination="Mpx-Ut-hbf" kind="show" identifier="HistorialSegue" id="jEZ-t1-8gT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -142,6 +148,9 @@
                                                 <color key="backgroundColor" red="0.046492169652706854" green="0.65193145805329955" blue="0.54139779318805614" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Calendario"/>
+                                                <connections>
+                                                    <segue destination="23D-jX-al1" kind="show" identifier="CalendarioSegue" id="gaj-s5-7BR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -194,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAz-cN-2wG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1784.057971014493" y="-624.10714285714278"/>
+            <point key="canvasLocation" x="852" y="-579"/>
         </scene>
         <!--HomeDonador-->
         <scene sceneID="pFu-cu-r2y">
@@ -234,6 +243,9 @@
                                                 <color key="backgroundColor" red="0.046492169649999998" green="0.65193145809999997" blue="0.54139779320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Crear donación"/>
+                                                <connections>
+                                                    <segue destination="lnO-Ig-7ye" kind="show" identifier="crearDonacionSegue" id="jIv-cG-46X"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -291,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xKP-DN-wgi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1784.057971014493" y="-624.10714285714278"/>
+            <point key="canvasLocation" x="1319" y="-1297"/>
         </scene>
         <!--VistaProducto-->
         <scene sceneID="hKH-8E-Mfu">
@@ -1012,6 +1024,7 @@
                         <viewLayoutGuide key="safeArea" id="9Ma-j4-rv1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ey9-Lv-RcS"/>
                     <connections>
                         <outlet property="tableProductsView" destination="U98-oI-5Vg" id="gQa-jf-ddE"/>
                     </connections>
@@ -1058,10 +1071,11 @@
                         <viewLayoutGuide key="safeArea" id="NQz-ob-GCv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bJ8-vo-I3F"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6G-q9-dsy" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="94"/>
+            <point key="canvasLocation" x="1081" y="188"/>
         </scene>
         <!--LogIn-->
         <scene sceneID="9tE-SG-9n7">
@@ -1151,7 +1165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Oy-CJ-4al" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-114.49275362318842" y="-579.24107142857144"/>
+            <point key="canvasLocation" x="-265" y="-743"/>
         </scene>
         <!--HistorialDonaciones-->
         <scene sceneID="enI-gx-RTb">
@@ -1162,10 +1176,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4f-r8-klO" userLabel="View">
-                                <rect key="frame" x="1" y="54" width="414" height="818"/>
+                                <rect key="frame" x="1" y="54" width="414" height="769"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZsK-Km-wdn" userLabel="Row1">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3V-04-Uoh">
                                                 <rect key="frame" x="15" y="8" width="172.5" height="44"/>
@@ -1182,10 +1196,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1QT-mz-gvR" userLabel="Row2">
-                                        <rect key="frame" x="0.0" y="82" width="414" height="81.5"/>
+                                        <rect key="frame" x="0.0" y="77" width="414" height="77"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Historial de donaciones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alv-hI-Lvs">
-                                                <rect key="frame" x="81.5" y="25.5" width="251.5" height="30"/>
+                                                <rect key="frame" x="81.5" y="23.5" width="251.5" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1198,7 +1212,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWW-BY-q4g" userLabel="Row3">
-                                        <rect key="frame" x="0.0" y="163.5" width="414" height="81.5"/>
+                                        <rect key="frame" x="0.0" y="154" width="414" height="76.5"/>
                                         <subviews>
                                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="BEu-VZ-OQw">
                                                 <rect key="frame" x="157" y="-10" width="249" height="102"/>
@@ -1220,7 +1234,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B5e-aG-KCS" userLabel="Row4">
-                                        <rect key="frame" x="0.0" y="245" width="414" height="82"/>
+                                        <rect key="frame" x="0.0" y="230.5" width="414" height="77"/>
                                         <subviews>
                                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Iih-vf-Jrb">
                                                 <rect key="frame" x="157" y="-10" width="249" height="102"/>
@@ -1279,27 +1293,28 @@
                             <constraint firstItem="g4f-r8-klO" firstAttribute="width" secondItem="jUQ-1z-JKR" secondAttribute="width" id="nRp-QF-yYs"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="637-ES-RSW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOU-xj-fyP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1174" y="106"/>
+            <point key="canvasLocation" x="1913" y="119"/>
         </scene>
         <!--CrearDonacion-->
         <scene sceneID="xMV-Zz-uvN">
             <objects>
-                <viewController title="CrearDonacion" id="lnO-Ig-7ye" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CrearDonacion" title="CrearDonacion" id="lnO-Ig-7ye" customClass="createDonationViewController" customModule="Caritapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vh5-CF-f6c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJw-uU-AY0" userLabel="Main">
-                                <rect key="frame" x="31" y="105.5" width="352" height="695"/>
+                                <rect key="frame" x="31" y="60.5" width="352" height="687"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6o-km-MNT" userLabel="Row1">
-                                        <rect key="frame" x="26.5" y="0.0" width="299" height="139"/>
+                                        <rect key="frame" x="26.5" y="0.0" width="299" height="137.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nueva Donacion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGw-ra-GlN">
-                                                <rect key="frame" x="30" y="48.5" width="239" height="41.5"/>
+                                                <rect key="frame" x="30" y="48" width="239" height="41.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1314,16 +1329,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Is2-kw-TOo" userLabel="Row2">
-                                        <rect key="frame" x="0.0" y="139" width="352" height="69.5"/>
+                                        <rect key="frame" x="0.0" y="137.5" width="352" height="68.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donador" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFe-TX-oiE">
-                                                <rect key="frame" x="0.0" y="14" width="105.5" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="13.5" width="105.5" height="41.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TWD-PB-wdS">
-                                                <rect key="frame" x="139" y="3.5" width="176" height="62.5"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TWD-PB-wdS" userLabel="donadorTextFIeld">
+                                                <rect key="frame" x="139" y="3.5" width="176" height="61.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -1341,16 +1356,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAh-YQ-WsP" userLabel="Row3">
-                                        <rect key="frame" x="0.0" y="208.5" width="352" height="69.5"/>
+                                        <rect key="frame" x="0.0" y="206" width="352" height="69"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tienda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRj-UN-qsW">
-                                                <rect key="frame" x="0.0" y="14" width="105.5" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="14" width="105.5" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bUq-iH-9ES">
-                                                <rect key="frame" x="139" y="3.5" width="176" height="62.5"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bUq-iH-9ES" userLabel="tiendaTextField">
+                                                <rect key="frame" x="139" y="3.5" width="176" height="62"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -1368,16 +1383,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TT1-8T-3gm" userLabel="Row4">
-                                        <rect key="frame" x="0.0" y="278" width="352" height="69.5"/>
+                                        <rect key="frame" x="0.0" y="275" width="352" height="68.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kilos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7U-Og-Ttc">
-                                                <rect key="frame" x="0.0" y="14" width="105.5" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="13.5" width="105.5" height="41.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9gq-75-rOx">
-                                                <rect key="frame" x="139" y="3.5" width="176" height="62.5"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9gq-75-rOx" userLabel="kilosTextField">
+                                                <rect key="frame" x="139" y="3.5" width="176" height="61.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -1395,16 +1410,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhx-Ge-Ris" userLabel="Row5">
-                                        <rect key="frame" x="0.0" y="347.5" width="352" height="69.5"/>
+                                        <rect key="frame" x="0.0" y="343.5" width="352" height="68.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izi-kD-9fk">
-                                                <rect key="frame" x="0.0" y="14" width="70.5" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="13.5" width="70.5" height="41.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="aXb-sO-gcG">
-                                                <rect key="frame" x="88" y="3.5" width="264" height="62.5"/>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="aXb-sO-gcG" userLabel="fechaDatePicker">
+                                                <rect key="frame" x="88" y="3.5" width="264" height="61.5"/>
                                             </datePicker>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1420,16 +1435,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ac8-Rc-qJJ" userLabel="Row6">
-                                        <rect key="frame" x="0.0" y="417" width="352" height="104.5"/>
+                                        <rect key="frame" x="0.0" y="412" width="352" height="103"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colocar archivo de donacion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rg5-KY-w5X">
-                                                <rect key="frame" x="26.5" y="0.0" width="299" height="83.5"/>
+                                                <rect key="frame" x="26.5" y="0.0" width="299" height="82.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fL-xx-QoZ">
-                                                <rect key="frame" x="70.5" y="83.5" width="211" height="26"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fL-xx-QoZ" userLabel="importarBtn">
+                                                <rect key="frame" x="70.5" y="82.5" width="211" height="26"/>
                                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                             </button>
                                         </subviews>
@@ -1446,15 +1461,18 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brD-Jk-3m7" userLabel="Row7">
-                                        <rect key="frame" x="0.0" y="521.5" width="352" height="139"/>
+                                        <rect key="frame" x="0.0" y="515" width="352" height="137.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0f-j1-NPW">
-                                                <rect key="frame" x="53" y="70" width="246" height="55.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0f-j1-NPW" userLabel="crearDonacion">
+                                                <rect key="frame" x="53" y="70" width="246" height="55"/>
                                                 <color key="backgroundColor" red="0.04036766663" green="0.64706712960000001" blue="0.535954237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <state key="normal" title="Crear donacion">
                                                     <color key="titleColor" red="0.98029905559999997" green="0.98045939209999999" blue="0.98026496169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="crearDonacion:" destination="lnO-Ig-7ye" eventType="touchUpInside" id="DZl-vd-a4S"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1508,10 +1526,18 @@
                             <constraint firstItem="xJw-uU-AY0" firstAttribute="width" secondItem="0la-51-jQu" secondAttribute="width" multiplier="0.85" id="vwY-nT-UqL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ewf-7m-FXn"/>
+                    <connections>
+                        <outlet property="donadorTextField" destination="TWD-PB-wdS" id="0kP-lF-d2r"/>
+                        <outlet property="fechaDatePicker" destination="aXb-sO-gcG" id="ei0-G3-vcL"/>
+                        <outlet property="importarBtn" destination="6fL-xx-QoZ" id="mPP-YE-XY1"/>
+                        <outlet property="kilosTextField" destination="9gq-75-rOx" id="WSK-y7-OLz"/>
+                        <outlet property="tiendaTextFIeld" destination="bUq-iH-9ES" id="Jv7-pA-SN9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8o-TI-f9D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1383" y="-1298"/>
+            <point key="canvasLocation" x="2212" y="-1319"/>
         </scene>
         <!--VistaDonacion-->
         <scene sceneID="gQB-i2-wEL">
@@ -1758,7 +1784,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbZ-QE-pmr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2139" y="-1298"/>
+            <point key="canvasLocation" x="3141" y="-1111"/>
         </scene>
         <!--EstatusDonaciones-->
         <scene sceneID="Hyg-QA-TzV">
@@ -2250,7 +2276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UgP-bz-AAx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2139" y="-1298"/>
+            <point key="canvasLocation" x="2816" y="-329"/>
         </scene>
         <!--ExportarDonacion-->
         <scene sceneID="gDd-xp-gXT">
@@ -2679,7 +2705,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zmc-Nf-Nm9" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+            <point key="canvasLocation" x="155" y="94"/>
         </scene>
     </scenes>
     <resources>
