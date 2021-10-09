@@ -49,7 +49,7 @@ class CreateDonationService {
                     print("statusCode: \(httpResponse.statusCode)")
                     print("donador: \(createdDonation.donador)")
                     print("tienda: \(createdDonation.tienda)")
-                    print("kilos: \(createdDonation.kilos_donados)")
+                    print("kilos: \(createdDonation.kilos)")
                     print("fecha: \(createdDonation.fecha)")
                 }
                 

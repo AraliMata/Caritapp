@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CF4F24227121B54004DE3EE /* ExportDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */; };
+		2CF4F24727121D4A004DE3EE /* DonationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24627121D4A004DE3EE /* DonationService.swift */; };
+		2CF4F24C271227FF004DE3EE /* DonationServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24B271227FF004DE3EE /* DonationServiceIntegrationTests.swift */; };
 		7B270BD226F837200038032B /* EstatusDonacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B270BD126F837200038032B /* EstatusDonacionViewController.swift */; };
 		7B270BD326F837200038032B /* EstatusDonacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B270BD126F837200038032B /* EstatusDonacionViewController.swift */; };
 		7B270BD426F837200038032B /* EstatusDonacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B270BD126F837200038032B /* EstatusDonacionViewController.swift */; };
@@ -54,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportDonationViewController.swift; sourceTree = "<group>"; };
+		2CF4F24627121D4A004DE3EE /* DonationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationService.swift; sourceTree = "<group>"; };
+		2CF4F24B271227FF004DE3EE /* DonationServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationServiceIntegrationTests.swift; sourceTree = "<group>"; };
 		7B270BD126F837200038032B /* EstatusDonacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstatusDonacionViewController.swift; sourceTree = "<group>"; };
 		8D06FF7B26EADC6500782CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D06FF7D26EADC6500782CD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +152,7 @@
 				ABE8BC2126F7CF7000707223 /* LogInController.swift */,
 				ABE8BC2626F7CF9E00707223 /* CalendarioController.swift */,
 				7B270BD126F837200038032B /* EstatusDonacionViewController.swift */,
+				2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */,
 			);
 			path = Caritapp;
 			sourceTree = "<group>";
@@ -156,6 +163,7 @@
 				8D06FF9226EADC6500782CD8 /* CaritappTests.swift */,
 				8D06FF9426EADC6500782CD8 /* Info.plist */,
 				8DC167BF2704DD7400AD188F /* CaritappTestsServices.swift */,
+				2CF4F24B271227FF004DE3EE /* DonationServiceIntegrationTests.swift */,
 			);
 			path = CaritappTests;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1E360D26FE4F2100314A99 /* CreateDonationService.swift */,
+				2CF4F24627121D4A004DE3EE /* DonationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -345,7 +354,9 @@
 				8D1E360926FE4D8500314A99 /* Donation.swift in Sources */,
 				ABE8BC1D26F7CF5B00707223 /* HistorialDonacionesController.swift in Sources */,
 				8D06FF7C26EADC6500782CD8 /* AppDelegate.swift in Sources */,
+				2CF4F24227121B54004DE3EE /* ExportDonationViewController.swift in Sources */,
 				8D1E670E26F14C82007BE4D1 /* HomeDonorViewController.swift in Sources */,
+				2CF4F24727121D4A004DE3EE /* DonationService.swift in Sources */,
 				8D06FF7E26EADC6500782CD8 /* SceneDelegate.swift in Sources */,
 				8D1E360E26FE4F2100314A99 /* CreateDonationService.swift in Sources */,
 				7B270BD226F837200038032B /* EstatusDonacionViewController.swift in Sources */,
@@ -361,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF4F24C271227FF004DE3EE /* DonationServiceIntegrationTests.swift in Sources */,
 				8DC167C02704DD7400AD188F /* CaritappTestsServices.swift in Sources */,
 				8D06FF9326EADC6500782CD8 /* CaritappTests.swift in Sources */,
 				7B270BD326F837200038032B /* EstatusDonacionViewController.swift in Sources */,
