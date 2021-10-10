@@ -19,7 +19,7 @@ class ExportDonationViewController: UIViewController {
         print("button pressed")
         donationService.retrieveDonation() {
             (donation) in
-            print("Test retrieveDonation")
+            print("Donation exported")
             print(donation)
         }
     }
