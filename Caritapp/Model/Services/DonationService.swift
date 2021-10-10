@@ -11,7 +11,7 @@ class DonationService {
     public typealias RetrieveDonationClosure = (Donation) -> Void
 
     func retrieveDonation(_ handler: @escaping RetrieveDonationClosure) {
-            let donationEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/2"
+            let donationEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/20"
             guard let url = URL(string: donationEndpoint) else {
                 print("Error: cannot create URL")
                 return
@@ -45,14 +45,20 @@ class DonationService {
                     }
 
                     // check status code
-                    
-                    let donation = try decoder.decode(Donation.self, from: responseData)
-                    
                     if let httpResponse = response as? HTTPURLResponse {
                         print("statusCode: \(httpResponse.statusCode)")
+                        
+                        if (httpResponse.statusCode == 200) {
+                            let donation = try decoder.decode(Donation.self, from: responseData)
+                            handler(donation)
+                        }
+                        else {
+                            print("Error: Failed to retrieve donation")
+                        }
+                        
                     }
-        
-                    handler(donation)
+                    
+                    
                 } catch {
                     print("error trying to convert data to JSON")
                     return
