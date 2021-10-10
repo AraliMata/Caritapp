@@ -331,6 +331,53 @@
             </objects>
             <point key="canvasLocation" x="1319" y="-1297"/>
         </scene>
+        <!--importarProductos-->
+        <scene sceneID="YNz-q6-agb">
+            <objects>
+                <viewController id="nwV-yX-hgV" userLabel="importarProductos" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kex-mS-PBq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Importación de productos" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49A-4y-nXK" userLabel="caritapp">
+                                <rect key="frame" x="12" y="168" width="391" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" red="0.11225049500000001" green="0.76165803109999997" blue="0.5650395466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pu5-f2-wf8" userLabel="importarProductos">
+                                <rect key="frame" x="96" y="418" width="222" height="60"/>
+                                <color key="backgroundColor" red="0.046492169649999998" green="0.65193145809999997" blue="0.54139779320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Importar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="importarProductos:" destination="VdG-Dr-ZHq" eventType="touchUpInside" id="1Xn-Cc-lFi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E2x-Tk-xmJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pu5-f2-wf8" firstAttribute="top" secondItem="E2x-Tk-xmJ" secondAttribute="top" constant="310" id="1Hs-ZJ-43b"/>
+                            <constraint firstItem="Pu5-f2-wf8" firstAttribute="height" secondItem="kex-mS-PBq" secondAttribute="height" multiplier="0.0669643" id="XrX-xd-22d"/>
+                            <constraint firstItem="49A-4y-nXK" firstAttribute="top" secondItem="E2x-Tk-xmJ" secondAttribute="top" constant="80" id="cE1-Oe-7Tv"/>
+                            <constraint firstItem="49A-4y-nXK" firstAttribute="width" secondItem="kex-mS-PBq" secondAttribute="width" id="g4T-OK-nF5"/>
+                            <constraint firstItem="49A-4y-nXK" firstAttribute="height" secondItem="kex-mS-PBq" secondAttribute="height" id="iVk-Mn-Bgm"/>
+                            <constraint firstItem="49A-4y-nXK" firstAttribute="centerX" secondItem="kex-mS-PBq" secondAttribute="centerX" id="kbp-k1-w1S"/>
+                            <constraint firstItem="Pu5-f2-wf8" firstAttribute="width" secondItem="kex-mS-PBq" secondAttribute="width" multiplier="0.536232" id="lm6-wb-Ozw"/>
+                            <constraint firstItem="Pu5-f2-wf8" firstAttribute="width" secondItem="E2x-Tk-xmJ" secondAttribute="width" multiplier="0.536232" id="vFR-eO-bPe"/>
+                            <constraint firstItem="Pu5-f2-wf8" firstAttribute="centerX" secondItem="E2x-Tk-xmJ" secondAttribute="centerX" id="wUg-b3-Dvj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tdh-7J-o6x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nz7-wy-hXp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="VdG-Dr-ZHq" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1128.985507246377" y="890.625"/>
+        </scene>
         <!--VistaProducto-->
         <scene sceneID="hKH-8E-Mfu">
             <objects>
@@ -1460,37 +1507,8 @@
                                             <constraint firstItem="Izi-kD-9fk" firstAttribute="centerY" secondItem="Zhx-Ge-Ris" secondAttribute="centerY" id="l6Z-b4-1GB"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ac8-Rc-qJJ" userLabel="Row6">
-                                        <rect key="frame" x="0.0" y="412" width="352" height="103"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colocar archivo de donacion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rg5-KY-w5X">
-                                                <rect key="frame" x="26.5" y="0.0" width="299" height="82.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fL-xx-QoZ" userLabel="importarBtn">
-                                                <rect key="frame" x="70.5" y="82.5" width="211" height="26"/>
-                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                                <connections>
-                                                    <action selector="importarProductos:" destination="lnO-Ig-7ye" eventType="touchUpInside" id="D5V-8U-akC"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="6fL-xx-QoZ" firstAttribute="width" secondItem="Ac8-Rc-qJJ" secondAttribute="width" multiplier="0.6" id="S3D-yc-10T"/>
-                                            <constraint firstItem="rg5-KY-w5X" firstAttribute="centerX" secondItem="Ac8-Rc-qJJ" secondAttribute="centerX" id="and-gg-LQ2"/>
-                                            <constraint firstItem="6fL-xx-QoZ" firstAttribute="top" secondItem="rg5-KY-w5X" secondAttribute="bottom" id="bda-Se-2g7"/>
-                                            <constraint firstItem="6fL-xx-QoZ" firstAttribute="height" secondItem="Ac8-Rc-qJJ" secondAttribute="height" multiplier="0.25" id="coG-c8-32b"/>
-                                            <constraint firstItem="rg5-KY-w5X" firstAttribute="width" secondItem="Ac8-Rc-qJJ" secondAttribute="width" multiplier="0.85" id="fhs-qC-b5l"/>
-                                            <constraint firstItem="rg5-KY-w5X" firstAttribute="top" secondItem="Ac8-Rc-qJJ" secondAttribute="top" id="hXl-SX-t7P"/>
-                                            <constraint firstItem="rg5-KY-w5X" firstAttribute="height" secondItem="Ac8-Rc-qJJ" secondAttribute="height" multiplier="0.8" id="hYS-iW-YFg"/>
-                                            <constraint firstItem="6fL-xx-QoZ" firstAttribute="centerX" secondItem="Ac8-Rc-qJJ" secondAttribute="centerX" id="xmX-xt-6nc"/>
-                                        </constraints>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brD-Jk-3m7" userLabel="Row7">
-                                        <rect key="frame" x="0.0" y="515" width="352" height="137.5"/>
+                                        <rect key="frame" x="0.0" y="412" width="352" height="137.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0f-j1-NPW" userLabel="crearDonacion">
                                                 <rect key="frame" x="53" y="70" width="246" height="55"/>
@@ -1500,7 +1518,8 @@
                                                     <color key="titleColor" red="0.98029905559999997" green="0.98045939209999999" blue="0.98026496169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="crearDonacion:" destination="lnO-Ig-7ye" eventType="touchUpInside" id="DZl-vd-a4S"/>
+                                                    <action selector="crearDonacion:" destination="lnO-Ig-7ye" eventType="touchUpInside" id="lNE-Ck-lYh"/>
+                                                    <segue destination="nwV-yX-hgV" kind="show" id="ohi-Pz-V2G"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1518,21 +1537,19 @@
                                     <constraint firstItem="TT1-8T-3gm" firstAttribute="width" secondItem="xJw-uU-AY0" secondAttribute="width" id="Bht-kE-Z7Z"/>
                                     <constraint firstItem="vAh-YQ-WsP" firstAttribute="centerX" secondItem="xJw-uU-AY0" secondAttribute="centerX" id="Cni-uH-ZBB"/>
                                     <constraint firstItem="TT1-8T-3gm" firstAttribute="centerX" secondItem="xJw-uU-AY0" secondAttribute="centerX" id="DwM-zc-qhT"/>
+                                    <constraint firstItem="brD-Jk-3m7" firstAttribute="top" secondItem="Zhx-Ge-Ris" secondAttribute="bottom" id="Ffq-BR-deN"/>
                                     <constraint firstItem="Is2-kw-TOo" firstAttribute="width" secondItem="xJw-uU-AY0" secondAttribute="width" id="Hg9-8f-d1E"/>
                                     <constraint firstItem="vAh-YQ-WsP" firstAttribute="width" secondItem="xJw-uU-AY0" secondAttribute="width" id="Hla-Mh-r2g"/>
-                                    <constraint firstItem="Ac8-Rc-qJJ" firstAttribute="width" secondItem="xJw-uU-AY0" secondAttribute="width" id="IJ7-yR-VWx"/>
                                     <constraint firstItem="e6o-km-MNT" firstAttribute="centerX" secondItem="xJw-uU-AY0" secondAttribute="centerX" id="KA7-O9-Yh5"/>
                                     <constraint firstItem="Is2-kw-TOo" firstAttribute="top" secondItem="e6o-km-MNT" secondAttribute="bottom" id="KAH-lv-ypa"/>
                                     <constraint firstItem="e6o-km-MNT" firstAttribute="top" secondItem="xJw-uU-AY0" secondAttribute="top" id="KBN-RN-7Y6"/>
                                     <constraint firstItem="e6o-km-MNT" firstAttribute="width" secondItem="xJw-uU-AY0" secondAttribute="width" multiplier="0.85" id="Myf-F3-Cya"/>
                                     <constraint firstItem="vAh-YQ-WsP" firstAttribute="height" secondItem="xJw-uU-AY0" secondAttribute="height" multiplier="0.1" id="PNI-ax-b9i"/>
-                                    <constraint firstItem="Ac8-Rc-qJJ" firstAttribute="height" secondItem="xJw-uU-AY0" secondAttribute="height" multiplier="0.15" id="Pqd-ph-ewX"/>
                                     <constraint firstItem="Zhx-Ge-Ris" firstAttribute="centerX" secondItem="xJw-uU-AY0" secondAttribute="centerX" id="RJd-XV-Zuk"/>
                                     <constraint firstItem="Is2-kw-TOo" firstAttribute="height" secondItem="xJw-uU-AY0" secondAttribute="height" multiplier="0.1" id="Rme-7Q-MIq"/>
                                     <constraint firstItem="Is2-kw-TOo" firstAttribute="centerX" secondItem="xJw-uU-AY0" secondAttribute="centerX" id="Tqh-PE-J99"/>
                                     <constraint firstItem="e6o-km-MNT" firstAttribute="height" secondItem="xJw-uU-AY0" secondAttribute="height" multiplier="0.2" id="fyY-sd-cO8"/>
                                     <constraint firstItem="Zhx-Ge-Ris" firstAttribute="top" secondItem="TT1-8T-3gm" secondAttribute="bottom" id="g1V-Ce-XQU"/>
-                                    <constraint firstItem="brD-Jk-3m7" firstAttribute="top" secondItem="Ac8-Rc-qJJ" secondAttribute="bottom" id="gfo-Gs-c9w"/>
                                     <constraint firstItem="brD-Jk-3m7" firstAttribute="height" secondItem="xJw-uU-AY0" secondAttribute="height" multiplier="0.2" id="h7D-WS-6ph"/>
                                     <constraint firstItem="vAh-YQ-WsP" firstAttribute="top" secondItem="Is2-kw-TOo" secondAttribute="bottom" id="iVA-HC-LAh"/>
                                     <constraint firstItem="brD-Jk-3m7" firstAttribute="centerX" secondItem="xJw-uU-AY0" secondAttribute="centerX" id="lld-xF-lqa"/>
@@ -1541,8 +1558,6 @@
                                     <constraint firstItem="TT1-8T-3gm" firstAttribute="height" secondItem="xJw-uU-AY0" secondAttribute="height" multiplier="0.1" id="skg-7b-no1"/>
                                     <constraint firstItem="TT1-8T-3gm" firstAttribute="top" secondItem="vAh-YQ-WsP" secondAttribute="bottom" id="upY-Vo-m9P"/>
                                     <constraint firstItem="brD-Jk-3m7" firstAttribute="width" secondItem="xJw-uU-AY0" secondAttribute="width" id="wqE-Lx-yvv"/>
-                                    <constraint firstItem="Ac8-Rc-qJJ" firstAttribute="top" secondItem="Zhx-Ge-Ris" secondAttribute="bottom" id="yLA-9d-kaF"/>
-                                    <constraint firstItem="Ac8-Rc-qJJ" firstAttribute="centerX" secondItem="xJw-uU-AY0" secondAttribute="centerX" id="zUa-j0-lrh"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -2743,9 +2758,6 @@
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -9,10 +9,10 @@ import Foundation
 
 class CreateDonationService {
     public typealias sendDonationClosure = (Donation) -> Void
-    public typealias importProductsClosure = ([Product]) -> Void
+    public typealias sendProductsClosure = (String) -> Void
     
     func sendDonation(donation: Donation, _ handler: @escaping sendDonationClosure) {
-        let createDonationEndpoint: String = "hola.com" //Poner endpoint
+        let createDonationEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/createDonation/create"
         guard let url = URL(string: createDonationEndpoint) else {
             print("Error: cannot create URL")
             return
@@ -43,6 +43,11 @@ class CreateDonationService {
             }
             
             do {
+                
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                
                 let createdDonation = try decoder.decode(Donation.self, from: responseData)
                 
                 if let httpResponse = response as? HTTPURLResponse {
@@ -55,7 +60,7 @@ class CreateDonationService {
                 
                 handler(createdDonation)
             } catch {
-                print("error trying to convert data to JSON")
+                print("error trying to convert data to JSON2")
                 return
             }
 
@@ -65,9 +70,9 @@ class CreateDonationService {
         
   }
     
-    func sendDonation(products: [Product], _ handler: @escaping importProductsClosure) {
-        let createDonationEndpoint: String = "hola.com" //Poner endpoint
-        guard let url = URL(string: createDonationEndpoint) else {
+    func sendProducts(file: Data, _ handler: @escaping sendProductsClosure) {
+        let sendProductsEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/createDonation/importProducts" //Poner endpoint
+        guard let url = URL(string: sendProductsEndpoint) else {
             print("Error: cannot create URL")
             return
         }
@@ -79,14 +84,13 @@ class CreateDonationService {
         
         urlRequest.httpMethod = "POST"
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        let encoder = JSONEncoder()
-        let decoder = JSONDecoder()
-        let jsonData = try! encoder.encode(products)
-        urlRequest.httpBody = jsonData
+       
+        urlRequest.httpBody = file
+        
         let task = session.dataTask(with: urlRequest) {
             (data, response, error) in
             guard error == nil else {
-                print("error calling POST on /donation/create/")
+                print("error calling POST on /donation/create/importProducts")
                 print(error!)
                 return
             }
@@ -96,20 +100,10 @@ class CreateDonationService {
                 return
             }
             
-            do {
-                let importedProducts = try decoder.decode([Product].self, from: responseData)
+            
+            let response =  String(decoding: responseData, as: UTF8.self)
                 
-                if let httpResponse = response as? HTTPURLResponse {
-                    print("statusCode: \(httpResponse.statusCode)")
-                    print("upc1: \(importedProducts[1].upc)")
-                   
-                }
-                
-                handler(importedProducts)
-            } catch {
-                print("error trying to convert data to JSON")
-                return
-            }
+            handler(response)
 
         }
         task.resume()

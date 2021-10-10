@@ -24,6 +24,7 @@ class CreateDonationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupToolbar()
     }
     
     @IBAction func crearDonacion(_ sender: UIButton) {
@@ -38,7 +39,7 @@ class CreateDonationViewController: UIViewController {
                                 let donationReceived = Donation(donador: String(donadorValue), tienda: String(tiendaValue), kilos_donados: Float16(kilosValue)!, fecha: fechaDatePicker.date)
                                 
                                 createDonationService.sendDonation(donation: donationReceived) { (createdDonation) in
-                                    print(createdDonation)
+                                    print(createdDonation.donador)
                                 }
                             
                         }
@@ -51,51 +52,39 @@ class CreateDonationViewController: UIViewController {
     }
     
     
-    @IBAction func importarProductos(_ sender: UIButton) {
-        let supportedTypes: [UTType] = [UTType.json]
-        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: supportedTypes, asCopy: true)
-        documentPicker.delegate = self
-        documentPicker.allowsMultipleSelection = false
-        documentPicker.modalPresentationStyle = .fullScreen
-        present(documentPicker, animated: true, completion: nil)
+    func setupToolbar(){
+        let bar = UIToolbar()
+       
+        let doneBtn = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(dismissMyKeyboard))
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        bar.items = [flexSpace, flexSpace, doneBtn]
+        bar.sizeToFit()
+        donadorTextField.inputAccessoryView = bar
+        tiendaTextFIeld.inputAccessoryView = bar
+        kilosTextField.inputAccessoryView = bar
+   }
+    
+    @objc func dismissMyKeyboard(){
+        view.endEditing(true)
     }
     
 
 }
+ 
 
-extension CreateDonationViewController: UIDocumentPickerDelegate {
-    public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
-
-        if let url = urls.first {
-            let fileTool = ImportFileTool()
-            
-            /*do {
-                let readString = try fileTool.readFileAsString(url)
-                self.loadedFile.text = readString
-            } catch {
-                print("error trying to convert data to String")
-            }*/
-            
-            do {
-                let readJson = try fileTool.readFileAsJson(url)
-                print("JSON: \(String(describing: readJson))")
-            } catch {
-                print("error trying to convert data to JSON")
-            }
-            
-            do {
-                let readProducts = try fileTool.readFileAsProducts(url)
-                //self.celsiusTextField.text = String(readTemperature.value)
-                //Aquí llamar al service y enviar los productos a la bdd
-            } catch {
-                print("error trying to convert data to JSON")
-            }
+extension ViewController: UITextFieldDelegate {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    /*public func textFieldDidEndEditing(_ textField: UITextField) {
+        if (Double(textField.text!) == nil) {
+            textField.text = ""
+            let alertController = UIAlertController(title: "Error", message: "Invalid Value", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            present(alertController, animated: true, completion: nil)
         }
-
-        controller.dismiss(animated: true)
-    }
-    
-    public func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
-        controller.dismiss(animated: true)
-    }
+    }*/
 }
+
