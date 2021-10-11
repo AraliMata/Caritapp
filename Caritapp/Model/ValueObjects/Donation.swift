@@ -12,9 +12,9 @@ public class Donation: Codable{
     public let tienda: String
     let kilos: Float16
     //let kilos_recibidos: Float16
-    let fecha: Date
+    let fecha: String
     
-    public init(donador: String, tienda: String, kilos_donados: Float16, fecha: Date){
+    public init(donador: String, tienda: String, kilos_donados: Float16, fecha: String){
         self.donador = donador
         self.tienda = tienda
         self.kilos = kilos_donados
