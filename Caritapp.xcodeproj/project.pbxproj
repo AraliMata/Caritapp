@@ -36,10 +36,12 @@
 		8DACBCDD270F6AC40059BE77 /* appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DACBCDB270F6AC40059BE77 /* appstore.png */; };
 		8DACBCDE270F6AC40059BE77 /* playstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DACBCDC270F6AC40059BE77 /* playstore.png */; };
 		8DC167C02704DD7400AD188F /* CaritappTestsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC167BF2704DD7400AD188F /* CaritappTestsServices.swift */; };
+		AB7EC4622713E60400517C5D /* CalendarServiceIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */; };
 		ABD2575B26EAF575007D866A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2575A26EAF575007D866A /* CalendarViewController.swift */; };
+		ABD8515F2712B8DF00FD2B75 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */; };
 		ABE8BC1D26F7CF5B00707223 /* HistorialDonacionesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */; };
 		ABE8BC2226F7CF7000707223 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC2126F7CF7000707223 /* LogInController.swift */; };
-		ABE8BC2726F7CF9E00707223 /* CalendarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC2626F7CF9E00707223 /* CalendarioController.swift */; };
+		ABE8BC2726F7CF9E00707223 /* CalendarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC2626F7CF9E00707223 /* CalendarioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,10 +95,12 @@
 		8DACBCDB270F6AC40059BE77 /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
 		8DACBCDC270F6AC40059BE77 /* playstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playstore.png; sourceTree = "<group>"; };
 		8DC167BF2704DD7400AD188F /* CaritappTestsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaritappTestsServices.swift; sourceTree = "<group>"; };
+		AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarServiceIntegrationTest.swift; sourceTree = "<group>"; };
 		ABD2575A26EAF575007D866A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialDonacionesController.swift; sourceTree = "<group>"; };
 		ABE8BC2126F7CF7000707223 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
-		ABE8BC2626F7CF9E00707223 /* CalendarioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioController.swift; sourceTree = "<group>"; };
+		ABE8BC2626F7CF9E00707223 /* CalendarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,10 +161,10 @@
 				8D1E670D26F14C82007BE4D1 /* HomeDonorViewController.swift */,
 				ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */,
 				ABE8BC2126F7CF7000707223 /* LogInController.swift */,
-				ABE8BC2626F7CF9E00707223 /* CalendarioController.swift */,
+				ABE8BC2626F7CF9E00707223 /* CalendarioViewController.swift */,
 				7B270BD126F837200038032B /* EstatusDonacionViewController.swift */,
 				8D9D78272710B083002F5049 /* ImportProductsViewController.swift */,
-				2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */
+				2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */,
 			);
 			path = Caritapp;
 			sourceTree = "<group>";
@@ -172,6 +176,7 @@
 				8D06FF9426EADC6500782CD8 /* Info.plist */,
 				8DC167BF2704DD7400AD188F /* CaritappTestsServices.swift */,
 				2CF4F24B271227FF004DE3EE /* DonationServiceIntegrationTests.swift */,
+				AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */,
 			);
 			path = CaritappTests;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 			children = (
 				8D1E360D26FE4F2100314A99 /* CreateDonationService.swift */,
 				2CF4F24627121D4A004DE3EE /* DonationService.swift */,
+				ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -367,10 +373,11 @@
 				8D1E66FF26F14BB8007BE4D1 /* EditProductViewController.swift in Sources */,
 				ABE8BC2226F7CF7000707223 /* LogInController.swift in Sources */,
 				ABD2575B26EAF575007D866A /* CalendarViewController.swift in Sources */,
-				ABE8BC2726F7CF9E00707223 /* CalendarioController.swift in Sources */,
+				ABE8BC2726F7CF9E00707223 /* CalendarioViewController.swift in Sources */,
 				8D254205270B660500EC540F /* ImportFileTool.swift in Sources */,
 				8D06FF8026EADC6500782CD8 /* ViewController.swift in Sources */,
 				8D9D78282710B083002F5049 /* ImportProductsViewController.swift in Sources */,
+				ABD8515F2712B8DF00FD2B75 /* CalendarService.swift in Sources */,
 				8D1E360926FE4D8500314A99 /* Donation.swift in Sources */,
 				ABE8BC1D26F7CF5B00707223 /* HistorialDonacionesController.swift in Sources */,
 				8D06FF7C26EADC6500782CD8 /* AppDelegate.swift in Sources */,
@@ -393,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CF4F24C271227FF004DE3EE /* DonationServiceIntegrationTests.swift in Sources */,
+				AB7EC4622713E60400517C5D /* CalendarServiceIntegrationTest.swift in Sources */,
 				8DC167C02704DD7400AD188F /* CaritappTestsServices.swift in Sources */,
 				8D06FF9326EADC6500782CD8 /* CaritappTests.swift in Sources */,
 				7B270BD326F837200038032B /* EstatusDonacionViewController.swift in Sources */,

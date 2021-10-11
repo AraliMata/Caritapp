@@ -9,21 +9,21 @@ import XCTest
 
 @testable import Caritapp
 
-class DonationServiceIntegrationTest: XCTestCase {
-    let donationService = DonationService()
+class CalendarServiceIntegrationTest: XCTestCase {
+    let calendarService = CalendarService()
 
-    func testRetrieveDonation() throws {
+    func testRetrieveCalendar() throws {
         // When
-        let donationExpectation = expectation(description: "Donation Retrieved")
-        donationService.retrieveDonation() {
+        let calendarExpectation = expectation(description: "Calendar Retrieved")
+        calendarService.retrieveCalendar() {
             (donation) in
             //print("Test retrieveDonation")
             //print(donation)
-            XCTAssertEqual(donation.donador, "Walmart")
-            XCTAssertEqual(donation.tienda, "Juventud")
-            XCTAssertEqual(donation.kilos, 15.2)
+            //XCTAssertEqual(donation.donador, "Walmart")
+            //XCTAssertEqual(donation.tienda, "Juventud")
+            //XCTAssertEqual(donation.kilos, 15.2)
             
-            donationExpectation.fulfill()
+            calendarExpectation.fulfill()
             
             
         }
@@ -41,4 +41,3 @@ class DonationServiceIntegrationTest: XCTestCase {
     }
 
 }
-
