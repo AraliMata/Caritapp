@@ -8,6 +8,9 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    let calendarService = CalendarService()
+
 
     @IBOutlet weak var registrarRecepcion: UIButton!
     
@@ -20,6 +23,22 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CalendarioSegue" {
+            let controller = (segue.destination as! CalendarioViewController)
+            
+            calendarService.retrieveCalendar() {
+                (donation) in
+                DispatchQueue.main.async {
+                    controller.donation = donation
+                    
+                    controller.tableView.reloadData()
+                }
+            }
+            
+        }
     }
 
 
