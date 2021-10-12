@@ -54,9 +54,10 @@ extension ImportProductsViewController: UIDocumentPickerDelegate {
             
             do {
                 
-                let readJson = try fileTool.readFileAsJson(url)
+                let readJson = try fileTool.readFileAsString(url)
                 print("JSON: \(String(describing: readJson))")
-                createDonationService.sendProducts(file: readJson as! Data, idDonation: String(self.idDonation!)) { (response) in
+                
+                createDonationService.sendProducts(file: readJson, idDonation: String(self.idDonation!)) { (response) in
                     print(response)
                 }
             
