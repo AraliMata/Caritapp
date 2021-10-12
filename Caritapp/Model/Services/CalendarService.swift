@@ -1,17 +1,19 @@
 //
-//  DonationService.swift
+//  CalendarService.swift
 //  Caritapp
 //
-//  Created by user193919 on 10/9/21.
+//  Created by user194078 on 10/10/21.
 //
+
+
 
 import Foundation
 
-class DonationService {
-    public typealias RetrieveDonationClosure = (Donation) -> Void
+class CalendarService {
+    public typealias RetrieveDonationClosure = ([Donation]) -> Void
 
-    func retrieveDonation(_ handler: @escaping RetrieveDonationClosure) {
-            let donationEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/2"
+    func retrieveCalendar(_ handler: @escaping RetrieveDonationClosure) {
+            let donationEndpoint: String = "https://caritapp-rest.herokuapp.com/calendar/history"
             guard let url = URL(string: donationEndpoint) else {
                 print("Error: cannot create URL")
                 return
@@ -49,7 +51,7 @@ class DonationService {
                         print("statusCode: \(httpResponse.statusCode)")
                         
                         if (httpResponse.statusCode == 200) {
-                            let donation = try decoder.decode(Donation.self, from: responseData)
+                            let donation = try decoder.decode([Donation].self, from: responseData)
                             handler(donation)
                         }
                         else {
@@ -57,7 +59,6 @@ class DonationService {
                         }
                         
                     }
-                    
                     
                 } catch {
                     print("error trying to convert data to JSON")
@@ -69,5 +70,6 @@ class DonationService {
       }
     
 }
+
 
 
