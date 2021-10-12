@@ -64,7 +64,7 @@ class CreateDonationService {
         
   }
     
-    func sendProducts(file: Data, idDonation: String, _ handler: @escaping sendProductsClosure) {
+    func sendProducts(file: String, idDonation: String, _ handler: @escaping sendProductsClosure) {
         let sendProductsEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/createDonation/importProducts/"+idDonation //Poner endpoint
         guard let url = URL(string: sendProductsEndpoint) else {
             print("Error: cannot create URL")
@@ -78,8 +78,11 @@ class CreateDonationService {
         
         urlRequest.httpMethod = "POST"
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-       
-        urlRequest.httpBody = file
+        let encoder = JSONEncoder()
+        
+        let jsonData = try! encoder.encode(file)
+        urlRequest.httpBody = jsonData
+        urlRequest.httpBody = jsonData
         
         let task = session.dataTask(with: urlRequest) {
             (data, response, error) in
