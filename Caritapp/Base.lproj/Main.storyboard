@@ -296,6 +296,16 @@
                                             <constraint firstItem="k7d-B6-4AQ" firstAttribute="width" secondItem="iPk-6x-cct" secondAttribute="width" multiplier="0.5" id="Qz8-aA-kxO"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V2a-0P-pAP" userLabel="calendario">
+                                        <rect key="frame" x="104" y="423" width="207" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.046492169649999998" green="0.65193145809999997" blue="0.54139779320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                        <state key="normal" title="Calendario"/>
+                                        <connections>
+                                            <segue destination="23D-jX-al1" kind="show" identifier="Calendario2Segue" id="ewK-BA-g49"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="gKq-Zv-cBl"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -323,6 +333,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="calendario" destination="V2a-0P-pAP" id="Ocg-tm-hYf"/>
                         <outlet property="corregirDonacion" destination="bmt-Uj-7ym" id="9xO-pl-hZC"/>
                         <outlet property="crearDonacion" destination="LrP-lG-FIa" id="J3I-X2-mPw"/>
                     </connections>
@@ -1111,7 +1122,7 @@
             <objects>
                 <viewController id="23D-jX-al1" customClass="CalendarioViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R2z-Ec-FUq" customClass="CalendarioView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="114" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yDg-sM-G80">
@@ -1180,24 +1191,17 @@
                                                 <constraint firstItem="6IT-bU-5zU" firstAttribute="top" secondItem="d6X-Wq-zRa" secondAttribute="top" constant="22" id="z42-Rt-xYU"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="conversionDate" destination="pgF-px-mgg" id="kkK-Wu-XBN"/>
-                                            <outlet property="convertedUnit" destination="jcY-SB-v41" id="5Dx-8V-7vV"/>
-                                            <outlet property="convertedValue" destination="k6u-aF-DTJ" id="1Tr-Fe-c6h"/>
-                                            <outlet property="originalUnit" destination="vv3-20-uwI" id="5fn-PU-drr"/>
-                                            <outlet property="originalValue" destination="bgM-UR-4VU" id="igU-Cr-FYu"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3bG-OK-uew"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="tableView" destination="yDg-sM-G80" id="E8Z-K4-vKX"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="bJ8-vo-I3F"/>
-                    <connections>
-                        <outlet property="tableView" destination="yDg-sM-G80" id="imI-dO-I7Y"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6G-q9-dsy" sceneMemberID="firstResponder"/>
             </objects>
@@ -2808,6 +2812,9 @@
             <point key="canvasLocation" x="155" y="94"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ewK-BA-g49"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
