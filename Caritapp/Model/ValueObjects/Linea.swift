@@ -2,12 +2,12 @@
 //  Product.swift
 //  Caritapp
 //
-//  Created by user189928 on 10/4/21.
+//  Created by Aralí Mata on 10/4/21.
 //
 
 import Foundation
 
-public class Product: Codable{
+public class Linea: Codable{
     public let upc: String;
     //Para tabla linea
     public let cantidad_supuesta: Float
@@ -15,7 +15,7 @@ public class Product: Codable{
     public let precio_unitario: Float
     public let precio_total: Float
     public let destino: String
-    //Ver que onda con los ids y llaves foraneas. Piensa en como formular la pregunta
+
     
     public init(upc: String, cant_s: Float, cant_r: Float, precio_unit: Float, precio_tot: Float){
         self.upc = upc

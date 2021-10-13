@@ -43,29 +43,27 @@ class CreateDonationService {
             }
             
            
-            print(responseData)
-                
-            let idReceived = String(decoding: responseData, as: UTF8.self)
-                
-                
-                //let createdDonation = try decoder.decode(Donation.self, from: responseData)
-                
             if let httpResponse = response as? HTTPURLResponse {
                 print("statusCode: \(httpResponse.statusCode)")
-                print("idDonacion:", idReceived)
-            }
                 
-            handler(idReceived)
-           
+                if (httpResponse.statusCode == 200) {
+                    let idReceived = String(decoding: responseData, as: UTF8.self)
+                    
+                    handler(idReceived)
+                }
+                else {
+                    print("Error: Failed to retrieve donation")
+                }
+                
+            }
 
         }
         task.resume()
         
-        
   }
     
     func sendProducts(file: String, idDonation: String, _ handler: @escaping sendProductsClosure) {
-        let sendProductsEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/createDonation/importProducts/"+idDonation //Poner endpoint
+        let sendProductsEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/createDonation/importProducts/"+idDonation 
         guard let url = URL(string: sendProductsEndpoint) else {
             print("Error: cannot create URL")
             return
