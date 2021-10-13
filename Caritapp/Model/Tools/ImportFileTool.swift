@@ -2,7 +2,7 @@
 //  ImportFileTool.swift
 //  Caritapp
 //
-//  Created by user189928 on 10/4/21.
+//  Created by Aralí Mata on 10/4/21.
 //
 
 import Foundation
@@ -13,7 +13,6 @@ class ImportFileTool {
         case invalidDirectory
         case writtingFailed
     }
-    //Revisar history de TemperaturConverter para saber como manejar el archivo con varios productos
     
     let fileManager: FileManager
     
@@ -21,13 +20,13 @@ class ImportFileTool {
             self.fileManager = fileManager
     }
 
-    public func readFileAsProducts(_ url: URL) throws -> [Product]{
+    public func readFileAsLinea(_ url: URL) throws -> [Linea]{
         print("The Url is : \(url)")
-        var donatedProducts : [Product]
+        var donatedProducts : [Linea]
         
         let data = try Data(contentsOf: url)
         let decoder = JSONDecoder()
-        donatedProducts = try decoder.decode([Product].self, from: data)
+        donatedProducts = try decoder.decode([Linea].self, from: data)
         
         print("Product=  UPC:\(donatedProducts[0].upc)")
         
@@ -56,7 +55,7 @@ class ImportFileTool {
 
     public typealias SaveFileClosure = (URL) -> Void
 
-    public func saveFile(products: [Product], _ handler: SaveFileClosure) throws {
+    public func saveFile(products: [Linea], _ handler: SaveFileClosure) throws {
         let encoder = JSONEncoder()
         let jsonData = try! encoder.encode(products)
         
