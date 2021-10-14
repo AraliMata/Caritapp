@@ -29,35 +29,61 @@ class CreateDonationViewController: UIViewController {
     }
     
     @IBAction func crearDonacion(_ sender: UIButton) {
-        //Variable booleana que muestre que ya se seleccionó el archivo json a subir
         
-        if let donadorValue = donadorTextField.text{
-            if !donadorValue.isEmpty{
-                if let tiendaValue = tiendaTextFIeld.text{
-                    if !tiendaValue.isEmpty{
-                        if let kilosValue = kilosTextField.text{
-                            if !kilosValue.isEmpty{
+        
+        
+        if let donadorValue = donadorTextField.text, !donadorValue.isEmpty{
+            
+            if let tiendaValue = tiendaTextFIeld.text, !tiendaValue.isEmpty{
+                    
+                if let kilosValue = kilosTextField.text, !kilosValue.isEmpty{
                                 
-                                let dateFormatter = DateFormatter()
-                                                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
                                 
-                                let fecha: String = dateFormatter.string(from: self.fechaDatePicker.date) as String
+                    let fecha: String = dateFormatter.string(from: self.fechaDatePicker.date) as String
                                 
-                                let donationReceived = Donation(donador: String(donadorValue), tienda: String(tiendaValue), kilos_donados: Float16(kilosValue)!, kilos_recibidos: Float16(0),  fecha: fecha)
+                    let donationReceived = Donation(donador: String(donadorValue), tienda: String(tiendaValue), kilos_donados: Float16(kilosValue)!, kilos_recibidos: Float16(0),  fecha: fecha)
                                 
-                                print("Fecha:", fecha)
+                    print("Fecha:", fecha)
                                 
-                                createDonationService.sendDonation(donation: donationReceived) { (idReceived) in
+                    createDonationService.sendDonation(donation: donationReceived) {
+                        [weak self](idReceived) in
                                     print(idReceived)
-                                    self.idDonation = idReceived
-                                }
-                            
+                                    self!.idDonation = idReceived
+                        
+                        DispatchQueue.main.async {
+                           // UI work here
+                            let importProductsView = self!.storyboard?.instantiateViewController(withIdentifier: "ImportProductsViewController") as! ImportProductsViewController
+                            importProductsView.idDonation = idReceived
+                            self!.present(importProductsView, animated: true, completion: nil)
                         }
+                        
+                        
+                        
+                        
+                        /*let VC = self!.storyboard?.instantiateViewController(withIdentifier: "ImportProductsViewController") as! ImportProductsViewController
+                        self!.present(VC, animated: true, completion: nil)*/
+                        
                     }
+                            
+                        
+                }else{
+                    print("Entré al else")
+                    let alertController = UIAlertController(title: "Error", message: "Coloca los kilos a donar", preferredStyle: UIAlertController.Style.alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    present(alertController, animated: true, completion: nil)
                 }
+            }else{
+                let alertController = UIAlertController(title: "Error", message: "Coloca el nombre de la tienda", preferredStyle: UIAlertController.Style.alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                present(alertController, animated: true, completion: nil)
             }
+        }else{
+            let alertController = UIAlertController(title: "Error", message: "Coloca un donador", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            present(alertController, animated: true, completion: nil)
         }
-     }
         //Poner alertas en los else
     }
     

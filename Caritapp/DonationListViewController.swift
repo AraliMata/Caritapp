@@ -1,25 +1,23 @@
 //
-//  ListProductsViewController.swift
+//  DonationListViewController.swift
 //  Caritapp
 //
-//  Created by user189928 on 9/14/21.
+//  Created by user189928 on 10/13/21.
 //
 
 import UIKit
 
-/*class ListProductsViewController: UIViewController {
-
-    
+class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
     @IBOutlet weak var tableView: UITableView!
+    let donationService = DonationService()
     
-    //let lineaService = LineaService()
-    
-    var history : [Linea]? {
+    var history : [Donation]? {
         didSet {
 
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -46,10 +44,10 @@ import UIKit
     }*/
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListProductsViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListDonationViewCell {
             
-            let product = history?[indexPath.row]
-            cell.updateCell(product: product!)
+            let donation = history?[indexPath.row]
+            cell.updateCell(donation: donation!)
             
             return cell
         }
@@ -58,8 +56,4 @@ import UIKit
         return UITableViewCell()
     }
     
-
 }
-
-
-*/

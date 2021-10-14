@@ -11,17 +11,43 @@ import XCTest
 
 class CreateDonationServiceIntegrationTests: XCTestCase {
     let createDonationService = CreateDonationService()
+    let fileTool = FileTool()
 
-    func testRetrieveDonation() throws {
+    func testSendDonation() throws {
         // When
         let donationExpectation = expectation(description: "ID donation retrieved")
         
-        createDonationService.sendDonation(donation: Donation(donador: "Alsuper",tienda: "3 culturas",kilos_donados: 40, fecha: "2021-11-2021")) { (idDonation) in
+        createDonationService.sendDonation(donation: Donation(donador: "Alsuper",tienda: "3 culturas",kilos_donados: 40, kilos_recibidos: Float16(0), fecha: "2021-11-2021")) { (idDonation) in
             
             XCTAssert((idDonation as Any) is String && idDonation.count  < 5)
             donationExpectation.fulfill()
         }
         
+        // Then
+        waitForExpectations(timeout: 20) {
+            (error) in
+
+            if let error = error {
+                XCTFail("waitForExpectations errored: \(error)")
+            } else {
+                XCTAssert(true)
+            }
+        }
+    }
+    
+    func testSendProducts() throws{
+        // When
+        guard let url = URL(string: "path") else { print("Error: cannot create URL")
+            return}
+        
+        let productsExpectation = expectation(description: "ID donation retrieved")
+        let readJson = try fileTool.readFileAsString(url)
+        
+        createDonationService.sendProducts(file: readJson, idDonation: "89") { (respuesta) in
+            XCTAssertEqual(respuesta, "200")
+            productsExpectation.fulfill()
+        }
+       
         // Then
         waitForExpectations(timeout: 20) {
             (error) in
