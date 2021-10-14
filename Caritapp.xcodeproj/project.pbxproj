@@ -41,6 +41,7 @@
 		8DDF02F427175CB800214477 /* ListProductsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF02F327175CB800214477 /* ListProductsViewCell.swift */; };
 		8DF2A7C12717E1FE0080F61A /* ImportProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A7C02717E1FE0080F61A /* ImportProductsTests.swift */; };
 		8DF2A7C62717E2CF0080F61A /* FileToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A7C52717E2CF0080F61A /* FileToolTests.swift */; };
+		AB5BA614271742A600F7E960 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */; };
 		AB7EC4622713E60400517C5D /* CalendarServiceIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */; };
 		ABD8515F2712B8DF00FD2B75 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */; };
 		ABE8BC1D26F7CF5B00707223 /* HistorialDonacionesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */; };
@@ -106,6 +107,7 @@
 		8DDF02F327175CB800214477 /* ListProductsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductsViewCell.swift; sourceTree = "<group>"; };
 		8DF2A7C02717E1FE0080F61A /* ImportProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportProductsTests.swift; sourceTree = "<group>"; };
 		8DF2A7C52717E2CF0080F61A /* FileToolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileToolTests.swift; sourceTree = "<group>"; };
+		AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarServiceIntegrationTest.swift; sourceTree = "<group>"; };
 		ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialDonacionesController.swift; sourceTree = "<group>"; };
@@ -153,7 +155,9 @@
 		8D06FF7A26EADC6500782CD8 /* Caritapp */ = {
 			isa = PBXGroup;
 			children = (
-				8DDF02E727174F1600214477 /* View */,
+
+				AB5BA6122717425F00F7E960 /* View */,
+				ABD2575A26EAF575007D866A /* CalendarViewController.swift */,
 				8D55B39926EAF50C002A4205 /* CreateDonationViewController.swift */,
 				8D1E66F926F14B46007BE4D1 /* ListProductsViewController.swift */,
 				8D1E66FE26F14BB8007BE4D1 /* EditProductViewController.swift */,
@@ -252,11 +256,13 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		8DDF02E727174F1600214477 /* View */ = {
+
+		AB5BA6122717425F00F7E960 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8DDF02E827174F4600214477 /* ListDonationViewCell.swift */,
-				8DDF02F327175CB800214477 /* ListProductsViewCell.swift */,
+				AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */,
+        8DDF02E827174F4600214477 /* ListDonationViewCell.swift */,
+				8DDF02F327175CB800214477 /* ListProductsViewCell.swift */
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -406,6 +412,7 @@
 				ABD8515F2712B8DF00FD2B75 /* CalendarService.swift in Sources */,
 				8D1E360926FE4D8500314A99 /* Donation.swift in Sources */,
 				ABE8BC1D26F7CF5B00707223 /* HistorialDonacionesController.swift in Sources */,
+				AB5BA614271742A600F7E960 /* CalendarTableViewCell.swift in Sources */,
 				8D06FF7C26EADC6500782CD8 /* AppDelegate.swift in Sources */,
 				2CF4F24227121B54004DE3EE /* ExportDonationViewController.swift in Sources */,
 				8D1E670E26F14C82007BE4D1 /* HomeDonorViewController.swift in Sources */,
