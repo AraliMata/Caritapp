@@ -10,7 +10,6 @@
 		2CF4F24227121B54004DE3EE /* ExportDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */; };
 		2CF4F24727121D4A004DE3EE /* DonationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24627121D4A004DE3EE /* DonationService.swift */; };
 		2CF4F24C271227FF004DE3EE /* DonationServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24B271227FF004DE3EE /* DonationServiceIntegrationTests.swift */; };
-		7B270BD226F837200038032B /* EstatusDonacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B270BD126F837200038032B /* EstatusDonacionViewController.swift */; };
 		8D06FF7C26EADC6500782CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF7B26EADC6500782CD8 /* AppDelegate.swift */; };
 		8D06FF7E26EADC6500782CD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF7D26EADC6500782CD8 /* SceneDelegate.swift */; };
 		8D06FF8026EADC6500782CD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF7F26EADC6500782CD8 /* ViewController.swift */; };
@@ -44,7 +43,6 @@
 		AB5BA614271742A600F7E960 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */; };
 		AB7EC4622713E60400517C5D /* CalendarServiceIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */; };
 		ABD8515F2712B8DF00FD2B75 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */; };
-		ABE8BC1D26F7CF5B00707223 /* HistorialDonacionesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */; };
 		ABE8BC2226F7CF7000707223 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC2126F7CF7000707223 /* LogInController.swift */; };
 		ABE8BC2726F7CF9E00707223 /* CalendarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC2626F7CF9E00707223 /* CalendarioViewController.swift */; };
 /* End PBXBuildFile section */
@@ -70,7 +68,6 @@
 		2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportDonationViewController.swift; sourceTree = "<group>"; };
 		2CF4F24627121D4A004DE3EE /* DonationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationService.swift; sourceTree = "<group>"; };
 		2CF4F24B271227FF004DE3EE /* DonationServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationServiceIntegrationTests.swift; sourceTree = "<group>"; };
-		7B270BD126F837200038032B /* EstatusDonacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstatusDonacionViewController.swift; sourceTree = "<group>"; };
 		8D06FF7B26EADC6500782CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D06FF7D26EADC6500782CD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8D06FF7F26EADC6500782CD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +107,6 @@
 		AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarServiceIntegrationTest.swift; sourceTree = "<group>"; };
 		ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
-		ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialDonacionesController.swift; sourceTree = "<group>"; };
 		ABE8BC2126F7CF7000707223 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		ABE8BC2626F7CF9E00707223 /* CalendarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,20 +151,16 @@
 		8D06FF7A26EADC6500782CD8 /* Caritapp */ = {
 			isa = PBXGroup;
 			children = (
-
 				AB5BA6122717425F00F7E960 /* View */,
-				ABD2575A26EAF575007D866A /* CalendarViewController.swift */,
 				8D55B39926EAF50C002A4205 /* CreateDonationViewController.swift */,
 				8D1E66F926F14B46007BE4D1 /* ListProductsViewController.swift */,
 				8D1E66FE26F14BB8007BE4D1 /* EditProductViewController.swift */,
 				8D1E670326F14BE5007BE4D1 /* ProductViewController.swift */,
 				8D1E670826F14C67007BE4D1 /* HomeViewController.swift */,
 				8D1E670D26F14C82007BE4D1 /* HomeDonorViewController.swift */,
-				ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */,
 				ABE8BC2126F7CF7000707223 /* LogInController.swift */,
 				ABE8BC2626F7CF9E00707223 /* CalendarioViewController.swift */,
 				8D06FF7F26EADC6500782CD8 /* ViewController.swift */,
-				7B270BD126F837200038032B /* EstatusDonacionViewController.swift */,
 				8D9D78272710B083002F5049 /* ImportProductsViewController.swift */,
 				2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */,
 				8DACBCD7270F68B70059BE77 /* Images */,
@@ -256,13 +248,12 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-
 		AB5BA6122717425F00F7E960 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */,
-        8DDF02E827174F4600214477 /* ListDonationViewCell.swift */,
-				8DDF02F327175CB800214477 /* ListProductsViewCell.swift */
+				8DDF02E827174F4600214477 /* ListDonationViewCell.swift */,
+				8DDF02F327175CB800214477 /* ListProductsViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -411,7 +402,6 @@
 				8DDF02E927174F4600214477 /* ListDonationViewCell.swift in Sources */,
 				ABD8515F2712B8DF00FD2B75 /* CalendarService.swift in Sources */,
 				8D1E360926FE4D8500314A99 /* Donation.swift in Sources */,
-				ABE8BC1D26F7CF5B00707223 /* HistorialDonacionesController.swift in Sources */,
 				AB5BA614271742A600F7E960 /* CalendarTableViewCell.swift in Sources */,
 				8D06FF7C26EADC6500782CD8 /* AppDelegate.swift in Sources */,
 				2CF4F24227121B54004DE3EE /* ExportDonationViewController.swift in Sources */,
@@ -420,7 +410,6 @@
 				8D06FF7E26EADC6500782CD8 /* SceneDelegate.swift in Sources */,
 				8DDF02EF27175C5000214477 /* LineaService.swift in Sources */,
 				8D1E360E26FE4F2100314A99 /* CreateDonationService.swift in Sources */,
-				7B270BD226F837200038032B /* EstatusDonacionViewController.swift in Sources */,
 				8D1E670926F14C67007BE4D1 /* HomeViewController.swift in Sources */,
 				8D1E66FA26F14B46007BE4D1 /* ListProductsViewController.swift in Sources */,
 				8D1E670426F14BE5007BE4D1 /* ProductViewController.swift in Sources */,

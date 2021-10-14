@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-458" y="94"/>
+            <point key="canvasLocation" x="-1390" y="443"/>
         </scene>
         <!--Home-->
         <scene sceneID="OeJ-N7-FMJ">
@@ -148,9 +148,6 @@
                                                 <color key="backgroundColor" red="0.046492169652706854" green="0.65193145805329955" blue="0.54139779318805614" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Calendario"/>
-                                                <connections>
-                                                    <segue destination="23D-jX-al1" kind="show" identifier="CalendarioSegue" id="gaj-s5-7BR"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1103,7 +1100,7 @@
         <!--Calendario View Controller-->
         <scene sceneID="1rr-tO-tdQ">
             <objects>
-                <viewController id="23D-jX-al1" customClass="CalendarioViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendarioViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="23D-jX-al1" customClass="CalendarioViewController" customModule="Caritapp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R2z-Ec-FUq" customClass="CalendarioView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1162,9 +1159,6 @@
                                                     <state key="normal" title="Ver Calendario">
                                                         <color key="titleColor" red="0.92540913820000004" green="0.92554211620000004" blue="0.92537993190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="verCalendario:" destination="23D-jX-al1" eventType="touchUpInside" id="PeX-O0-46E"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1174,17 +1168,23 @@
                                                 <constraint firstItem="6IT-bU-5zU" firstAttribute="top" secondItem="d6X-Wq-zRa" secondAttribute="top" constant="22" id="z42-Rt-xYU"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fechaRegistro" destination="jcY-SB-v41" id="bW2-vv-7rr"/>
+                                            <outlet property="nombreDonador" destination="pgF-px-mgg" id="a99-e2-Sq0"/>
+                                            <outlet property="nombreTienda" destination="vv3-20-uwI" id="AdV-0M-ug6"/>
+                                            <outlet property="numKilos" destination="bgM-UR-4VU" id="VQn-9W-GKQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3bG-OK-uew"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="tableView" destination="yDg-sM-G80" id="E8Z-K4-vKX"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="bJ8-vo-I3F"/>
+                    <connections>
+                        <outlet property="tableView" destination="yDg-sM-G80" id="m91-af-d93"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6G-q9-dsy" sceneMemberID="firstResponder"/>
             </objects>
@@ -2955,9 +2955,6 @@
             <point key="canvasLocation" x="1959" y="846"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ewK-BA-g49"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

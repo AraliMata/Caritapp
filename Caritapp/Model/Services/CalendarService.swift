@@ -27,7 +27,7 @@ class CalendarService {
             let task = session.dataTask(with: urlRequest) {
                 (data, response, error) in
                 guard error == nil else {
-                    print("error calling GET on /donation/{id}")
+                    print("error calling GET on /calendar/history")
                     print(error!)
                     return
                 }
