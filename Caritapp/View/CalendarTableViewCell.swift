@@ -8,19 +8,22 @@
 import UIKit
 
 class CalendarTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var nombreDonador: UILabel!
+    
     @IBOutlet weak var nombreTienda: UILabel!
+    
     @IBOutlet weak var numKilos: UILabel!
+    
     @IBOutlet weak var fechaRegistro: UILabel!
-    //@IBOutlet weak var convertedUnit: UILabel!
     
     func updateCell(donacion: Donation) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
         nombreDonador.text = String(donacion.donador)
         nombreTienda.text = String(donacion.tienda)
-        numKilos.text = String(donacion.kilos)
-        fechaRegistro.text = dateFormatter.string(from: donacion.fecha)
+        numKilos.text = String(donacion.kilos_donados)
+        fechaRegistro.text = donacion.fecha
     }
     
 }
