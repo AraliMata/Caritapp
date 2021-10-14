@@ -345,7 +345,7 @@
         <!--importarProductos-->
         <scene sceneID="YNz-q6-agb">
             <objects>
-                <viewController id="nwV-yX-hgV" userLabel="importarProductos" sceneMemberID="viewController">
+                <viewController id="nwV-yX-hgV" userLabel="importarProductos" customClass="ImportProductsViewController" customModule="Caritapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kex-mS-PBq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -364,7 +364,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="importarProductos:" destination="VdG-Dr-ZHq" eventType="touchUpInside" id="1Xn-Cc-lFi"/>
+                                    <action selector="importarProductos:" destination="nwV-yX-hgV" eventType="touchUpInside" id="jFl-DJ-ujR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -385,7 +385,6 @@
                     <navigationItem key="navigationItem" id="Tdh-7J-o6x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nz7-wy-hXp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="VdG-Dr-ZHq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1128.985507246377" y="890.625"/>
         </scene>
@@ -1576,7 +1575,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="crearDonacion:" destination="lnO-Ig-7ye" eventType="touchUpInside" id="lNE-Ck-lYh"/>
-                                                    <segue destination="nwV-yX-hgV" kind="show" id="ohi-Pz-V2G"/>
+                                                    <segue destination="nwV-yX-hgV" kind="show" identifier="importacionProductos" id="ohi-Pz-V2G"/>
                                                 </connections>
                                             </button>
                                         </subviews>

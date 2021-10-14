@@ -11,8 +11,6 @@
 		2CF4F24727121D4A004DE3EE /* DonationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24627121D4A004DE3EE /* DonationService.swift */; };
 		2CF4F24C271227FF004DE3EE /* DonationServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24B271227FF004DE3EE /* DonationServiceIntegrationTests.swift */; };
 		7B270BD226F837200038032B /* EstatusDonacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B270BD126F837200038032B /* EstatusDonacionViewController.swift */; };
-		7B270BD326F837200038032B /* EstatusDonacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B270BD126F837200038032B /* EstatusDonacionViewController.swift */; };
-		7B270BD426F837200038032B /* EstatusDonacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B270BD126F837200038032B /* EstatusDonacionViewController.swift */; };
 		8D06FF7C26EADC6500782CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF7B26EADC6500782CD8 /* AppDelegate.swift */; };
 		8D06FF7E26EADC6500782CD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF7D26EADC6500782CD8 /* SceneDelegate.swift */; };
 		8D06FF8026EADC6500782CD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF7F26EADC6500782CD8 /* ViewController.swift */; };
@@ -30,15 +28,15 @@
 		8D1E670926F14C67007BE4D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E670826F14C67007BE4D1 /* HomeViewController.swift */; };
 		8D1E670E26F14C82007BE4D1 /* HomeDonorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E670D26F14C82007BE4D1 /* HomeDonorViewController.swift */; };
 		8D254205270B660500EC540F /* ImportFileTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D254204270B660500EC540F /* ImportFileTool.swift */; };
-		8D25420A270B664200EC540F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D254209270B664200EC540F /* Product.swift */; };
+		8D25420A270B664200EC540F /* Linea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D254209270B664200EC540F /* Linea.swift */; };
 		8D55B39A26EAF50C002A4205 /* CreateDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55B39926EAF50C002A4205 /* CreateDonationViewController.swift */; };
+		8D587C992715154E004DC660 /* CreateDonationServiceIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D587C982715154E004DC660 /* CreateDonationServiceIntegrationTest.swift */; };
 		8D9D78282710B083002F5049 /* ImportProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D78272710B083002F5049 /* ImportProductsViewController.swift */; };
 		8DACBCDD270F6AC40059BE77 /* appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DACBCDB270F6AC40059BE77 /* appstore.png */; };
 		8DACBCDE270F6AC40059BE77 /* playstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DACBCDC270F6AC40059BE77 /* playstore.png */; };
 		8DC167C02704DD7400AD188F /* CaritappTestsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC167BF2704DD7400AD188F /* CaritappTestsServices.swift */; };
 		AB5BA614271742A600F7E960 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */; };
 		AB7EC4622713E60400517C5D /* CalendarServiceIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */; };
-		ABD2575B26EAF575007D866A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2575A26EAF575007D866A /* CalendarViewController.swift */; };
 		ABD8515F2712B8DF00FD2B75 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */; };
 		ABE8BC1D26F7CF5B00707223 /* HistorialDonacionesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */; };
 		ABE8BC2226F7CF7000707223 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC2126F7CF7000707223 /* LogInController.swift */; };
@@ -90,15 +88,15 @@
 		8D254202270B65CB00EC540F /* CaritappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaritappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D254203270B65CB00EC540F /* CaritappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaritappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D254204270B660500EC540F /* ImportFileTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportFileTool.swift; sourceTree = "<group>"; };
-		8D254209270B664200EC540F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		8D254209270B664200EC540F /* Linea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linea.swift; sourceTree = "<group>"; };
 		8D55B39926EAF50C002A4205 /* CreateDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDonationViewController.swift; sourceTree = "<group>"; };
+		8D587C982715154E004DC660 /* CreateDonationServiceIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDonationServiceIntegrationTest.swift; sourceTree = "<group>"; };
 		8D9D78272710B083002F5049 /* ImportProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportProductsViewController.swift; sourceTree = "<group>"; };
 		8DACBCDB270F6AC40059BE77 /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
 		8DACBCDC270F6AC40059BE77 /* playstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playstore.png; sourceTree = "<group>"; };
 		8DC167BF2704DD7400AD188F /* CaritappTestsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaritappTestsServices.swift; sourceTree = "<group>"; };
 		AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarServiceIntegrationTest.swift; sourceTree = "<group>"; };
-		ABD2575A26EAF575007D866A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialDonacionesController.swift; sourceTree = "<group>"; };
 		ABE8BC2126F7CF7000707223 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
@@ -146,15 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				AB5BA6122717425F00F7E960 /* View */,
-				8DACBCD7270F68B70059BE77 /* Images */,
-				8D1E35FF26FE4C2500314A99 /* Model */,
-				8D06FF7B26EADC6500782CD8 /* AppDelegate.swift */,
-				8D06FF7D26EADC6500782CD8 /* SceneDelegate.swift */,
-				8D06FF7F26EADC6500782CD8 /* ViewController.swift */,
-				8D06FF8126EADC6500782CD8 /* Main.storyboard */,
-				8D06FF8426EADC6500782CD8 /* Assets.xcassets */,
-				8D06FF8626EADC6500782CD8 /* LaunchScreen.storyboard */,
-				8D06FF8926EADC6500782CD8 /* Info.plist */,
 				ABD2575A26EAF575007D866A /* CalendarViewController.swift */,
 				8D55B39926EAF50C002A4205 /* CreateDonationViewController.swift */,
 				8D1E66F926F14B46007BE4D1 /* ListProductsViewController.swift */,
@@ -165,9 +154,18 @@
 				ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */,
 				ABE8BC2126F7CF7000707223 /* LogInController.swift */,
 				ABE8BC2626F7CF9E00707223 /* CalendarioViewController.swift */,
+				8D06FF7F26EADC6500782CD8 /* ViewController.swift */,
 				7B270BD126F837200038032B /* EstatusDonacionViewController.swift */,
 				8D9D78272710B083002F5049 /* ImportProductsViewController.swift */,
 				2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */,
+				8DACBCD7270F68B70059BE77 /* Images */,
+				8D1E35FF26FE4C2500314A99 /* Model */,
+				8D06FF7B26EADC6500782CD8 /* AppDelegate.swift */,
+				8D06FF7D26EADC6500782CD8 /* SceneDelegate.swift */,
+				8D06FF8126EADC6500782CD8 /* Main.storyboard */,
+				8D06FF8426EADC6500782CD8 /* Assets.xcassets */,
+				8D06FF8626EADC6500782CD8 /* LaunchScreen.storyboard */,
+				8D06FF8926EADC6500782CD8 /* Info.plist */,
 			);
 			path = Caritapp;
 			sourceTree = "<group>";
@@ -179,6 +177,7 @@
 				8D06FF9426EADC6500782CD8 /* Info.plist */,
 				8DC167BF2704DD7400AD188F /* CaritappTestsServices.swift */,
 				2CF4F24B271227FF004DE3EE /* DonationServiceIntegrationTests.swift */,
+				8D587C982715154E004DC660 /* CreateDonationServiceIntegrationTest.swift */,
 				AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */,
 			);
 			path = CaritappTests;
@@ -226,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1E360826FE4D8500314A99 /* Donation.swift */,
-				8D254209270B664200EC540F /* Product.swift */,
+				8D254209270B664200EC540F /* Linea.swift */,
 			);
 			path = ValueObjects;
 			sourceTree = "<group>";
@@ -380,10 +379,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D25420A270B664200EC540F /* Product.swift in Sources */,
+				8D25420A270B664200EC540F /* Linea.swift in Sources */,
 				8D1E66FF26F14BB8007BE4D1 /* EditProductViewController.swift in Sources */,
 				ABE8BC2226F7CF7000707223 /* LogInController.swift in Sources */,
-				ABD2575B26EAF575007D866A /* CalendarViewController.swift in Sources */,
 				ABE8BC2726F7CF9E00707223 /* CalendarioViewController.swift in Sources */,
 				8D254205270B660500EC540F /* ImportFileTool.swift in Sources */,
 				8D06FF8026EADC6500782CD8 /* ViewController.swift in Sources */,
@@ -411,11 +409,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D587C992715154E004DC660 /* CreateDonationServiceIntegrationTest.swift in Sources */,
 				2CF4F24C271227FF004DE3EE /* DonationServiceIntegrationTests.swift in Sources */,
 				AB7EC4622713E60400517C5D /* CalendarServiceIntegrationTest.swift in Sources */,
 				8DC167C02704DD7400AD188F /* CaritappTestsServices.swift in Sources */,
 				8D06FF9326EADC6500782CD8 /* CaritappTests.swift in Sources */,
-				7B270BD326F837200038032B /* EstatusDonacionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +422,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D06FF9E26EADC6500782CD8 /* CaritappUITests.swift in Sources */,
-				7B270BD426F837200038032B /* EstatusDonacionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@ import UniformTypeIdentifiers
 
 class CreateDonationViewController: UIViewController {
     let createDonationService = CreateDonationService()
+    var idDonation = "0"
 
     @IBOutlet weak var donadorTextField: UITextField!
     
@@ -36,10 +37,19 @@ class CreateDonationViewController: UIViewController {
                     if !tiendaValue.isEmpty{
                         if let kilosValue = kilosTextField.text{
                             if !kilosValue.isEmpty{
-                                let donationReceived = Donation(donador: String(donadorValue), tienda: String(tiendaValue), kilos_donados: Float16(kilosValue)!, fecha: fechaDatePicker.date)
                                 
-                                createDonationService.sendDonation(donation: donationReceived) { (createdDonation) in
-                                    print(createdDonation.donador)
+                                let dateFormatter = DateFormatter()
+                                                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                                
+                                let fecha: String = dateFormatter.string(from: self.fechaDatePicker.date) as String
+                                
+                                let donationReceived = Donation(donador: String(donadorValue), tienda: String(tiendaValue), kilos_donados: Float16(kilosValue)!, kilos_recibidos: Float16(0),  fecha: fecha)
+                                
+                                print("Fecha:", fecha)
+                                
+                                createDonationService.sendDonation(donation: donationReceived) { (idReceived) in
+                                    print(idReceived)
+                                    self.idDonation = idReceived
                                 }
                             
                         }
@@ -49,6 +59,15 @@ class CreateDonationViewController: UIViewController {
         }
      }
         //Poner alertas en los else
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "importacionProductos" {
+            let controller = (segue.destination as! ImportProductsViewController)
+            
+            controller.idDonation = self.idDonation
+            
+        }
     }
     
     

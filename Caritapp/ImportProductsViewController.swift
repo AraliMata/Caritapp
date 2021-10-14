@@ -19,10 +19,19 @@ import UniformTypeIdentifiers
 class ImportProductsViewController: UIViewController {
     let createDonationService = CreateDonationService()
     
+    var idDonation: String?{
+        didSet{
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
+    
+    
     
     @IBAction func importarProductos(_ sender: UIButton) {
         let supportedTypes: [UTType] = [UTType.json]
@@ -44,28 +53,19 @@ extension ImportProductsViewController: UIDocumentPickerDelegate {
             let fileTool = ImportFileTool()
             
             do {
-                let readString = try fileTool.readFileAsString(url)
-                //self.loadedFile.text = readString
-            } catch {
-                print("error trying to convert data to String")
-            }
-            
-            do {
-                let readJson = try fileTool.readFileAsJson(url)
+                
+                let readJson = try fileTool.readFileAsString(url)
                 print("JSON: \(String(describing: readJson))")
-                //Aquí llamar al service y enviar los productos a la bdd
+                
+                createDonationService.sendProducts(file: readJson, idDonation: String(self.idDonation!)) { (response) in
+                    print(response)
+                }
+            
             } catch {
                 print("error trying to convert data to JSON")
             }
             
-            do {
-                let readProducts = try fileTool.readFileAsProducts(url)
-                print(readProducts)
-                //self.celsiusTextField.text = String(readTemperature.value)
-                
-            } catch {
-                print("error trying to convert data to JSON Products")
-            }
+           
         }
 
         controller.dismiss(animated: true)
