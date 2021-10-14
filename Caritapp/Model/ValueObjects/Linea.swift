@@ -15,6 +15,7 @@ public class Linea: Codable{
     public let precio_unitario: Float
     public let precio_total: Float
     public let destino: String
+    public let status: String
 
     
     public init(upc: String, cant_s: Float, cant_r: Float, precio_unit: Float, precio_tot: Float){
@@ -24,6 +25,7 @@ public class Linea: Codable{
         self.precio_unitario = precio_unit
         self.precio_total = precio_tot
         self.destino = "Indefinido"
+        self.status = "No recibido"
     }
     
 }

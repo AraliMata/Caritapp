@@ -1,32 +1,14 @@
-//
-//  ImportProductsViewController.swift
-//  Caritapp
-//
-//  Created by user189928 on 10/8/21.
-//
-
-import UIKit
-
-//
-//  newDonationViewController.swift
-//  Caritapp
-//
-//  Created by user189928 on 9/9/
-
 import UIKit
 import UniformTypeIdentifiers
 
 class ImportProductsViewController: UIViewController {
     let createDonationService = CreateDonationService()
     
-    var idDonation: String?{
-        didSet{
-            
-        }
-    }
+    var idDonation: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Seungdo id:", idDonation!)
         // Do any additional setup after loading the view.
         
     }
@@ -50,7 +32,7 @@ extension ImportProductsViewController: UIDocumentPickerDelegate {
     public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
 
         if let url = urls.first {
-            let fileTool = ImportFileTool()
+            let fileTool = FileTool()
             
             do {
                 

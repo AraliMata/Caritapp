@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ImportFileTool {
+class FileTool {
     enum Error: Swift.Error {
         case fileAlreadyExists
         case invalidDirectory
