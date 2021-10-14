@@ -35,6 +35,7 @@
 		8DACBCDD270F6AC40059BE77 /* appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DACBCDB270F6AC40059BE77 /* appstore.png */; };
 		8DACBCDE270F6AC40059BE77 /* playstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DACBCDC270F6AC40059BE77 /* playstore.png */; };
 		8DC167C02704DD7400AD188F /* CaritappTestsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC167BF2704DD7400AD188F /* CaritappTestsServices.swift */; };
+		AB5BA614271742A600F7E960 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */; };
 		AB7EC4622713E60400517C5D /* CalendarServiceIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */; };
 		ABD8515F2712B8DF00FD2B75 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */; };
 		ABE8BC1D26F7CF5B00707223 /* HistorialDonacionesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */; };
@@ -94,6 +95,7 @@
 		8DACBCDB270F6AC40059BE77 /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
 		8DACBCDC270F6AC40059BE77 /* playstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playstore.png; sourceTree = "<group>"; };
 		8DC167BF2704DD7400AD188F /* CaritappTestsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaritappTestsServices.swift; sourceTree = "<group>"; };
+		AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarServiceIntegrationTest.swift; sourceTree = "<group>"; };
 		ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		ABE8BC1C26F7CF5B00707223 /* HistorialDonacionesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialDonacionesController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,8 @@
 		8D06FF7A26EADC6500782CD8 /* Caritapp */ = {
 			isa = PBXGroup;
 			children = (
+				AB5BA6122717425F00F7E960 /* View */,
+				ABD2575A26EAF575007D866A /* CalendarViewController.swift */,
 				8D55B39926EAF50C002A4205 /* CreateDonationViewController.swift */,
 				8D1E66F926F14B46007BE4D1 /* ListProductsViewController.swift */,
 				8D1E66FE26F14BB8007BE4D1 /* EditProductViewController.swift */,
@@ -233,6 +237,14 @@
 				8DACBCDC270F6AC40059BE77 /* playstore.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		AB5BA6122717425F00F7E960 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +389,7 @@
 				ABD8515F2712B8DF00FD2B75 /* CalendarService.swift in Sources */,
 				8D1E360926FE4D8500314A99 /* Donation.swift in Sources */,
 				ABE8BC1D26F7CF5B00707223 /* HistorialDonacionesController.swift in Sources */,
+				AB5BA614271742A600F7E960 /* CalendarTableViewCell.swift in Sources */,
 				8D06FF7C26EADC6500782CD8 /* AppDelegate.swift in Sources */,
 				2CF4F24227121B54004DE3EE /* ExportDonationViewController.swift in Sources */,
 				8D1E670E26F14C82007BE4D1 /* HomeDonorViewController.swift in Sources */,

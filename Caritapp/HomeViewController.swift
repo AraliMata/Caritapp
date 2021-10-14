@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import UniformTypeIdentifiers
+
 
 class HomeViewController: UIViewController {
     
@@ -32,7 +34,7 @@ class HomeViewController: UIViewController {
             calendarService.retrieveCalendar() {
                 (donation) in
                 DispatchQueue.main.async {
-                    controller.donation = donation
+                    controller.donacion = donation
                     
                     controller.tableView.reloadData()
                 }
