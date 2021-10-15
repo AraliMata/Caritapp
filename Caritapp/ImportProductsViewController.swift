@@ -41,6 +41,15 @@ extension ImportProductsViewController: UIDocumentPickerDelegate {
                 
                 createDonationService.sendProducts(file: readJson, idDonation: String(self.idDonation!)) { (response) in
                     print(response)
+                    
+                    /*let alertController = UIAlertController(title: "Éxito", message: "Importación de productos completada", preferredStyle: UIAlertController.Style.alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)*/
+                    
+                    DispatchQueue.main.async {
+                        let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomeDonorViewController") as! HomeDonorViewController
+                        self.present(controller, animated: true, completion: nil)
+                    }
                 }
             
             } catch {
