@@ -17,7 +17,7 @@ class CreateDonationServiceIntegrationTests: XCTestCase {
         // When
         let donationExpectation = expectation(description: "ID donation retrieved")
         
-        createDonationService.sendDonation(donation: Donation(donador: "Alsuper",tienda: "3 culturas",kilos_donados: 40, kilos_recibidos: Float16(0), fecha: "2021-11-2021")) { (idDonation) in
+        createDonationService.sendDonation(donation: Donation(id: 0, donador: "Alsuper",tienda: "3 culturas",kilos_donados: 40, kilos_recibidos: Float16(0), fecha: "2021-11-2021")) { (idDonation) in
             
             XCTAssert((idDonation as Any) is String && idDonation.count  < 5)
             donationExpectation.fulfill()
