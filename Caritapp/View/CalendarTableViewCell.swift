@@ -22,7 +22,7 @@ class CalendarTableViewCell: UITableViewCell {
         dateFormatter.dateFormat = "YYYY-MM-dd"
         nombreDonador.text = String(donacion.donador)
         nombreTienda.text = String(donacion.tienda)
-        numKilos.text = String(donacion.kilos_donados)
+        numKilos.text = String(donacion.kilosDonados)
         fechaRegistro.text = donacion.fecha
     }
     

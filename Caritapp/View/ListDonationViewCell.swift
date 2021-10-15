@@ -18,8 +18,8 @@ class ListDonationViewCell: UITableViewCell {
         fecha.text = donation.fecha
         donador.text = donation.donador
         tienda.text = donation.tienda
-        kilos_recibidos.text = String(donation.kilos_recibidos)
-        kilosDonados.text = String(donation.kilos_donados)
+        kilos_recibidos.text = String(donation.kilosRecibidos)
+        kilosDonados.text = String(donation.kilosDonados)
     }
     
 }

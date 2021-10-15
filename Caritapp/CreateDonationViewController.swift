@@ -43,7 +43,7 @@ class CreateDonationViewController: UIViewController {
                                 
                     let fecha: String = dateFormatter.string(from: self.fechaDatePicker.date) as String
                                 
-                    let donationReceived = Donation(id: 0, donador: String(donadorValue), tienda: String(tiendaValue), kilos_donados: Float16(kilosValue)!, kilos_recibidos: Float16(0),  fecha: fecha)
+                    let donationReceived = Donation(donador: String(donadorValue), tienda: String(tiendaValue), kilos_donados: Float16(kilosValue)!, kilos_recibidos: Float16(0),  fecha: fecha)
                                 
                     print("Fecha:", fecha)
                                 
