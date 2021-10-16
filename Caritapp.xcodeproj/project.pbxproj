@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2CF4F24227121B54004DE3EE /* ExportDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */; };
 		2CF4F24727121D4A004DE3EE /* DonationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24627121D4A004DE3EE /* DonationService.swift */; };
 		2CF4F24C271227FF004DE3EE /* DonationServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24B271227FF004DE3EE /* DonationServiceIntegrationTests.swift */; };
+		3B3BB3795A1303EB3B9E5395 /* Pods_Caritapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C990CE1FBB27DB660FB6D85 /* Pods_Caritapp.framework */; };
 		8D06FF7C26EADC6500782CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF7B26EADC6500782CD8 /* AppDelegate.swift */; };
 		8D06FF7E26EADC6500782CD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF7D26EADC6500782CD8 /* SceneDelegate.swift */; };
 		8D06FF8026EADC6500782CD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF7F26EADC6500782CD8 /* ViewController.swift */; };
@@ -34,17 +35,20 @@
 		8DACBCDD270F6AC40059BE77 /* appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DACBCDB270F6AC40059BE77 /* appstore.png */; };
 		8DACBCDE270F6AC40059BE77 /* playstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DACBCDC270F6AC40059BE77 /* playstore.png */; };
 		8DC167C02704DD7400AD188F /* CaritappTestsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC167BF2704DD7400AD188F /* CaritappTestsServices.swift */; };
+		8DC1B256271A0204006D3EB4 /* Donador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC1B255271A0204006D3EB4 /* Donador.swift */; };
 		8DDF02E327174EC900214477 /* DonationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF02E227174EC900214477 /* DonationListViewController.swift */; };
 		8DDF02E927174F4600214477 /* ListDonationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF02E827174F4600214477 /* ListDonationViewCell.swift */; };
 		8DDF02EF27175C5000214477 /* LineaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF02EE27175C5000214477 /* LineaService.swift */; };
 		8DDF02F427175CB800214477 /* ListProductsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF02F327175CB800214477 /* ListProductsViewCell.swift */; };
 		8DF2A7C12717E1FE0080F61A /* ImportProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A7C02717E1FE0080F61A /* ImportProductsTests.swift */; };
 		8DF2A7C62717E2CF0080F61A /* FileToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A7C52717E2CF0080F61A /* FileToolTests.swift */; };
+		A81C2ABD680576BB8C0D1D5B /* Pods_Caritapp_CaritappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E9AA32944BF09A0D264636 /* Pods_Caritapp_CaritappUITests.framework */; };
 		AB5BA614271742A600F7E960 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */; };
 		AB7EC4622713E60400517C5D /* CalendarServiceIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */; };
 		ABD8515F2712B8DF00FD2B75 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */; };
 		ABE8BC2226F7CF7000707223 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC2126F7CF7000707223 /* LogInController.swift */; };
 		ABE8BC2726F7CF9E00707223 /* CalendarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC2626F7CF9E00707223 /* CalendarioViewController.swift */; };
+		D5025C9183BDFEEE9E3340BE /* Pods_CaritappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB09C06159CD477E2C7688C /* Pods_CaritappTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,9 +69,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		065C834844891B5F583CC3AF /* Pods-CaritappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaritappTests.release.xcconfig"; path = "Target Support Files/Pods-CaritappTests/Pods-CaritappTests.release.xcconfig"; sourceTree = "<group>"; };
+		0CB09C06159CD477E2C7688C /* Pods_CaritappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CaritappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B08494E491987AEC538760C /* Pods-Caritapp-CaritappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caritapp-CaritappUITests.debug.xcconfig"; path = "Target Support Files/Pods-Caritapp-CaritappUITests/Pods-Caritapp-CaritappUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportDonationViewController.swift; sourceTree = "<group>"; };
 		2CF4F24627121D4A004DE3EE /* DonationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationService.swift; sourceTree = "<group>"; };
 		2CF4F24B271227FF004DE3EE /* DonationServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationServiceIntegrationTests.swift; sourceTree = "<group>"; };
+		36FB522007DCD949A1BAEDA1 /* Pods-CaritappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaritappTests.debug.xcconfig"; path = "Target Support Files/Pods-CaritappTests/Pods-CaritappTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3C0EF92B0923608E8DA8365C /* Pods-Caritapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caritapp.release.xcconfig"; path = "Target Support Files/Pods-Caritapp/Pods-Caritapp.release.xcconfig"; sourceTree = "<group>"; };
+		3C990CE1FBB27DB660FB6D85 /* Pods_Caritapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Caritapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57E9AA32944BF09A0D264636 /* Pods_Caritapp_CaritappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Caritapp_CaritappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D06FF7B26EADC6500782CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D06FF7D26EADC6500782CD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8D06FF7F26EADC6500782CD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,17 +109,20 @@
 		8DACBCDB270F6AC40059BE77 /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
 		8DACBCDC270F6AC40059BE77 /* playstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playstore.png; sourceTree = "<group>"; };
 		8DC167BF2704DD7400AD188F /* CaritappTestsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaritappTestsServices.swift; sourceTree = "<group>"; };
+		8DC1B255271A0204006D3EB4 /* Donador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donador.swift; sourceTree = "<group>"; };
 		8DDF02E227174EC900214477 /* DonationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationListViewController.swift; sourceTree = "<group>"; };
 		8DDF02E827174F4600214477 /* ListDonationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDonationViewCell.swift; sourceTree = "<group>"; };
 		8DDF02EE27175C5000214477 /* LineaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineaService.swift; sourceTree = "<group>"; };
 		8DDF02F327175CB800214477 /* ListProductsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductsViewCell.swift; sourceTree = "<group>"; };
 		8DF2A7C02717E1FE0080F61A /* ImportProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportProductsTests.swift; sourceTree = "<group>"; };
 		8DF2A7C52717E2CF0080F61A /* FileToolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileToolTests.swift; sourceTree = "<group>"; };
+		AA70F5AAC34B14B49299F86E /* Pods-Caritapp-CaritappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caritapp-CaritappUITests.release.xcconfig"; path = "Target Support Files/Pods-Caritapp-CaritappUITests/Pods-Caritapp-CaritappUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarServiceIntegrationTest.swift; sourceTree = "<group>"; };
 		ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		ABE8BC2126F7CF7000707223 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		ABE8BC2626F7CF9E00707223 /* CalendarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioViewController.swift; sourceTree = "<group>"; };
+		DAA700FC70D66115B6D44D3A /* Pods-Caritapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caritapp.debug.xcconfig"; path = "Target Support Files/Pods-Caritapp/Pods-Caritapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B3BB3795A1303EB3B9E5395 /* Pods_Caritapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5025C9183BDFEEE9E3340BE /* Pods_CaritappTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,12 +146,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A81C2ABD680576BB8C0D1D5B /* Pods_Caritapp_CaritappUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		707962996EED6FE1FDD8416C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C990CE1FBB27DB660FB6D85 /* Pods_Caritapp.framework */,
+				57E9AA32944BF09A0D264636 /* Pods_Caritapp_CaritappUITests.framework */,
+				0CB09C06159CD477E2C7688C /* Pods_CaritappTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8D06FF6F26EADC6400782CD8 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +172,8 @@
 				8D254201270B65CB00EC540F /* Caritapp.app */,
 				8D254202270B65CB00EC540F /* CaritappTests.xctest */,
 				8D254203270B65CB00EC540F /* CaritappUITests.xctest */,
+				A64B491EEE93FC653C698284 /* Pods */,
+				707962996EED6FE1FDD8416C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,6 +264,7 @@
 			children = (
 				8D1E360826FE4D8500314A99 /* Donation.swift */,
 				8D254209270B664200EC540F /* Linea.swift */,
+				8DC1B255271A0204006D3EB4 /* Donador.swift */,
 			);
 			path = ValueObjects;
 			sourceTree = "<group>";
@@ -246,6 +276,19 @@
 				8DACBCDC270F6AC40059BE77 /* playstore.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		A64B491EEE93FC653C698284 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAA700FC70D66115B6D44D3A /* Pods-Caritapp.debug.xcconfig */,
+				3C0EF92B0923608E8DA8365C /* Pods-Caritapp.release.xcconfig */,
+				1B08494E491987AEC538760C /* Pods-Caritapp-CaritappUITests.debug.xcconfig */,
+				AA70F5AAC34B14B49299F86E /* Pods-Caritapp-CaritappUITests.release.xcconfig */,
+				36FB522007DCD949A1BAEDA1 /* Pods-CaritappTests.debug.xcconfig */,
+				065C834844891B5F583CC3AF /* Pods-CaritappTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		AB5BA6122717425F00F7E960 /* View */ = {
@@ -265,9 +308,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D06FFA226EADC6500782CD8 /* Build configuration list for PBXNativeTarget "Caritapp" */;
 			buildPhases = (
+				564DD06AF4B8E8283AD1E9CC /* [CP] Check Pods Manifest.lock */,
 				8D06FF7426EADC6500782CD8 /* Sources */,
 				8D06FF7526EADC6500782CD8 /* Frameworks */,
 				8D06FF7626EADC6500782CD8 /* Resources */,
+				C6A505DD2FB39C846AAD2BC3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,6 +327,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D06FFA526EADC6500782CD8 /* Build configuration list for PBXNativeTarget "CaritappTests" */;
 			buildPhases = (
+				2AD2B4A88C30785CD4F62381 /* [CP] Check Pods Manifest.lock */,
 				8D06FF8A26EADC6500782CD8 /* Sources */,
 				8D06FF8B26EADC6500782CD8 /* Frameworks */,
 				8D06FF8C26EADC6500782CD8 /* Resources */,
@@ -300,9 +346,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D06FFA826EADC6500782CD8 /* Build configuration list for PBXNativeTarget "CaritappUITests" */;
 			buildPhases = (
+				654E5555A0F1E30B3C900627 /* [CP] Check Pods Manifest.lock */,
 				8D06FF9526EADC6500782CD8 /* Sources */,
 				8D06FF9626EADC6500782CD8 /* Frameworks */,
 				8D06FF9726EADC6500782CD8 /* Resources */,
+				8CC069C29EF4863E195AF0A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -385,6 +433,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2AD2B4A88C30785CD4F62381 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CaritappTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		564DD06AF4B8E8283AD1E9CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Caritapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		654E5555A0F1E30B3C900627 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Caritapp-CaritappUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CC069C29EF4863E195AF0A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Caritapp-CaritappUITests/Pods-Caritapp-CaritappUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Caritapp-CaritappUITests/Pods-Caritapp-CaritappUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Caritapp-CaritappUITests/Pods-Caritapp-CaritappUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6A505DD2FB39C846AAD2BC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Caritapp/Pods-Caritapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Caritapp/Pods-Caritapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Caritapp/Pods-Caritapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D06FF7426EADC6500782CD8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -393,6 +544,7 @@
 				8D25420A270B664200EC540F /* Linea.swift in Sources */,
 				8D1E66FF26F14BB8007BE4D1 /* EditProductViewController.swift in Sources */,
 				8DDF02F427175CB800214477 /* ListProductsViewCell.swift in Sources */,
+				8DC1B256271A0204006D3EB4 /* Donador.swift in Sources */,
 				ABE8BC2226F7CF7000707223 /* LogInController.swift in Sources */,
 				ABE8BC2726F7CF9E00707223 /* CalendarioViewController.swift in Sources */,
 				8DDF02E327174EC900214477 /* DonationListViewController.swift in Sources */,
@@ -593,6 +745,7 @@
 		};
 		8D06FFA326EADC6500782CD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAA700FC70D66115B6D44D3A /* Pods-Caritapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -612,6 +765,7 @@
 		};
 		8D06FFA426EADC6500782CD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C0EF92B0923608E8DA8365C /* Pods-Caritapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -631,6 +785,7 @@
 		};
 		8D06FFA626EADC6500782CD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36FB522007DCD949A1BAEDA1 /* Pods-CaritappTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -652,6 +807,7 @@
 		};
 		8D06FFA726EADC6500782CD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 065C834844891B5F583CC3AF /* Pods-CaritappTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -673,6 +829,7 @@
 		};
 		8D06FFA926EADC6500782CD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B08494E491987AEC538760C /* Pods-Caritapp-CaritappUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -692,6 +849,7 @@
 		};
 		8D06FFAA26EADC6500782CD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA70F5AAC34B14B49299F86E /* Pods-Caritapp-CaritappUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

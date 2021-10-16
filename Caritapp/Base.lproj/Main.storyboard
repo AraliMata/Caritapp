@@ -1450,22 +1450,48 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TWD-PB-wdS" userLabel="donadorTextFIeld">
-                                                <rect key="frame" x="139" y="3.5" width="176" height="61.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXc-hi-7mp" userLabel="dropDownDonador">
+                                                <rect key="frame" x="139" y="10.5" width="176" height="48"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccionar donador" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMF-Je-gn8" userLabel="donadorLabel">
+                                                        <rect key="frame" x="0.0" y="4.5" width="176" height="38.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNV-dm-zkK" userLabel="btnDonador">
+                                                        <rect key="frame" x="0.0" y="0.0" width="176" height="48"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="mostrarDonadores:" destination="lnO-Ig-7ye" eventType="touchUpInside" id="RKy-M9-hhl"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstItem="dMF-Je-gn8" firstAttribute="width" secondItem="bXc-hi-7mp" secondAttribute="width" id="3KA-Wh-Whh"/>
+                                                    <constraint firstItem="lNV-dm-zkK" firstAttribute="height" secondItem="bXc-hi-7mp" secondAttribute="height" id="7My-RJ-w7e"/>
+                                                    <constraint firstItem="dMF-Je-gn8" firstAttribute="height" secondItem="bXc-hi-7mp" secondAttribute="height" multiplier="0.8" id="L6R-HC-5NY"/>
+                                                    <constraint firstItem="lNV-dm-zkK" firstAttribute="width" secondItem="bXc-hi-7mp" secondAttribute="width" id="RWx-U3-wwy"/>
+                                                    <constraint firstItem="dMF-Je-gn8" firstAttribute="leading" secondItem="bXc-hi-7mp" secondAttribute="leading" id="YuX-Av-tI1"/>
+                                                    <constraint firstItem="dMF-Je-gn8" firstAttribute="centerY" secondItem="bXc-hi-7mp" secondAttribute="centerY" id="ZbZ-MB-C2x"/>
+                                                    <constraint firstItem="lNV-dm-zkK" firstAttribute="top" secondItem="bXc-hi-7mp" secondAttribute="top" id="ajb-W7-oFo"/>
+                                                    <constraint firstItem="lNV-dm-zkK" firstAttribute="leading" secondItem="bXc-hi-7mp" secondAttribute="leading" id="wfT-am-uPg"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="bFe-TX-oiE" firstAttribute="centerY" secondItem="Is2-kw-TOo" secondAttribute="centerY" id="0OX-3I-dhm"/>
-                                            <constraint firstItem="TWD-PB-wdS" firstAttribute="height" secondItem="Is2-kw-TOo" secondAttribute="height" multiplier="0.9" id="2I0-Ac-r4Z"/>
-                                            <constraint firstAttribute="trailing" secondItem="TWD-PB-wdS" secondAttribute="trailing" constant="37" id="7jP-oe-kTJ"/>
-                                            <constraint firstItem="TWD-PB-wdS" firstAttribute="width" secondItem="Is2-kw-TOo" secondAttribute="width" multiplier="0.5" id="DCs-8f-dHf"/>
                                             <constraint firstItem="bFe-TX-oiE" firstAttribute="leading" secondItem="Is2-kw-TOo" secondAttribute="leading" id="Daf-9X-4fc"/>
                                             <constraint firstItem="bFe-TX-oiE" firstAttribute="height" secondItem="Is2-kw-TOo" secondAttribute="height" multiplier="0.6" id="En9-Tz-Qwt"/>
-                                            <constraint firstItem="TWD-PB-wdS" firstAttribute="centerY" secondItem="Is2-kw-TOo" secondAttribute="centerY" id="WCH-S6-BdI"/>
+                                            <constraint firstItem="bXc-hi-7mp" firstAttribute="centerY" secondItem="Is2-kw-TOo" secondAttribute="centerY" id="Pq4-mK-JSI"/>
+                                            <constraint firstItem="bXc-hi-7mp" firstAttribute="width" secondItem="Is2-kw-TOo" secondAttribute="width" multiplier="0.5" id="U8T-OJ-KeO"/>
+                                            <constraint firstItem="bXc-hi-7mp" firstAttribute="height" secondItem="Is2-kw-TOo" secondAttribute="height" multiplier="0.7" id="cql-Mp-Ptp"/>
                                             <constraint firstItem="bFe-TX-oiE" firstAttribute="width" secondItem="Is2-kw-TOo" secondAttribute="width" multiplier="0.3" id="fC9-zd-v9p"/>
+                                            <constraint firstAttribute="trailing" secondItem="bXc-hi-7mp" secondAttribute="trailing" constant="37" id="qyT-eC-25u"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAh-YQ-WsP" userLabel="Row3">
@@ -1477,22 +1503,48 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bUq-iH-9ES" userLabel="tiendaTextField">
-                                                <rect key="frame" x="139" y="3.5" width="176" height="62"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FU0-eb-O9k" userLabel="dropDownTienda">
+                                                <rect key="frame" x="139" y="0.0" width="176" height="48"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccionar tienda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXm-7W-FCF" userLabel="tiendaLabel">
+                                                        <rect key="frame" x="0.0" y="5" width="176" height="38.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoS-pJ-N7D" userLabel="btnTienda">
+                                                        <rect key="frame" x="0.0" y="0.0" width="176" height="48"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="mostrarTiendas:" destination="lnO-Ig-7ye" eventType="touchUpInside" id="pRB-Di-CW9"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstItem="SXm-7W-FCF" firstAttribute="height" secondItem="FU0-eb-O9k" secondAttribute="height" multiplier="0.8" id="2UG-sG-YtV"/>
+                                                    <constraint firstItem="SXm-7W-FCF" firstAttribute="centerY" secondItem="FU0-eb-O9k" secondAttribute="centerY" id="59q-rX-qtt"/>
+                                                    <constraint firstItem="SXm-7W-FCF" firstAttribute="leading" secondItem="FU0-eb-O9k" secondAttribute="leading" id="Pf6-n7-aQy"/>
+                                                    <constraint firstItem="SXm-7W-FCF" firstAttribute="width" secondItem="FU0-eb-O9k" secondAttribute="width" id="hm8-45-q2F"/>
+                                                    <constraint firstItem="hoS-pJ-N7D" firstAttribute="width" secondItem="FU0-eb-O9k" secondAttribute="width" id="jOx-K7-RU3"/>
+                                                    <constraint firstItem="hoS-pJ-N7D" firstAttribute="leading" secondItem="FU0-eb-O9k" secondAttribute="leading" id="jpr-xz-vvd"/>
+                                                    <constraint firstItem="hoS-pJ-N7D" firstAttribute="top" secondItem="FU0-eb-O9k" secondAttribute="top" id="qnh-1L-opV"/>
+                                                    <constraint firstItem="hoS-pJ-N7D" firstAttribute="height" secondItem="FU0-eb-O9k" secondAttribute="height" id="w3S-gw-mDN"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="JRj-UN-qsW" firstAttribute="leading" secondItem="vAh-YQ-WsP" secondAttribute="leading" id="BUz-Yp-R1O"/>
-                                            <constraint firstItem="bUq-iH-9ES" firstAttribute="height" secondItem="vAh-YQ-WsP" secondAttribute="height" multiplier="0.9" id="E6H-Gt-tr2"/>
                                             <constraint firstItem="JRj-UN-qsW" firstAttribute="centerY" secondItem="vAh-YQ-WsP" secondAttribute="centerY" id="NZE-mF-Tln"/>
+                                            <constraint firstItem="FU0-eb-O9k" firstAttribute="width" secondItem="vAh-YQ-WsP" secondAttribute="width" multiplier="0.5" id="Prx-6C-RzU"/>
+                                            <constraint firstItem="FU0-eb-O9k" firstAttribute="height" secondItem="vAh-YQ-WsP" secondAttribute="height" multiplier="0.7" id="RlV-9t-t8S"/>
                                             <constraint firstItem="JRj-UN-qsW" firstAttribute="width" secondItem="vAh-YQ-WsP" secondAttribute="width" multiplier="0.3" id="VXF-sO-w00"/>
-                                            <constraint firstItem="bUq-iH-9ES" firstAttribute="centerY" secondItem="vAh-YQ-WsP" secondAttribute="centerY" id="ZRb-Ge-uDC"/>
-                                            <constraint firstAttribute="trailing" secondItem="bUq-iH-9ES" secondAttribute="trailing" constant="37" id="aBF-HQ-4vP"/>
                                             <constraint firstItem="JRj-UN-qsW" firstAttribute="height" secondItem="vAh-YQ-WsP" secondAttribute="height" multiplier="0.6" id="glT-65-bEf"/>
-                                            <constraint firstItem="bUq-iH-9ES" firstAttribute="width" secondItem="vAh-YQ-WsP" secondAttribute="width" multiplier="0.5" id="zc9-Pd-Gut"/>
+                                            <constraint firstItem="FU0-eb-O9k" firstAttribute="top" secondItem="vAh-YQ-WsP" secondAttribute="top" id="jP0-S6-938"/>
+                                            <constraint firstAttribute="trailing" secondItem="FU0-eb-O9k" secondAttribute="trailing" constant="37" id="vbd-on-5w2"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TT1-8T-3gm" userLabel="Row4">
@@ -1611,10 +1663,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="ewf-7m-FXn"/>
                     <connections>
-                        <outlet property="donadorTextField" destination="TWD-PB-wdS" id="0kP-lF-d2r"/>
+                        <outlet property="donadorLabel" destination="dMF-Je-gn8" id="TvM-rY-ZPj"/>
+                        <outlet property="dropDownDonador" destination="bXc-hi-7mp" id="gFf-kj-8jD"/>
+                        <outlet property="dropDownTienda" destination="FU0-eb-O9k" id="Jxf-pz-ZTt"/>
                         <outlet property="fechaDatePicker" destination="aXb-sO-gcG" id="ei0-G3-vcL"/>
                         <outlet property="kilosTextField" destination="9gq-75-rOx" id="WSK-y7-OLz"/>
-                        <outlet property="tiendaTextFIeld" destination="bUq-iH-9ES" id="Jv7-pA-SN9"/>
+                        <outlet property="tiendaLabel" destination="SXm-7W-FCF" id="umo-OM-bAj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8o-TI-f9D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2967,6 +3021,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -12,7 +12,7 @@ class FileToolTests: XCTestCase {
     
     func testReadFileAsString() throws {
         //Given
-        guard let input = URL(string: "path") else { print("Error: cannot create URL")
+        guard let input = URL(string: "file:///Users/user189928/Downloads/products-3.json") else { print("Error: cannot create URL")
             return}
         
         //When
@@ -24,14 +24,14 @@ class FileToolTests: XCTestCase {
    
     func testReadFileAsJson() throws {
         //Given
-        guard let input = URL(string: "path") else { print("Error: cannot create URL")
+        guard let input = URL(string: "file:///Users/user189928/Downloads/products-3.json") else { print("Error: cannot create URL")
             return}
         
         //When
         let result = try fileTool.readFileAsJson(input)
         
         //Then
-        XCTAssert((result as Any) is String) //Que sea tipo JSON
+        XCTAssert(JSONSerialization.isValidJSONObject(result as Any)) //Que sea tipo JSON
     }
 
 }

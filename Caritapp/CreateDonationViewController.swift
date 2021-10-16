@@ -6,14 +6,22 @@
 
 import UIKit
 import UniformTypeIdentifiers
+import DropDown
 
 class CreateDonationViewController: UIViewController {
     let createDonationService = CreateDonationService()
     var idDonation = "0"
+    var idDonor = 145
+    var donors = [Donador]()
 
-    @IBOutlet weak var donadorTextField: UITextField!
     
-    @IBOutlet weak var tiendaTextFIeld: UITextField!
+    @IBOutlet weak var dropDownDonador: UIView!
+    
+    @IBOutlet weak var donadorLabel: UILabel!
+    
+    @IBOutlet weak var dropDownTienda: UIView!
+    
+    @IBOutlet weak var tiendaLabel: UILabel!
     
     @IBOutlet weak var kilosTextField: UITextField!
     
@@ -21,20 +29,74 @@ class CreateDonationViewController: UIViewController {
     
     @IBOutlet weak var importarBtn: UIButton!
     
+    let dropdownDon = DropDown()
+    let dropdownTien = DropDown()
+    let dropDownTienValues = ["Seleccione un donador"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupToolbar()
+        setupDropdownDonador()
+        setupDropdownTiendas()
+        
+    }
+    
+    
+    func setupDropdownDonador(){
+        dropdownDon.anchorView = dropDownDonador
+        dropdownDon.bottomOffset = CGPoint(x: 0, y:(dropdownDon.anchorView?.plainView.bounds.height)!)
+        dropdownDon.direction = .bottom
+        createDonationService.retrieveDonors {[weak self](donors) in
+            self?.donors = donors
+            var donorsName = [String]()
+            for donor in donors{
+                donorsName.append(donor.nombre)
+            }
+            self?.dropdownDon.dataSource = donorsName
+        }
+        dropdownDon.selectionAction = { [unowned self] (index: Int, item: String) in
+          print("Donador selecionado: \(item) en index: \(index)")
+            self.donadorLabel.text = item
+            self.tiendaLabel.text = "Seleccionar tienda"
+            self.idDonor = self.donors[index].id
+            print(self.idDonor)
+            
+            createDonationService.retrieveStores(idDonor: self.idDonor) { (stores) in
+                self.dropdownTien.dataSource = stores
+            }
+        }
+        
+    }
+    
+    func setupDropdownTiendas(){
+        dropdownTien.anchorView = dropDownTienda
+        dropdownTien.dataSource = dropDownTienValues
+        dropdownTien.bottomOffset = CGPoint(x: 0, y:(dropdownDon.anchorView?.plainView.bounds.height)!)
+        dropdownTien.direction = .bottom
+        
+        dropdownTien.selectionAction = { [unowned self] (index: Int, item: String) in
+          print("Tienda selecionada: \(item) en index: \(index)")
+            self.tiendaLabel.text = item
+        }
+    }
+    
+    
+    @IBAction func mostrarDonadores(_ sender: Any) {
+        dropdownDon.show()
+    }
+    
+    @IBAction func mostrarTiendas(_ sender: Any) {
+        dropdownTien.show()
     }
     
     @IBAction func crearDonacion(_ sender: UIButton) {
         
         
         
-        if let donadorValue = donadorTextField.text, !donadorValue.isEmpty{
+        if let donadorValue = donadorLabel.text, donadorValue != "Seleccionar donador"{
             
-            if let tiendaValue = tiendaTextFIeld.text, !tiendaValue.isEmpty{
+            if let tiendaValue = tiendaLabel.text, tiendaValue != "Seleccionar tienda" && tiendaValue != "Seleccione un donador"{
                     
                 if let kilosValue = kilosTextField.text, !kilosValue.isEmpty{
                                 
@@ -43,7 +105,7 @@ class CreateDonationViewController: UIViewController {
                                 
                     let fecha: String = dateFormatter.string(from: self.fechaDatePicker.date) as String
                                 
-                    let donationReceived = Donation(donador: String(donadorValue), tienda: String(tiendaValue), kilos_donados: Float16(kilosValue)!, kilos_recibidos: Float16(0),  fecha: fecha)
+                    let donationReceived = Donation(donador: String("Soriana"), tienda: String("Jardines"), kilos_donados: Float16(kilosValue)!, kilos_recibidos: Float16(0),  fecha: fecha)
                                 
                     print("Fecha:", fecha)
                                 
@@ -60,31 +122,26 @@ class CreateDonationViewController: UIViewController {
                         }
                         
                         
-                        
-                        
-                        /*let VC = self!.storyboard?.instantiateViewController(withIdentifier: "ImportProductsViewController") as! ImportProductsViewController
-                        self!.present(VC, animated: true, completion: nil)*/
-                        
                     }
                             
                         
                 }else{
                     print("Entré al else")
-                    let alertController = UIAlertController(title: "Error", message: "Coloca los kilos a donar", preferredStyle: UIAlertController.Style.alert)
+                    let alertController = UIAlertController(title: "Error", message: "Coloque los kilos a donar", preferredStyle: UIAlertController.Style.alert)
                     alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                     present(alertController, animated: true, completion: nil)
                 }
-            }else{
-                let alertController = UIAlertController(title: "Error", message: "Coloca el nombre de la tienda", preferredStyle: UIAlertController.Style.alert)
+           }else{
+                let alertController = UIAlertController(title: "Error", message: "Seleccione la tienda dede donde está donando", preferredStyle: UIAlertController.Style.alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                 present(alertController, animated: true, completion: nil)
             }
         }else{
-            let alertController = UIAlertController(title: "Error", message: "Coloca un donador", preferredStyle: UIAlertController.Style.alert)
+            let alertController = UIAlertController(title: "Error", message: "Seleccione su nombre de donador", preferredStyle: UIAlertController.Style.alert)
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             present(alertController, animated: true, completion: nil)
         }
-        //Poner alertas en los else
+      
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -104,8 +161,6 @@ class CreateDonationViewController: UIViewController {
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         bar.items = [flexSpace, flexSpace, doneBtn]
         bar.sizeToFit()
-        donadorTextField.inputAccessoryView = bar
-        tiendaTextFIeld.inputAccessoryView = bar
         kilosTextField.inputAccessoryView = bar
    }
     
