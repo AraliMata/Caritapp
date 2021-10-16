@@ -1,0 +1,6 @@
+framework module Pods_Caritapp_CaritappUITests {
+  umbrella header "Pods-Caritapp-CaritappUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
