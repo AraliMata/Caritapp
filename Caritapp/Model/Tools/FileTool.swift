@@ -68,4 +68,18 @@ class FileTool {
         
         handler(fileURL)
     }
+    
+    public func saveExportedDonationFile(donation: Donation, _ handler: SaveFileClosure) throws {
+        let encoder = JSONEncoder()
+        let jsonData = try! encoder.encode(donation)
+        
+        let fileManager = FileManager.default
+
+
+        let fileURL = fileManager.temporaryDirectory.appendingPathComponent("exportedDonation.json")
+            
+        try jsonData.write(to: fileURL)
+        
+        handler(fileURL)
+    }
 }
