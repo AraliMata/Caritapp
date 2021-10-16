@@ -2516,10 +2516,10 @@
             </objects>
             <point key="canvasLocation" x="1959" y="846"/>
         </scene>
-        <!--EstatusDonaciones-->
+        <!--Estatus Donation View Controller-->
         <scene sceneID="WlU-t9-UrN">
             <objects>
-                <viewController title="EstatusDonaciones" id="7qf-m2-iTF" sceneMemberID="viewController">
+                <viewController id="7qf-m2-iTF" customClass="EstatusDonationViewController" customModule="Caritapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zgd-CZ-7W8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2527,7 +2527,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bi9-wp-hyB" userLabel="Main">
                                 <rect key="frame" x="31" y="105.5" width="352" height="695"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-IP-6Yc" userLabel="Row1">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-IP-6Yc" userLabel="Row1" customClass="EstatusDon">
                                         <rect key="frame" x="26.5" y="0.0" width="299" height="139"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estatus Donacion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQl-iu-fkI">
@@ -2561,7 +2561,7 @@
                                         <rect key="frame" x="0.0" y="269" width="352" height="417"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="89" id="FyN-E2-LlZ" userLabel="EstatusDonacion" customClass="EstatusDonacion">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellStatus" rowHeight="89" id="FyN-E2-LlZ" customClass="EstatusViewCell" customModule="Caritapp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="352" height="89"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FyN-E2-LlZ" id="mY4-Uj-Px9">
@@ -2636,6 +2636,10 @@
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="7qf-m2-iTF" id="KKs-gu-sTJ"/>
+                                            <outlet property="delegate" destination="7qf-m2-iTF" id="fK4-xk-5Mh"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2661,6 +2665,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1W6-9X-Yal"/>
+                    <connections>
+                        <outlet property="tableViewStatus" destination="2La-A0-o3W" id="2Qj-xi-Bx3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXG-Vw-A03" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

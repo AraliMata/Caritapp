@@ -13,7 +13,7 @@ class EstatusViewCell: UITableViewCell {
 
     @IBOutlet weak var estatusValue: UITextField!
     
-    func updateCell(donation: Donation) {
+    func updateCellStatus(donation: Donation) {
            let dateFormatter = DateFormatter()
            dateFormatter.dateFormat = "YYYY-MM-dd"
            
