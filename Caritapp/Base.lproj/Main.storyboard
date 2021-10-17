@@ -88,6 +88,9 @@
                                                 <color key="backgroundColor" red="0.046492169649999998" green="0.65193145809999997" blue="0.54139779320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Registrar recepción"/>
+                                                <connections>
+                                                    <segue destination="7qf-m2-iTF" kind="show" identifier="statusSegue" id="fOO-tg-5JH"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -193,6 +196,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="2mo-L2-Ffc"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calendario" destination="fxE-0y-m7q" id="PsE-cw-ZgD"/>
@@ -2514,24 +2518,24 @@
         <scene sceneID="WlU-t9-UrN">
             <objects>
                 <viewController id="7qf-m2-iTF" customClass="EstatusDonationViewController" customModule="Caritapp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zgd-CZ-7W8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="view" contentMode="scaleToFill" id="zgd-CZ-7W8" userLabel="Estatus Donation View Controller">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bi9-wp-hyB" userLabel="Main">
-                                <rect key="frame" x="31" y="105.5" width="352" height="695"/>
+                                <rect key="frame" x="31" y="57" width="352" height="645"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-IP-6Yc" userLabel="Row1" customClass="EstatusDon">
-                                        <rect key="frame" x="26.5" y="0.0" width="299" height="139"/>
+                                        <rect key="frame" x="26.5" y="0.0" width="299" height="129"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estatus Donacion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQl-iu-fkI">
-                                                <rect key="frame" x="0.0" y="80" width="299" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="80" width="299" height="38.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sz3-4P-Lbz">
-                                                <rect key="frame" x="0.0" y="0.0" width="89.5" height="34.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="89.5" height="32"/>
                                                 <color key="backgroundColor" red="0.04036766663" green="0.64706712960000001" blue="0.535954237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Regresar">
@@ -2552,7 +2556,7 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2La-A0-o3W">
-                                        <rect key="frame" x="0.0" y="269" width="352" height="417"/>
+                                        <rect key="frame" x="0.0" y="129" width="352" height="516"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellStatus" rowHeight="89" id="FyN-E2-LlZ" customClass="EstatusViewCell" customModule="Caritapp" customModuleProvider="target">
@@ -2565,7 +2569,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PdA-IV-ijK" userLabel="Element1">
                                                             <rect key="frame" x="5" y="2" width="264" height="85"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tienda" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYO-n4-SK6">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYO-n4-SK6">
                                                                     <rect key="frame" x="8" y="5" width="264" height="42.5"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
@@ -2578,7 +2582,7 @@
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <textInputTraits key="textInputTraits"/>
                                                                 </textField>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donador" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrv-I1-fo3">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrv-I1-fo3">
                                                                     <rect key="frame" x="8" y="42.5" width="264" height="42.5"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2622,11 +2626,8 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="Tienda" destination="jYO-n4-SK6" id="Uye-VB-2bD"/>
-                                                    <outlet property="donador" destination="Nrv-I1-fo3" id="bkU-JU-Ufq"/>
-                                                    <outlet property="donadorValue" destination="Nrv-I1-fo3" id="3RS-Ws-Z7z"/>
-                                                    <outlet property="estatusValue" destination="wZ3-W5-X9B" id="dXK-nL-UY2"/>
-                                                    <outlet property="tiendaValue" destination="jYO-n4-SK6" id="I1A-KC-Kek"/>
+                                                    <outlet property="donadorValue" destination="Nrv-I1-fo3" id="XQ4-Kr-3Di"/>
+                                                    <outlet property="tiendaValue" destination="jYO-n4-SK6" id="mjD-mU-RSD"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -2638,14 +2639,14 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="2La-A0-o3W" firstAttribute="height" secondItem="Bi9-wp-hyB" secondAttribute="height" multiplier="0.6" id="DM5-7H-MO2"/>
+                                    <constraint firstItem="2La-A0-o3W" firstAttribute="height" secondItem="Bi9-wp-hyB" secondAttribute="height" multiplier="0.8" id="DM5-7H-MO2"/>
                                     <constraint firstItem="3tI-IP-6Yc" firstAttribute="top" secondItem="Bi9-wp-hyB" secondAttribute="top" id="FbF-4z-XUM"/>
                                     <constraint firstItem="3tI-IP-6Yc" firstAttribute="height" secondItem="Bi9-wp-hyB" secondAttribute="height" multiplier="0.2" id="Xn0-oF-URX"/>
                                     <constraint firstItem="3tI-IP-6Yc" firstAttribute="width" secondItem="Bi9-wp-hyB" secondAttribute="width" multiplier="0.85" id="ogR-ej-Acv"/>
                                     <constraint firstItem="3tI-IP-6Yc" firstAttribute="centerX" secondItem="Bi9-wp-hyB" secondAttribute="centerX" id="q7S-U5-6fR"/>
                                     <constraint firstItem="2La-A0-o3W" firstAttribute="centerX" secondItem="Bi9-wp-hyB" secondAttribute="centerX" id="tqq-7I-dry"/>
                                     <constraint firstItem="2La-A0-o3W" firstAttribute="width" secondItem="Bi9-wp-hyB" secondAttribute="width" id="w3t-ST-zAX"/>
-                                    <constraint firstItem="2La-A0-o3W" firstAttribute="top" secondItem="3tI-IP-6Yc" secondAttribute="bottom" constant="130" id="wnd-TM-B2i"/>
+                                    <constraint firstItem="2La-A0-o3W" firstAttribute="top" secondItem="3tI-IP-6Yc" secondAttribute="bottom" id="wnd-TM-B2i"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -2730,15 +2731,6 @@
                                             <constraint firstItem="BjP-Yy-aP2" firstAttribute="width" secondItem="HKv-HO-O1y" secondAttribute="width" multiplier="0.125373" id="dv7-s1-D4F"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyK-nC-52v">
-                                        <rect key="frame" x="9" y="8" width="92" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.1647058824" green="0.61568627450000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Regresar">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
