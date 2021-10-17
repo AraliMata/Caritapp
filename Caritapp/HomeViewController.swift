@@ -41,6 +41,20 @@ class HomeViewController: UIViewController {
             }
             
         }
+        
+        if segue.identifier == "statusSegue" {
+            let controller = (segue.destination as! EstatusDonationViewController)
+            
+            calendarService.retrieveCalendar() {
+                (donation) in
+                DispatchQueue.main.async {
+                    controller.historyStatus = donation
+                    controller.tableViewStatus.reloadData()
+                }
+            }
+
+            
+        }
     }
 
 

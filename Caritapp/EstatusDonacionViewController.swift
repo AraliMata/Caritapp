@@ -8,13 +8,12 @@ import UIKit
 class EstatusDonationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource	{
     @IBOutlet weak var tableViewStatus: UITableView!
     
-    var history : [Donation]? {
+    var historyStatus : [Donation]? {
         didSet {
 
         }
     }
-        /* esto es para sacar cada donacion del arreglo/bd dinamico de doncion
-        */
+        
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -24,21 +23,27 @@ class EstatusDonationViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return history?.count ?? 0
+        return historyStatus?.count ?? 0
     }
     
-    //Aqu[i se mete lo que va a llevar la tabla
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellStatus = tableView.dequeueReusableCell(withIdentifier: "cellStatus", for: indexPath)
-        let statusDonation = history?[indexPath.row]
+        if let cellStatus = tableView.dequeueReusableCell(withIdentifier: "cellStatus", for: indexPath) as? EstatusViewCell {
+            let statusDonation = historyStatus?[indexPath.row]
+            cellStatus.updateCellStatus(donation: statusDonation!)
+            return cellStatus
+        }
         
-        //cellStatus.updateCellStatus(donation : statusDonation)
-        //return cellStatus
-        //Borrar o cambiar de aqui
+        
+        
+        /* let cellStatus = tableView.dequeueReusableCell(withIdentifier: "cellStatus", for: indexPath)
+        let statusDonation = historyStatus?[indexPath.row]
+    
         cellStatus.textLabel!.text = String(statusDonation?.tienda.count ?? 0)
         return cellStatus
-        //a aqui
-        
+         
+*/
+        return UITableViewCell()
     }
 }
 
@@ -47,40 +52,3 @@ class EstatusDonationViewController: UIViewController, UITableViewDelegate, UITa
 
 
 
-/*class EstatusDonationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var tableView: UITableView!
-    
-    
-    
-    var history : [Donation]? {
-        didSet {
-
-        }
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return history?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? EstatusViewCell {
-            let estatus = history?[indexPath.row]
-            cell.updateCell(donation: estatus!)
-            return cell
-        }
-        
-        
-        return UITableViewCell()
-    }
-
-    
-}*/

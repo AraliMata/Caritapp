@@ -10,13 +10,10 @@ class EstatusViewCell: UITableViewCell {
        
     @IBOutlet weak var tiendaValue: UILabel!
     @IBOutlet weak var donadorValue: UILabel!
-
-    @IBOutlet weak var estatusValue: UITextField!
+    
+    //@IBOutlet weak var estatusValue: UITextField!
     
     func updateCellStatus(donation: Donation) {
-           let dateFormatter = DateFormatter()
-           dateFormatter.dateFormat = "YYYY-MM-dd"
-           
         tiendaValue.text = String(donation.tienda)
         donadorValue.text = String(donation.donador)
            
