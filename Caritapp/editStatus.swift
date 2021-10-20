@@ -8,16 +8,28 @@ import UIKit
 
 class editStatus: UIViewController {
     
+  
+    @IBOutlet weak var donadorStatus: UILabel!
+    @IBOutlet weak var tiendaStatus: UILabel!
+    @IBOutlet weak var fechaStatus: UILabel!
+    var updateStatus : Donation? {
+        didSet {
+
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        /*if let conversion = detailItem {
-            originalLabel.text = String(conversion.original.value) + " " + conversion.original.unit.rawValue
-            convertedLabel.text = String(conversion.converted.value) + " " + conversion.converted.unit.rawValue
+        if let status = updateStatus {
+            donadorStatus.text = String(status.donador)
+            tiendaStatus.text = String(status.tienda)
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "YYYY-MM-dd"
-            dateLabel.text = dateFormatter.string(from: conversion.created)
-        }*/
+            fechaStatus.text = status.fecha
+            
+        }
+        //donadorStatus.text = "Strip"
     }
     
     @IBAction func regresarStatusList(_ sender: UIButton) {
