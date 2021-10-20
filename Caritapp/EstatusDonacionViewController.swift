@@ -45,6 +45,17 @@ class EstatusDonationViewController: UIViewController, UITableViewDelegate, UITa
 */
         return UITableViewCell()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "updateStatus" {
+            let controller = (segue.destination as! editStatus)
+            
+            if let indexPath = tableViewStatus.indexPathForSelectedRow {
+                let selectedStatus = historyStatus?[indexPath.row]
+                controller.updateStatus = selectedStatus
+            }
+            
+        }
+    }
 }
 
 

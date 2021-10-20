@@ -2616,7 +2616,7 @@
                                                 <connections>
                                                     <outlet property="donadorValue" destination="Nrv-I1-fo3" id="XQ4-Kr-3Di"/>
                                                     <outlet property="tiendaValue" destination="jYO-n4-SK6" id="mjD-mU-RSD"/>
-                                                    <segue destination="Owq-JC-Ruk" kind="show" id="p7t-HY-Pk9"/>
+                                                    <segue destination="Owq-JC-Ruk" kind="show" identifier="updateStatus" id="p7t-HY-Pk9"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -2745,8 +2745,8 @@
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16/20/2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQx-Vf-vIq">
-                                                        <rect key="frame" x="0.0" y="41" width="134" height="27.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="16/20/2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQx-Vf-vIq">
+                                                        <rect key="frame" x="0.0" y="41" width="134" height="41"/>
                                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2841,6 +2841,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="K2S-vy-VzA"/>
+                    <connections>
+                        <outlet property="donadorStatus" destination="BjP-Yy-aP2" id="eMA-01-jU9"/>
+                        <outlet property="fechaStatus" destination="wQx-Vf-vIq" id="mD6-Wn-asa"/>
+                        <outlet property="tiendaStatus" destination="1eR-f7-t1A" id="btf-Gj-fnH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0A-gq-oeA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
