@@ -2827,7 +2827,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="regresarStatusList:" destination="Owq-JC-Ruk" eventType="touchUpInside" id="Rxi-7K-BGN"/>
+                                    <action selector="actualuzarEstado:" destination="Owq-JC-Ruk" eventType="touchUpInside" id="cUL-CZ-vId"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2843,6 +2843,7 @@
                     <navigationItem key="navigationItem" id="K2S-vy-VzA"/>
                     <connections>
                         <outlet property="donadorStatus" destination="BjP-Yy-aP2" id="eMA-01-jU9"/>
+                        <outlet property="estado" destination="meg-J7-fq4" id="0aS-5y-BCY"/>
                         <outlet property="fechaStatus" destination="wQx-Vf-vIq" id="mD6-Wn-asa"/>
                         <outlet property="tiendaStatus" destination="1eR-f7-t1A" id="btf-Gj-fnH"/>
                     </connections>

@@ -9,6 +9,7 @@ import UIKit
 class editStatus: UIViewController {
     
   
+    @IBOutlet weak var estado: UILabel!
     @IBOutlet weak var donadorStatus: UILabel!
     @IBOutlet weak var tiendaStatus: UILabel!
     @IBOutlet weak var fechaStatus: UILabel!
@@ -18,7 +19,16 @@ class editStatus: UIViewController {
         }
     }
     
-    @IBOutlet weak var actualizarEstado: UIButton!
+    @IBAction func actualuzarEstado(_ sender: UIButton) {
+        if estado.text == "En tienda"{
+            estado.text = "En camino"
+        } else if estado.text == "En camino"{
+            estado.text = "En almacen"
+        } else if estado.text == "En almacen"{
+            estado.text = "En tienda"
+        }
+    }
+    
     
     
     override func viewDidLoad() {
