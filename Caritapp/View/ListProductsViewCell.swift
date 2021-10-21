@@ -16,7 +16,7 @@ class ListProductsViewCell: UITableViewCell {
     
     func updateCell(product: Linea) {
         upc.text = product.upc
-        cantidad_recibida.text = String(product.cantidad_recibida)
+        cantidad_recibida.text = String(product.cantidadRecibida)
         status.text = product.status
     }
     

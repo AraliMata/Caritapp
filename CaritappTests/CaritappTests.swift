@@ -31,20 +31,5 @@ class CaritappTests: XCTestCase {
         }
     }
     
-    
-    /*func testCreateDonation() throws {
-        // Given
-        let input = Donation(donador: String("Aralí"), tienda: String("mi casa"), kilos: "40", fecha: Date())
-        
-        // When
-        let result =
-        
-        // Then
-        let expectedValue: Float16 = 0
-        let expectedUnit = Temperature.Unit.CELSIUS
-        XCTAssertEqual(result.value, expectedValue)
-        XCTAssertEqual(result.unit, expectedUnit)
-    }*/
-    
 
 }
