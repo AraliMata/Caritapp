@@ -22,7 +22,12 @@ class ListProductsViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //alerta()
+        
+
     }
+    
+   
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -54,7 +59,7 @@ class ListProductsViewController: UIViewController, UITableViewDelegate, UITable
     }
     
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListProductsViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cellProducts", for: indexPath) as? ListProductsViewCell {
             
             let product = history?[indexPath.row]
             cell.updateCell(product: product!)
@@ -66,8 +71,21 @@ class ListProductsViewController: UIViewController, UITableViewDelegate, UITable
         return UITableViewCell()
     }
     
-
+   /* func alerta(){
+        
+        if(self.history!.count == 0 || self.history){
+           
+            DispatchQueue.main.async {
+            let alertController2 = UIAlertController(title: "Advertencia", message: "Esta donación no tiene productos asociados", preferredStyle: UIAlertController.Style.alert)
+                alertController2.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default))
+                self.present(alertController2, animated: true, completion: nil)
+           }
+        }
+    }*/
 }
+    
+
+
 
 
 

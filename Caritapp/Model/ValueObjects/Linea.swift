@@ -35,6 +35,25 @@ public class Linea: Codable{
 
     }
     
+    public init(id: Int, upc: String, cant_s: Float, cant_r: Float, precio_unit: Float, precio_tot: Float, destino: String, status: String, donacion: Donation){
+        self.id = id
+
+        self.upc = upc
+        self.cantidadSupuesta = cant_s
+        self.cantidadRecibida = cant_r
+        self.precioUnitario = precio_unit
+        self.precioTotal = precio_tot
+        self.destino = destino
+        
+        if(status.isEmpty){
+            self.status = "No recibido"
+        }else{
+            self.status = status
+        }
+        self.donation = donacion
+
+    }
+    
    
     
 }
