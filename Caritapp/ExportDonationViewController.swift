@@ -8,7 +8,8 @@
 import UIKit
 
 class ExportDonationViewController: UIViewController {
-    let donationService = DonationService()
+    let productsService = LineaService()
+    var exportedProducts: [Linea] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,11 +18,28 @@ class ExportDonationViewController: UIViewController {
 
     @IBAction func exportDonation(_ sender: UIButton) {
         print("button pressed")
-        donationService.retrieveDonation() {
-            (donation) in
-            print("Donation exported")
-            print(donation)
+        let semaphore = DispatchSemaphore(value: 0)
+        productsService.retrieveProducts() {
+            (products) in
+            print("Products exported")
+            // Set products list
+            self.exportedProducts = products
+
+            print("Number of products:", self.exportedProducts.count)
+            semaphore.signal()
         }
+        semaphore.wait()
+        let fileTool = FileTool()
+        do {
+            try fileTool.saveProductsFile(products: self.exportedProducts) {
+                fileURL in
+                let controller = UIDocumentPickerViewController(forExporting: [fileURL])
+                self.present(controller, animated: true)
+            }
+        } catch {
+            print("Cannot save file")
+        }
+
     }
     
 }
