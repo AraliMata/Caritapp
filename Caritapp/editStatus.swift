@@ -18,6 +18,9 @@ class editStatus: UIViewController {
         }
     }
     
+    @IBOutlet weak var actualizarEstado: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,8 +35,5 @@ class editStatus: UIViewController {
         //donadorStatus.text = "Strip"
     }
     
-    @IBAction func regresarStatusList(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-    }
-    
+        
 }

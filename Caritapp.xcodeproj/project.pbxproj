@@ -205,6 +205,7 @@
 				8D06FF7F26EADC6500782CD8 /* ViewController.swift */,
 				8D9D78272710B083002F5049 /* ImportProductsViewController.swift */,
 				2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */,
+				7B8F0C52271CDC42002FD53A /* editStatus.swift */,
 				8DACBCD7270F68B70059BE77 /* Images */,
 				8D1E35FF26FE4C2500314A99 /* Model */,
 				8D06FF7B26EADC6500782CD8 /* AppDelegate.swift */,
@@ -214,7 +215,6 @@
 				8D06FF8626EADC6500782CD8 /* LaunchScreen.storyboard */,
 				8D06FF8926EADC6500782CD8 /* Info.plist */,
 				8DDF02E227174EC900214477 /* DonationListViewController.swift */,
-				7B8F0C52271CDC42002FD53A /* editStatus.swift */,
 			);
 			path = Caritapp;
 			sourceTree = "<group>";
