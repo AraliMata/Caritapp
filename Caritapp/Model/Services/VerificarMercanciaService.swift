@@ -11,7 +11,7 @@ class VerificarMercanciaService {
     public typealias RetrieveDonationClosure = ([Donation]) -> Void
     public typealias RetrieveProductsClosure = ([Linea]) -> Void
     public typealias RetrieveDonationsIdClosure = ([String]) -> Void
-    public typealias sendProductClosure = (Linea) -> Void
+    public typealias sendProductClosure = (Int) -> Void
 
     func retrieveDonations(_ handler: @escaping RetrieveDonationClosure) {
             let donationEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/getDonations"
@@ -172,7 +172,7 @@ class VerificarMercanciaService {
     
     
     func updateProduct(product: Linea, _ handler: @escaping sendProductClosure) {
-        let createDonationEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/createDonation/create"
+        let createDonationEndpoint: String = "https://caritapp-rest.herokuapp.com/product/updateProduct"
         guard let url = URL(string: createDonationEndpoint) else {
             print("Error: cannot create URL")
             return
@@ -188,11 +188,13 @@ class VerificarMercanciaService {
         let encoder = JSONEncoder()
         let decoder = JSONDecoder()
         let jsonData = try! encoder.encode(product)
+        
+        print(jsonData)
         urlRequest.httpBody = jsonData
         let task = session.dataTask(with: urlRequest) {
             (data, response, error) in
             guard error == nil else {
-                print("error calling POST on /donation/createDonation/create")
+                print("error calling POST on /product/updateProduct")
                 print(error!)
                 return
             }
@@ -210,14 +212,26 @@ class VerificarMercanciaService {
                     print(httpResponse)
                     do{
                         let updated_product = try decoder.decode(Linea.self, from: responseData)
-                        handler(updated_product)
+                        
+                        print("Producto recibido")
+                        print("Id: ", updated_product.id)
+                        print("Upc: ",updated_product.upc)
+                        print("Status: ",updated_product.status ?? "Default")
+                        print("Destino: ",updated_product.destino)
+                        handler(httpResponse.statusCode)
+                        
                     }catch{
                         print("No se pudo convertir json a Linea")
+                        handler(httpResponse.statusCode)
                     }
+                    
                 }
                 else {
-                    print("Error: Failed to retrieve donation")
+                    print("Error: Failed to retrieve product")
+                    
                 }
+                
+                
                 
             }
 

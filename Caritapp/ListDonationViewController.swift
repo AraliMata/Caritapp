@@ -42,9 +42,9 @@ class ListDonationViewController: UIViewController, UITableViewDelegate, UITable
             let controller = (segue.destination as! ListProductsViewController)
             if let indexPath = tableView.indexPathForSelectedRow{
                 let idDonation = idDonations?[indexPath.row] ?? "129"
-                //let idDonation = "129"
                 verificarMercanciaService.retrieveProducts(idDonation: idDonation) {
                     (products) in
+                    
                     DispatchQueue.main.async {
                         controller.history = products
                         controller.tableView.reloadData()
@@ -57,7 +57,7 @@ class ListDonationViewController: UIViewController, UITableViewDelegate, UITable
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListDonationViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cellListDonation", for: indexPath) as? ListDonationViewCell {
 
             let donation = history?[indexPath.row]
             cell.updateCell(donation: donation!)
@@ -65,7 +65,7 @@ class ListDonationViewController: UIViewController, UITableViewDelegate, UITable
             return cell
         }
 
-        //cell.textLabel!.text = String(temperatureConversion?.original.value ?? 0) + " " + String(temperatureConversion?.converted.value ?? 0)
+     
         return UITableViewCell()
     }
 

@@ -9,14 +9,18 @@ import UIKit
 import DropDown
 
 class EditProductViewController: UIViewController {
+    let verificarMercanciaService = VerificarMercanciaService()
     
     var destinoActualizado = ""
+    var recibido = ""
+    var switchChanged = false
     
     var productoRecibido : Linea? {
         didSet {
 
         }
     }
+    
 
     @IBOutlet weak var upcEdit_textField: UITextField!
     @IBOutlet weak var udmEdit_textField: UITextField!
@@ -32,8 +36,17 @@ class EditProductViewController: UIViewController {
     
     @IBOutlet weak var destinoLabel: UILabel!
     
+    @IBAction func cambiarEstatus(_ sender: Any) {
+        if(recibidoEditSwitch.isOn){
+            recibido = "Recibido"
+        }else{
+            recibido = "No recibido"
+        }
+        switchChanged = true
+    }
     
     @IBAction func seleccionarDestino(_ sender: Any) {
+        dropdownDestino.show()
     }
     
     let dropdownDestino = DropDown()
@@ -41,14 +54,10 @@ class EditProductViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         updateView(product: productoRecibido)
         setupDropdownDestino()
     }
     
-    @IBAction func guardar(_ sender: Any) {
-        
-    }
     
     func setupDropdownDestino(){
         dropdownDestino.anchorView = dropdownDestView
@@ -61,12 +70,45 @@ class EditProductViewController: UIViewController {
             print("Almacen seleccionado: \(item) en index: \(index)")
             self.destinoActualizado = item
             self.destinoLabel.text = item
-            //Cuando se presione el botón guardar, llamar al servicio, usar id de producto para poder actualizar
             
         }
         
 
     }
+    
+    @IBAction func guardar(_ sender: Any) {
+        print(recibido)
+        
+        if(destinoActualizado.isEmpty){
+            destinoActualizado = productoRecibido?.destino ?? "No definido"
+        }
+        
+        if(!switchChanged){
+            recibido = productoRecibido?.status ?? "No recibido"
+        }
+        
+        let donacionRepuesto = Donation(donador: "Prueba1", tienda: "Chida", kilos_donados: 189, kilos_recibidos: 0, fecha: "2021-10-14")
+        
+        let producto = Linea(id: productoRecibido?.id ?? 1, upc: productoRecibido?.upc ?? "5678", cant_s: productoRecibido?.cantidadSupuesta ?? 0, cant_r: productoRecibido?.cantidadRecibida ?? 0, precio_unit: productoRecibido?.precioUnitario ?? 0, precio_tot: productoRecibido?.precioTotal ?? 0, destino: destinoActualizado, status: recibido, donacion: productoRecibido?.donation ?? donacionRepuesto)
+       
+        verificarMercanciaService.updateProduct(product: producto,{(statusServicio) in
+            if(statusServicio == 200){
+                DispatchQueue.main.async {
+                let alertController2 = UIAlertController(title: "Exito", message: "El producto fue actualizado", preferredStyle: UIAlertController.Style.alert)
+                    alertController2.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default))
+                    self.present(alertController2, animated: true, completion: nil)
+               }
+            }else{
+                DispatchQueue.main.async {
+                let alertController2 = UIAlertController(title: "Fallo", message: "Lo sentimos, la actualización del producto no pudo ser completada", preferredStyle: UIAlertController.Style.alert)
+                    alertController2.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default))
+                    self.present(alertController2, animated: true, completion: nil)
+                }
+            }
+        } )
+        
+    }
+    
     
     
     public func updateView(product: Linea?){
@@ -75,14 +117,15 @@ class EditProductViewController: UIViewController {
         cantRecEdit_textField.text = String(product?.cantidadRecibida ?? 0)
         
         
-        if(product?.status == "No recibido"){
-            recibidoEditSwitch.setOn(false, animated :true)
-        }else{
+        if(product?.status == "Recibido" || product?.status == "recibido" ){
             recibidoEditSwitch.setOn(true, animated: true)
+        }else{
+            recibidoEditSwitch.setOn(false, animated :true)
         }
         
         precioTotEdit_textField.text = String(product?.precioTotal ?? 0)
         precioUnEdit_textField.text = String(product?.precioUnitario ?? 0)
+        destinoLabel.text = product?.destino ?? "Selecciona un destino"
         
     }
     
