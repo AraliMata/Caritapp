@@ -12,6 +12,7 @@ import UniformTypeIdentifiers
 class HomeViewController: UIViewController {
     
     let calendarService = CalendarService()
+    let entregasService = EntregasService()
 
 
     @IBOutlet weak var registrarRecepcion: UIButton!
@@ -42,6 +43,7 @@ class HomeViewController: UIViewController {
             
         }
         
+        
         if segue.identifier == "statusSegue" {
             let controller = (segue.destination as! EstatusDonationViewController)
             
@@ -55,6 +57,21 @@ class HomeViewController: UIViewController {
 
             
         }
+        
+        if segue.identifier == "entregasSegue" {
+            let controller = (segue.destination as! EntregasViewController)
+            
+            entregasService.retrieveEntregas() {
+                (entregas) in
+                DispatchQueue.main.async {
+                    controller.entrega = entregas
+                    controller.tableView.reloadData()
+                }
+            }
+
+            
+        }
+        
     }
 
 

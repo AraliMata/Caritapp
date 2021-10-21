@@ -51,6 +51,12 @@
 		A81C2ABD680576BB8C0D1D5B /* Pods_Caritapp_CaritappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E9AA32944BF09A0D264636 /* Pods_Caritapp_CaritappUITests.framework */; };
 		AB5BA614271742A600F7E960 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */; };
 		AB7EC4622713E60400517C5D /* CalendarServiceIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */; };
+		AB9939EC2720ED0F00B3544B /* EntregaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9939EB2720ED0F00B3544B /* EntregaTableViewCell.swift */; };
+		AB9939F62720F56100B3544B /* Entrega.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9939F52720F56100B3544B /* Entrega.swift */; };
+		AB993A022720F75200B3544B /* EntregasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB993A012720F75200B3544B /* EntregasService.swift */; };
+		AB993A072721047A00B3544B /* EntregasIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB993A062721047A00B3544B /* EntregasIntegrationTest.swift */; };
+		AB993A0C27210F5E00B3544B /* Tienda.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB993A0B27210F5E00B3544B /* Tienda.swift */; };
+		AB993A18272116EC00B3544B /* EntregasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB993A17272116EC00B3544B /* EntregasViewController.swift */; };
 		ABD8515F2712B8DF00FD2B75 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */; };
 		ABE8BC2226F7CF7000707223 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC2126F7CF7000707223 /* LogInController.swift */; };
 		ABE8BC2726F7CF9E00707223 /* CalendarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8BC2626F7CF9E00707223 /* CalendarioViewController.swift */; };
@@ -131,6 +137,12 @@
 		AA70F5AAC34B14B49299F86E /* Pods-Caritapp-CaritappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caritapp-CaritappUITests.release.xcconfig"; path = "Target Support Files/Pods-Caritapp-CaritappUITests/Pods-Caritapp-CaritappUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarServiceIntegrationTest.swift; sourceTree = "<group>"; };
+		AB9939EB2720ED0F00B3544B /* EntregaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntregaTableViewCell.swift; sourceTree = "<group>"; };
+		AB9939F52720F56100B3544B /* Entrega.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrega.swift; sourceTree = "<group>"; };
+		AB993A012720F75200B3544B /* EntregasService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntregasService.swift; sourceTree = "<group>"; };
+		AB993A062721047A00B3544B /* EntregasIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntregasIntegrationTest.swift; sourceTree = "<group>"; };
+		AB993A0B27210F5E00B3544B /* Tienda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tienda.swift; sourceTree = "<group>"; };
+		AB993A17272116EC00B3544B /* EntregasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntregasViewController.swift; sourceTree = "<group>"; };
 		ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		ABE8BC2126F7CF7000707223 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		ABE8BC2626F7CF9E00707223 /* CalendarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +211,7 @@
 				8D1E670326F14BE5007BE4D1 /* ProductViewController.swift */,
 				8D1E670826F14C67007BE4D1 /* HomeViewController.swift */,
 				7BE74B99271A45F8005D83ED /* EstatusDonacionViewController.swift */,
+				AB993A17272116EC00B3544B /* EntregasViewController.swift */,
 				8D1E670D26F14C82007BE4D1 /* HomeDonorViewController.swift */,
 				ABE8BC2126F7CF7000707223 /* LogInController.swift */,
 				ABE8BC2626F7CF9E00707223 /* CalendarioViewController.swift */,
@@ -231,6 +244,7 @@
 				8DF2A7C02717E1FE0080F61A /* ImportProductsTests.swift */,
 				8DF2A7C52717E2CF0080F61A /* FileToolTests.swift */,
 				7BE74BA8271A46FD005D83ED /* StatusServiceIntegrationTest.swift */,
+				AB993A062721047A00B3544B /* EntregasIntegrationTest.swift */,
 			);
 			path = CaritappTests;
 			sourceTree = "<group>";
@@ -271,6 +285,7 @@
 				ABD8515E2712B8DF00FD2B75 /* CalendarService.swift */,
 				8DDF02EE27175C5000214477 /* LineaService.swift */,
 				7BE74BA3271A4690005D83ED /* StatusService.swift */,
+				AB993A012720F75200B3544B /* EntregasService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -282,6 +297,8 @@
 				8D254209270B664200EC540F /* Linea.swift */,
 				8DC1B255271A0204006D3EB4 /* Donador.swift */,
 				7BE74B9E271A4643005D83ED /* Status.swift */,
+				AB9939F52720F56100B3544B /* Entrega.swift */,
+				AB993A0B27210F5E00B3544B /* Tienda.swift */,
 			);
 			path = ValueObjects;
 			sourceTree = "<group>";
@@ -315,6 +332,7 @@
 				8DDF02E827174F4600214477 /* ListDonationViewCell.swift */,
 				8DDF02F327175CB800214477 /* ListProductsViewCell.swift */,
 				7BE74B94271A41A3005D83ED /* EstatusViewCell.swift */,
+				AB9939EB2720ED0F00B3544B /* EntregaTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -560,8 +578,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B8F0C53271CDC42002FD53A /* editStatus.swift in Sources */,
+				AB993A18272116EC00B3544B /* EntregasViewController.swift in Sources */,
 				7BE74B95271A41A3005D83ED /* EstatusViewCell.swift in Sources */,
 				8D25420A270B664200EC540F /* Linea.swift in Sources */,
+				AB9939F62720F56100B3544B /* Entrega.swift in Sources */,
 				8D1E66FF26F14BB8007BE4D1 /* EditProductViewController.swift in Sources */,
 				8DDF02F427175CB800214477 /* ListProductsViewCell.swift in Sources */,
 				8DC1B256271A0204006D3EB4 /* Donador.swift in Sources */,
@@ -581,6 +601,8 @@
 				2CF4F24227121B54004DE3EE /* ExportDonationViewController.swift in Sources */,
 				8D1E670E26F14C82007BE4D1 /* HomeDonorViewController.swift in Sources */,
 				2CF4F24727121D4A004DE3EE /* DonationService.swift in Sources */,
+				AB993A0C27210F5E00B3544B /* Tienda.swift in Sources */,
+				AB993A022720F75200B3544B /* EntregasService.swift in Sources */,
 				8D06FF7E26EADC6500782CD8 /* SceneDelegate.swift in Sources */,
 				8DDF02EF27175C5000214477 /* LineaService.swift in Sources */,
 				8D1E360E26FE4F2100314A99 /* CreateDonationService.swift in Sources */,
@@ -589,6 +611,7 @@
 				8D1E66FA26F14B46007BE4D1 /* ListProductsViewController.swift in Sources */,
 				8D1E670426F14BE5007BE4D1 /* ProductViewController.swift in Sources */,
 				8D1E360426FE4CD500314A99 /* CreateDonation.swift in Sources */,
+				AB9939EC2720ED0F00B3544B /* EntregaTableViewCell.swift in Sources */,
 				8D55B39A26EAF50C002A4205 /* CreateDonationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,6 +623,7 @@
 				8DF2A7C12717E1FE0080F61A /* ImportProductsTests.swift in Sources */,
 				8D587C992715154E004DC660 /* CreateDonationServiceIntegrationTest.swift in Sources */,
 				2CF4F24C271227FF004DE3EE /* DonationServiceIntegrationTests.swift in Sources */,
+				AB993A072721047A00B3544B /* EntregasIntegrationTest.swift in Sources */,
 				8DF2A7C62717E2CF0080F61A /* FileToolTests.swift in Sources */,
 				AB7EC4622713E60400517C5D /* CalendarServiceIntegrationTest.swift in Sources */,
 				8DC167C02704DD7400AD188F /* CaritappTestsServices.swift in Sources */,
