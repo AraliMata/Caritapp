@@ -19,9 +19,9 @@ class DonationServiceIntegrationTest: XCTestCase {
             (donation) in
             //print("Test retrieveDonation")
             //print(donation)
-            XCTAssertEqual(donation.donador, "Alsuper")
-            XCTAssertEqual(donation.tienda, "azul")
-            XCTAssertEqual(donation.kilosDonados, 0)
+            XCTAssertEqual(donation.donador, "Prueba1")
+            XCTAssertEqual(donation.tienda, "Chida")
+            XCTAssertEqual(donation.kilosDonados, 189)
             
             donationExpectation.fulfill()
             

@@ -8,8 +8,8 @@
 import UIKit
 
 class ExportDonationViewController: UIViewController {
-    let donationService = DonationService()
-    var exportedDonation: Donation = Donation(donador: "", tienda: "", kilos_donados: 0, kilos_recibidos: 0, fecha: "")
+    let productsService = LineaService()
+    var exportedProducts: [Linea] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,32 +19,19 @@ class ExportDonationViewController: UIViewController {
     @IBAction func exportDonation(_ sender: UIButton) {
         print("button pressed")
         let semaphore = DispatchSemaphore(value: 0)
-        donationService.retrieveDonation() {
-            (donation) in
-            print("Donation exported")
-            print(donation.donador)
-            self.exportedDonation = donation
-            print("Exported donation:")
-            print("Donador:", self.exportedDonation.donador)
+        productsService.retrieveProducts() {
+            (products) in
+            print("Products exported")
+            // Set products list
+            self.exportedProducts = products
+
+            print("Number of products:", self.exportedProducts.count)
             semaphore.signal()
-            /*
-            let fileTool = FileTool()
-            do {
-                try fileTool.saveExportedDonationFile(donation: donation) {
-                    fileURL in
-                    let controller = UIDocumentPickerViewController(forExporting: [fileURL])
-                    self.present(controller, animated: true)
-                }
-            } catch {
-                print("Cannot save file")
-            }*/
         }
         semaphore.wait()
-        print("Exported donation outside closure:")
-        print("Donador:", self.exportedDonation.donador)
         let fileTool = FileTool()
         do {
-            try fileTool.saveExportedDonationFile(donation: self.exportedDonation) {
+            try fileTool.saveProductsFile(products: self.exportedProducts) {
                 fileURL in
                 let controller = UIDocumentPickerViewController(forExporting: [fileURL])
                 self.present(controller, animated: true)

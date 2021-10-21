@@ -55,14 +55,14 @@ class FileTool {
 
     public typealias SaveFileClosure = (URL) -> Void
 
-    public func saveFile(products: [Linea], _ handler: SaveFileClosure) throws {
+    public func saveProductsFile(products: [Linea], _ handler: SaveFileClosure) throws {
         let encoder = JSONEncoder()
         let jsonData = try! encoder.encode(products)
         
         let fileManager = FileManager.default
 
 
-        let fileURL = fileManager.temporaryDirectory.appendingPathComponent("exported.json")
+        let fileURL = fileManager.temporaryDirectory.appendingPathComponent("exportedProducts.json")
             
         try jsonData.write(to: fileURL)
         
