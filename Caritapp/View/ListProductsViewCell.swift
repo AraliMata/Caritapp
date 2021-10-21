@@ -12,12 +12,14 @@ class ListProductsViewCell: UITableViewCell {
     @IBOutlet weak var upc: UILabel!
     
     @IBOutlet weak var status: UILabel!
-    @IBOutlet weak var cantidad_recibida: UILabel!
+   
+    
+    @IBOutlet weak var destino: UILabel!
     
     func updateCell(product: Linea) {
         upc.text = product.upc
-        cantidad_recibida.text = String(product.cantidad_recibida)
-        status.text = product.status
+        destino.text = "Destino: "+product.destino
+        status.text = "Estatus: "+product.status! 
     }
     
 }

@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
     let calendarService = CalendarService()
     let entregasService = EntregasService()
 
+    let verificarMercanciaService = VerificarMercanciaService()
+
 
     @IBOutlet weak var registrarRecepcion: UIButton!
     
@@ -71,6 +73,25 @@ class HomeViewController: UIViewController {
 
             
         }
+        
+
+        if segue.identifier == "verificarMercancia" {
+            let controller = (segue.destination as! ListDonationViewController)
+            
+            verificarMercanciaService.retrieveDonations() {
+                (donations) in
+                self.verificarMercanciaService.retrieveDonationsId { (idDonations) in
+                    DispatchQueue.main.async {
+                        controller.history = donations
+                        controller.idDonations = idDonations
+                        controller.tableView.reloadData()
+                    }
+                }
+                
+            }
+            
+        }
+        
         
     }
 

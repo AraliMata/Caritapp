@@ -9,7 +9,7 @@ import Foundation
 
 class CreateDonationService {
     public typealias sendDonationClosure = (String) -> Void
-    public typealias sendProductsClosure = (String) -> Void
+    public typealias sendProductsClosure = (Int) -> Void
     public typealias retrieveDonorsClosure = ([Donador]) -> Void
     public typealias retrieveStoresClosure = ([String]) -> Void
     
@@ -79,6 +79,7 @@ class CreateDonationService {
         urlRequest.httpMethod = "POST"
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         //let encoder = JSONEncoder()
+        let decoder = JSONDecoder()
         
         //let jsonData = try! encoder.encode(file)
         urlRequest.httpBody = Data(file.utf8)
@@ -86,7 +87,7 @@ class CreateDonationService {
         let task = session.dataTask(with: urlRequest) {
             (data, response, error) in
             guard error == nil else {
-                print("error calling POST on /donation/create/importProducts")
+                print("error calling POST on /donation/createDonation/create")
                 print(error!)
                 return
             }
@@ -96,14 +97,34 @@ class CreateDonationService {
                 return
             }
             
-            
-            let response =  String(decoding: responseData, as: UTF8.self)
-            
-            handler(response)
+           
+            if let httpResponse = response as? HTTPURLResponse {
+                print("statusCode: \(httpResponse.statusCode)")
+                
+                if (httpResponse.statusCode == 200) {
+                    print(responseData)
+                    /*do{
+                        let products = try decoder.decode([Linea].self, from: responseData)
+                        
+                        print("Http response", httpResponse)
+                        print("UPC:", products[0].upc)
+                        print("Destino: ", products[0].destino)
+                        
+                    }catch{
+                        print("Nose pudo convertir JSON a Linea")
+                    }*/ //Para cuando pueda hacer push en heroku
+                    
+                    handler(httpResponse.statusCode)
+                    
+                }
+                else {
+                    print("Error: Failed to retrieve donation")
+                }
+                
+            }
 
         }
         task.resume()
-        
         
   }
     

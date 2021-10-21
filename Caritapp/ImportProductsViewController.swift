@@ -42,7 +42,7 @@ extension ImportProductsViewController: UIDocumentPickerDelegate {
                 createDonationService.sendProducts(file: readJson, idDonation: String(self.idDonation!)) { (response) in
                     print(response)
                     
-                if(response == "200"){
+                if(response == 200){
                     DispatchQueue.main.async {
                 let alertController = UIAlertController(title: "Éxito", message: "Importación de productos completada", preferredStyle: UIAlertController.Style.alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler:{(action: UIAlertAction!) in
