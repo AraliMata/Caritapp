@@ -8,24 +8,28 @@
 import Foundation
 
 public class Linea: Codable{
+    public let id: Int
     public let upc: String;
     //Para tabla linea
-    public let cantidad_supuesta: Float
-    public let cantidad_recibida: Float
-    public let precio_unitario: Float
-    public let precio_total: Float
+    public let cantidadRecibida: Float
+    public let cantidadSupuesta: Float
     public let destino: String
+    public let precioTotal: Float
+    public let precioUnitario: Float
     public let status: String
+    public let donation: Donation
 
     
-    public init(upc: String, cant_s: Float, cant_r: Float, precio_unit: Float, precio_tot: Float){
+    public init(id: Int, upc: String, cant_s: Float, cant_r: Float, precio_unit: Float, precio_tot: Float, donacion: Donation){
+        self.id = id
         self.upc = upc
-        self.cantidad_supuesta = cant_s
-        self.cantidad_recibida = cant_r
-        self.precio_unitario = precio_unit
-        self.precio_total = precio_tot
+        self.cantidadSupuesta = cant_s
+        self.cantidadRecibida = cant_r
+        self.precioUnitario = precio_unit
+        self.precioTotal = precio_tot
         self.destino = "Indefinido"
         self.status = "No recibido"
+        self.donation = donacion
     }
     
 }

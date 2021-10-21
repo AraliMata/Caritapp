@@ -5,14 +5,14 @@
 //  Created by user189928 on 10/13/21.
 //
 
-/*import Foundation
+import Foundation
 
 class LineaService{
-    public typealias RetrieveProductsClosure = ([Donation]) -> Void
+    public typealias RetrieveProductsClosure = ([Linea]) -> Void
 
-    func retrieveProducts(_ handler: @escaping RetrieveDonationsClosure) {
-            let historyEndpoint: String = "https://temperature-converter-rest.herokuapp.com/temperature/conversion/history"
-            guard let url = URL(string: historyEndpoint) else {
+    func retrieveProducts(_ handler: @escaping RetrieveProductsClosure) {
+            let productsEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/129/products"
+            guard let url = URL(string: productsEndpoint) else {
                 print("Error: cannot create URL")
                 return
             }
@@ -25,7 +25,7 @@ class LineaService{
             let task = session.dataTask(with: urlRequest) {
                 (data, response, error) in
                 guard error == nil else {
-                    print("error calling GET on /temperature/conversion/history")
+                    print("error calling GET on /donation/{id}/products")
                     print(error!)
                     return
                 }
@@ -43,14 +43,20 @@ class LineaService{
                     if let jsonResponse = String(data: responseData, encoding: String.Encoding.utf8) {
                         print("JSON String: \(jsonResponse)")
                     }
-
-                    let history = try decoder.decode([TemperatureConversion].self, from: responseData)
                     
+                    // check status code
                     if let httpResponse = response as? HTTPURLResponse {
                         print("statusCode: \(httpResponse.statusCode)")
+                        
+                        if (httpResponse.statusCode == 200) {
+                            let products = try decoder.decode([Linea].self, from: responseData)
+                            handler(products)
+                        }
+                        else {
+                            print("Error: Failed to retrieve products")
+                        }
+                        
                     }
-        
-                    handler(history)
                 } catch {
                     print("error trying to convert data to JSON")
                     return
@@ -60,4 +66,4 @@ class LineaService{
             task.resume()
       }
 }
-*/
+
