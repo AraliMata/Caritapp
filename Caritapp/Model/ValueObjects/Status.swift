@@ -8,11 +8,11 @@ import Foundation
 
 public class Status: Codable{
     public let estado: String
-    let fecha: String
+    let fechaStatus: String
     
     public init(estado: String, fecha: String){
         self.estado = estado
-        self.fecha = fecha
+        self.fechaStatus = fecha
         
     }
     

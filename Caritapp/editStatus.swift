@@ -10,6 +10,7 @@ class editStatus: UIViewController {
     
   
     @IBOutlet weak var donadorStatus: UILabel!
+    @IBOutlet weak var estado: UILabel!
     @IBOutlet weak var tiendaStatus: UILabel!
     @IBOutlet weak var fechaStatus: UILabel!
     var updateStatus : Donation? {
@@ -18,6 +19,15 @@ class editStatus: UIViewController {
         }
     }
     
+    @IBAction func actualizarEstado(_ sender: UIButton) {
+        if estado.text == "En tienda"{
+                    estado.text = "En camino"
+                } else if estado.text == "En camino"{
+                    estado.text = "En almacen"
+                } else if estado.text == "En almacen"{
+                    estado.text = "En tienda"
+                }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,8 +42,6 @@ class editStatus: UIViewController {
         //donadorStatus.text = "Strip"
     }
     
-    @IBAction func regresarStatusList(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-    }
+   
     
 }
