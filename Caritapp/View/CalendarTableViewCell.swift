@@ -17,6 +17,7 @@ class CalendarTableViewCell: UITableViewCell {
     
     @IBOutlet weak var fechaRegistro: UILabel!
     
+    //Llenar labels de la celda con los valores del objeto Donation    
     func updateCell(donacion: Donation) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"

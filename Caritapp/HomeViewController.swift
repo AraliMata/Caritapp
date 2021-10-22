@@ -29,6 +29,11 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    
+    //al hacer click en el boton calendario, con identificados de segue entregasSegue, llamar
+    //desiganar al controller correspondiente y llamar al servicio entregasService para que
+    //recupere la lista de las donaciones registradas
+    //pasar la lista al controller y llamar a la funcion reloadData para que se llene la tabla
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CalendarioSegue" {
             let controller = (segue.destination as! CalendarioViewController)
@@ -58,6 +63,11 @@ class HomeViewController: UIViewController {
             
         }
         
+        
+        //al hacer click en el boton historialDonaciones, con identificados de segue entregasSegue, llamar
+        //desiganar al controller correspondiente y llamar al servicio entregasService para que
+        //recupere la lista de las entregas registradas
+        //pasar la lista al controller y llamar a la funcion reloadData para que se llene la tabla
         if segue.identifier == "entregasSegue" {
             let controller = (segue.destination as! EntregasViewController)
             

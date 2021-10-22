@@ -18,7 +18,7 @@ class EntregaTableViewCell: UITableViewCell {
     
     @IBOutlet weak var fechaRecepcion: UILabel!
     
-    
+    //Llenar labels de la celda con los valores del objeto Entrega
     func updateCell(entrega: Entrega) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
