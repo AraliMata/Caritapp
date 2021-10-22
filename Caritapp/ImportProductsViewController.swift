@@ -1,6 +1,7 @@
 import UIKit
 import UniformTypeIdentifiers
 
+///Clase para realizar las operaciones relacionadas con la escena de importar donación
 class ImportProductsViewController: UIViewController {
     let createDonationService = CreateDonationService()
     
@@ -9,12 +10,10 @@ class ImportProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Seungdo id:", idDonation!)
-        // Do any additional setup after loading the view.
         
     }
     
-    
-    
+    ///Función para que al presionar el botón de importarProductos se abra el document picker
     @IBAction func importarProductos(_ sender: UIButton) {
         let supportedTypes: [UTType] = [UTType.json]
         let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: supportedTypes, asCopy: true)
@@ -29,6 +28,7 @@ class ImportProductsViewController: UIViewController {
 }
 
 extension ImportProductsViewController: UIDocumentPickerDelegate {
+    ///Función para que al seleccionar un archivo en el document picker, se convierta a String y se llame al servicio para enviar los productos relacionados a la donación al endpoint
     public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
 
         if let url = urls.first {

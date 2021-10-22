@@ -7,12 +7,15 @@
 
 import Foundation
 
+///BDA-16
+///Clase de servicio de verificar mercancia, la cual tiene los métodos que hacen post y get con los endpoints relacionados a la verificación de mercancia (Marcar producto como recibido y cambiar destino)
 class VerificarMercanciaService {
     public typealias RetrieveDonationClosure = ([Donation]) -> Void
     public typealias RetrieveProductsClosure = ([Linea]) -> Void
     public typealias RetrieveDonationsIdClosure = ([String]) -> Void
     public typealias sendProductClosure = (Int) -> Void
 
+    ///Método para obtener una lista de donaciones con get al endpoint donation/getDonations
     func retrieveDonations(_ handler: @escaping RetrieveDonationClosure) {
             let donationEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/getDonations"
             guard let url = URL(string: donationEndpoint) else {
@@ -70,6 +73,7 @@ class VerificarMercanciaService {
             task.resume()
       }
     
+    ///Método para obtener la lista con los ids de las donaciones con get al endpoint donation/getIdDonations
     func retrieveDonationsId(_ handler: @escaping RetrieveDonationsIdClosure) {
             let donationEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/getIdDonations"
             guard let url = URL(string: donationEndpoint) else {
@@ -123,7 +127,7 @@ class VerificarMercanciaService {
             task.resume()
       }
     
-    
+    ///Método para obtener una lista de productos por id de donación con get al endpoint donation/{id}/products
     func retrieveProducts(idDonation: String, _ handler: @escaping RetrieveProductsClosure) {
            let historyEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/"+idDonation+"/products"
            guard let url = URL(string: historyEndpoint) else {
@@ -170,7 +174,7 @@ class VerificarMercanciaService {
            task.resume()
      }
     
-    
+    ///Método que recibe los datos de un producto y llama al endpoint para actualizar su estatus y destino
     func updateProduct(product: Linea, _ handler: @escaping sendProductClosure) {
         let createDonationEndpoint: String = "https://caritapp-rest.herokuapp.com/product/updateProduct"
         guard let url = URL(string: createDonationEndpoint) else {

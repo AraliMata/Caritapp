@@ -2,8 +2,7 @@
 //  HomeDonorViewController.swift
 //  Caritapp
 //
-//  Created by user189928 on 9/14/21.
-//
+
 
 import UIKit
 

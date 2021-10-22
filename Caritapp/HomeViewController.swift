@@ -27,7 +27,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -73,8 +72,8 @@ class HomeViewController: UIViewController {
             
         }
         
-        
-        
+        ///BDA-16
+        ///Función que manda una lista de donaciones, una lista de ids de donaciones y carga los datos de la tabla de la siguiente pantalla que se verá que es la de ListDonation
         if segue.identifier == "verificarMercancia" {
             let controller = (segue.destination as! ListDonationViewController)
             

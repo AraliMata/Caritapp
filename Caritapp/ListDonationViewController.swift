@@ -1,11 +1,11 @@
 //
 //  DonationListViewController.swift
 //  Caritapp
-//
-//  Created by user189928 on 10/13/21.
-//
+
 import UIKit
 
+///BDA-16
+///Clase que contiene los métodos y variables para controlar lo que ocurre con la escena que muestra una lista de donaciones como tabla
 class ListDonationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
@@ -37,6 +37,7 @@ class ListDonationViewController: UIViewController, UITableViewDelegate, UITable
         return history?.count ?? 0
     }
 
+    ///Función que manda una lista de productos y carga la vista de tabla a la siguiente escena a mostrar (lista de productos)
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailListProducts" {
             let controller = (segue.destination as! ListProductsViewController)
@@ -55,7 +56,8 @@ class ListDonationViewController: UIViewController, UITableViewDelegate, UITable
             
             }
     }
-
+    
+    ///Función que va asignando los valores de la lista de donaciones de esta clase (history) a las celdas de la tabla de donaciones
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cellListDonation", for: indexPath) as? ListDonationViewCell {
 
