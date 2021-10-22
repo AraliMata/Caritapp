@@ -1,9 +1,7 @@
 //
 //  ListProductsViewController.swift
 //  Caritapp
-//
-//  Created by user189928 on 9/14/21.
-//
+
 
 import UIKit
 
@@ -52,7 +50,6 @@ class ListProductsViewController: UIViewController, UITableViewDelegate, UITable
                     let alertController = UIAlertController(title: "Lo sentimos", message: "El producto no fue encontrado", preferredStyle: UIAlertController.Style.alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
                     present(alertController, animated: true, completion: nil)
-                    //Volver a lista de donaciones
                 }
                 
                 
@@ -71,21 +68,10 @@ class ListProductsViewController: UIViewController, UITableViewDelegate, UITable
             return cell
         }
 
-        //cell.textLabel!.text = String(temperatureConversion?.original.value ?? 0) + " " + String(temperatureConversion?.converted.value ?? 0)
         return UITableViewCell()
     }
     
-   /* func alerta(){
-        
-        if(self.history!.count == 0 || self.history){
-           
-            DispatchQueue.main.async {
-            let alertController2 = UIAlertController(title: "Advertencia", message: "Esta donación no tiene productos asociados", preferredStyle: UIAlertController.Style.alert)
-                alertController2.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default))
-                self.present(alertController2, animated: true, completion: nil)
-           }
-        }
-    }*/
+    
 }
     
 
