@@ -35,20 +35,37 @@ class ExportUITests: XCTestCase {
         // Given
         let app = XCUIApplication()
         app.launch()
+        let donadorValueLabel = app.staticTexts["donadorValueLabel"]
+        let tiendaValueLabel = app.staticTexts["tiendaValueLabel"]
+        let fechaValueLabel = app.staticTexts["fechaValueLabel"]
+        let kilosDonadosValueLabel = app.staticTexts["kilosDonadosValueLabel"]
+        let kilosRecibidosValueLabel = app.staticTexts["kilosRecibidosValueLabel"]
+        let destinoValueLabel = app.staticTexts["destinoValueLabel"]
+        //let statusSwitch = app.switches["statusSwitch"]
         
         // When
 
         // Go to export view
         let gotoExportButton = app.buttons["Exportar Donacion"]
         gotoExportButton.tap()
+        // Wait to change screen
         let label = app.staticTexts["title"]
         let exists = NSPredicate(format: "exists == 1")
         expectation(for: exists, evaluatedWith: label, handler: nil)
         waitForExpectations(timeout: 5, handler: nil)
+        // Wait to load values
+        let notEqualPredicate = NSPredicate(format: "label != %@", "")
+        let serviceExpectation = XCTNSPredicateExpectation(predicate: notEqualPredicate, object: donadorValueLabel)
+        wait(for: [serviceExpectation], timeout: 10.0)
         
         // Assert correct label values
-        let donadorValueLabel = app.staticTexts["donadorValueLabel"]
-        XCTAssertEqual(donadorValueLabel.value  as! String, "Prueba1")
+        XCTAssertEqual(donadorValueLabel.label  , "Prueba1")
+        XCTAssertEqual(tiendaValueLabel.label  , "Chida")
+        XCTAssertEqual(fechaValueLabel.label  , "2021-10-14")
+        XCTAssertEqual(kilosDonadosValueLabel.label  , "189.0")
+        XCTAssertEqual(kilosRecibidosValueLabel.label  , "0.0")
+        XCTAssertEqual(destinoValueLabel.label  , "Central de abastos")
+        //XCTAssertEqual(statusSwitch.value  as! Bool, false)
     }
 
 }
