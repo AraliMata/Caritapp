@@ -2,8 +2,6 @@
 //  EditProductViewController.swift
 //  Caritapp
 //
-//  Created by user189928 on 9/14/21.
-//
 
 import UIKit
 import DropDown
@@ -71,7 +69,6 @@ class EditProductViewController: UIViewController {
         dropdownDestino.anchorView = dropdownDestView
         dropdownDestino.bottomOffset = CGPoint(x: 0, y:( dropdownDestino.anchorView?.plainView.bounds.height)!)
         dropdownDestino.direction = .bottom
-        //Llamar al servicio que saca los almacenes de la tabla, recibir una lista con los nombres y guardarlo en el datasource
         dropdownDestino.dataSource = almacenes
         dropdownDestino.selectionAction = {
             [unowned self ](index: Int, item: String) in
