@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C24A73027225A7900740B9E /* LineaServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C24A72F27225A7900740B9E /* LineaServiceIntegrationTests.swift */; };
+		2C24A7382722605500740B9E /* ExportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C24A7372722605500740B9E /* ExportUITests.swift */; };
 		2CF4F24227121B54004DE3EE /* ExportDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */; };
 		2CF4F24727121D4A004DE3EE /* DonationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24627121D4A004DE3EE /* DonationService.swift */; };
 		2CF4F24C271227FF004DE3EE /* DonationServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24B271227FF004DE3EE /* DonationServiceIntegrationTests.swift */; };
@@ -84,6 +86,8 @@
 		065C834844891B5F583CC3AF /* Pods-CaritappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaritappTests.release.xcconfig"; path = "Target Support Files/Pods-CaritappTests/Pods-CaritappTests.release.xcconfig"; sourceTree = "<group>"; };
 		0CB09C06159CD477E2C7688C /* Pods_CaritappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CaritappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B08494E491987AEC538760C /* Pods-Caritapp-CaritappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caritapp-CaritappUITests.debug.xcconfig"; path = "Target Support Files/Pods-Caritapp-CaritappUITests/Pods-Caritapp-CaritappUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C24A72F27225A7900740B9E /* LineaServiceIntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineaServiceIntegrationTests.swift; sourceTree = "<group>"; };
+		2C24A7372722605500740B9E /* ExportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportUITests.swift; sourceTree = "<group>"; };
 		2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportDonationViewController.swift; sourceTree = "<group>"; };
 		2CF4F24627121D4A004DE3EE /* DonationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationService.swift; sourceTree = "<group>"; };
 		2CF4F24B271227FF004DE3EE /* DonationServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationServiceIntegrationTests.swift; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 		8D06FF9126EADC6500782CD8 /* CaritappTests */ = {
 			isa = PBXGroup;
 			children = (
+				2C24A72F27225A7900740B9E /* LineaServiceIntegrationTests.swift */,
 				8D06FF9226EADC6500782CD8 /* CaritappTests.swift */,
 				8D06FF9426EADC6500782CD8 /* Info.plist */,
 				8DC167BF2704DD7400AD188F /* CaritappTestsServices.swift */,
@@ -251,6 +256,7 @@
 		8D06FF9C26EADC6500782CD8 /* CaritappUITests */ = {
 			isa = PBXGroup;
 			children = (
+				2C24A7372722605500740B9E /* ExportUITests.swift */,
 				8D06FF9D26EADC6500782CD8 /* CaritappUITests.swift */,
 				8D06FF9F26EADC6500782CD8 /* Info.plist */,
 			);
@@ -626,6 +632,7 @@
 				2CF4F24C271227FF004DE3EE /* DonationServiceIntegrationTests.swift in Sources */,
 				8DF2A7C62717E2CF0080F61A /* FileToolTests.swift in Sources */,
 				AB7EC4622713E60400517C5D /* CalendarServiceIntegrationTest.swift in Sources */,
+				2C24A73027225A7900740B9E /* LineaServiceIntegrationTests.swift in Sources */,
 				8DC167C02704DD7400AD188F /* CaritappTestsServices.swift in Sources */,
 				7BE74BA9271A46FD005D83ED /* StatusServiceIntegrationTest.swift in Sources */,
 				8D06FF9326EADC6500782CD8 /* CaritappTests.swift in Sources */,
@@ -637,6 +644,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D06FF9E26EADC6500782CD8 /* CaritappUITests.swift in Sources */,
+				2C24A7382722605500740B9E /* ExportUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
