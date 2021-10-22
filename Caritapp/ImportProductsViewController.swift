@@ -41,6 +41,35 @@ extension ImportProductsViewController: UIDocumentPickerDelegate {
                 
                 createDonationService.sendProducts(file: readJson, idDonation: String(self.idDonation!)) { (response) in
                     print(response)
+                    
+                if(response == 200){
+                    DispatchQueue.main.async {
+                let alertController = UIAlertController(title: "Éxito", message: "Importación de productos completada", preferredStyle: UIAlertController.Style.alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler:{(action: UIAlertAction!) in
+                                
+                                let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomeDonorViewController") as! HomeDonorViewController
+                                    self.present(controller, animated: true, completion: nil)
+                                                                
+                                                            
+                    }))
+                self.present(alertController, animated: true, completion: nil)
+                    }
+                }else{
+                    DispatchQueue.main.async {
+                let alertController2 = UIAlertController(title: "Fallo", message: "Lo sentimos, la importación de productos no pudo ser completada", preferredStyle: UIAlertController.Style.alert)
+                    alertController2.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler:{(action: UIAlertAction!) in
+                                
+                                let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomeDonorViewController") as! HomeDonorViewController
+                                    self.present(controller, animated: true, completion: nil)
+                                                                
+                                                            
+                    }))
+                self.present(alertController2, animated: true, completion: nil)
+                    }
+                    
+                }
+                    
+                    
                 }
             
             } catch {

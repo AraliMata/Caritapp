@@ -36,15 +36,16 @@ class CreateDonationServiceIntegrationTests: XCTestCase {
     }
     
     func testSendProducts() throws{
+        //Given
+        let inputFile = "[{\"upc\": \"345678\",\"cantidadSupuesta\": 18,\"cantidadRecibida\": 16,\"precioUnitario\": 1,\"precioTotal\": 18,\"destino\": \"no definido\"},{\"upc\": \"345679\",\"cantidadSupuesta\": 18,\"cantidadRecibida\": 16,\"precioUnitario\": 1,\"precioTotal\": 18, \"destino\": \"no definido\"}]"
+            //Agregar status cuando se suban los nuevos cambios del backend
         // When
-        guard let url = URL(string: "path") else { print("Error: cannot create URL")
-            return}
-        
         let productsExpectation = expectation(description: "ID donation retrieved")
-        let readJson = try fileTool.readFileAsString(url)
         
-        createDonationService.sendProducts(file: readJson, idDonation: "89") { (respuesta) in
-            XCTAssertEqual(respuesta, "200")
+
+        createDonationService.sendProducts(file: inputFile, idDonation: "157") { (respuesta) in
+            
+            XCTAssertEqual(respuesta, 200)
             productsExpectation.fulfill()
         }
        

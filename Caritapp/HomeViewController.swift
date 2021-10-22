@@ -12,6 +12,7 @@ import UniformTypeIdentifiers
 class HomeViewController: UIViewController {
     
     let calendarService = CalendarService()
+    let verificarMercanciaService = VerificarMercanciaService()
 
 
     @IBOutlet weak var registrarRecepcion: UIButton!
@@ -41,6 +42,38 @@ class HomeViewController: UIViewController {
             }
             
         }
+        
+        if segue.identifier == "statusSegue" {
+            let controller = (segue.destination as! EstatusDonationViewController)
+            
+            calendarService.retrieveCalendar() {
+                (donation) in
+                DispatchQueue.main.async {
+                    controller.historyStatus = donation
+                    controller.tableViewStatus.reloadData()
+                }
+            }
+
+            
+        }
+        if segue.identifier == "verificarMercancia" {
+            let controller = (segue.destination as! ListDonationViewController)
+            
+            verificarMercanciaService.retrieveDonations() {
+                (donations) in
+                self.verificarMercanciaService.retrieveDonationsId { (idDonations) in
+                    DispatchQueue.main.async {
+                        controller.history = donations
+                        controller.idDonations = idDonations
+                        controller.tableView.reloadData()
+                    }
+                }
+                
+            }
+            
+        }
+        
+        
     }
 
 

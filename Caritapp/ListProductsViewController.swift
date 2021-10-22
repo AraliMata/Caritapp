@@ -7,12 +7,11 @@
 
 import UIKit
 
-/*class ListProductsViewController: UIViewController {
+class ListProductsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
     @IBOutlet weak var tableView: UITableView!
     
-    //let lineaService = LineaService()
     
     var history : [Linea]? {
         didSet {
@@ -23,7 +22,12 @@ import UIKit
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //alerta()
+        
+
     }
+    
+   
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -33,20 +37,29 @@ import UIKit
         return history?.count ?? 0
     }
     
-   /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "detail" {
-            let controller = (segue.destination as! DetailViewController)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailProduct" {
+            let controller = (segue.destination as! EditProductViewController)
             
             if let indexPath = tableView.indexPathForSelectedRow{
-                let selectedConversion = history?[indexPath.row]
-                controller.detailItem = selectedConversion
+                
+                if let selectedProduct = history?[indexPath.row]{
+                    controller.productoRecibido = selectedProduct
+                } else {
+                    let alertController = UIAlertController(title: "Lo sentimos", message: "El producto no fue encontrado", preferredStyle: UIAlertController.Style.alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+                    present(alertController, animated: true, completion: nil)
+                    //Volver a lista de donaciones
+                }
+                
+                
             }
             
         }
-    }*/
+    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListProductsViewCell {
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cellProducts", for: indexPath) as? ListProductsViewCell {
             
             let product = history?[indexPath.row]
             cell.updateCell(product: product!)
@@ -58,8 +71,21 @@ import UIKit
         return UITableViewCell()
     }
     
-
+   /* func alerta(){
+        
+        if(self.history!.count == 0 || self.history){
+           
+            DispatchQueue.main.async {
+            let alertController2 = UIAlertController(title: "Advertencia", message: "Esta donación no tiene productos asociados", preferredStyle: UIAlertController.Style.alert)
+                alertController2.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default))
+                self.present(alertController2, animated: true, completion: nil)
+           }
+        }
+    }*/
 }
+    
 
 
-*/
+
+
+
