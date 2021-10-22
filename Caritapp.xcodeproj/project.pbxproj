@@ -29,7 +29,6 @@
 		8D06FF9E26EADC6500782CD8 /* CaritappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF9D26EADC6500782CD8 /* CaritappUITests.swift */; };
 		8D0E31C0271E0A210090A959 /* ListDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E31BF271E0A210090A959 /* ListDonationViewController.swift */; };
 		8D14B04D272123100053DE16 /* LineaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14B04C272123100053DE16 /* LineaService.swift */; };
-		8D1E360426FE4CD500314A99 /* CreateDonation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E360326FE4CD500314A99 /* CreateDonation.swift */; };
 		8D1E360926FE4D8500314A99 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E360826FE4D8500314A99 /* Donation.swift */; };
 		8D1E360E26FE4F2100314A99 /* CreateDonationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E360D26FE4F2100314A99 /* CreateDonationService.swift */; };
 		8D1E66FA26F14B46007BE4D1 /* ListProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E66F926F14B46007BE4D1 /* ListProductsViewController.swift */; };
@@ -114,7 +113,6 @@
 		8D06FF9F26EADC6500782CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D0E31BF271E0A210090A959 /* ListDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDonationViewController.swift; sourceTree = "<group>"; };
 		8D14B04C272123100053DE16 /* LineaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineaService.swift; sourceTree = "<group>"; };
-		8D1E360326FE4CD500314A99 /* CreateDonation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDonation.swift; sourceTree = "<group>"; };
 		8D1E360826FE4D8500314A99 /* Donation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
 		8D1E360D26FE4F2100314A99 /* CreateDonationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDonationService.swift; sourceTree = "<group>"; };
 		8D1E66F926F14B46007BE4D1 /* ListProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductsViewController.swift; sourceTree = "<group>"; };
@@ -276,7 +274,6 @@
 		8D1E360026FE4C2D00314A99 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				8D1E360326FE4CD500314A99 /* CreateDonation.swift */,
 				8D254204270B660500EC540F /* FileTool.swift */,
 			);
 			path = Tools;
@@ -617,7 +614,6 @@
 				7BE74B9F271A4643005D83ED /* Status.swift in Sources */,
 				8D1E66FA26F14B46007BE4D1 /* ListProductsViewController.swift in Sources */,
 				8D1E670426F14BE5007BE4D1 /* ProductViewController.swift in Sources */,
-				8D1E360426FE4CD500314A99 /* CreateDonation.swift in Sources */,
 				ABA3F4D827223A51003D3445 /* EntregasService.swift in Sources */,
 				8D55B39A26EAF50C002A4205 /* CreateDonationViewController.swift in Sources */,
 			);

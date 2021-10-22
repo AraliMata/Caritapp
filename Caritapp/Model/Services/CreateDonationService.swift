@@ -1,18 +1,17 @@
 //
 //  TemperatureConverterService.swift
 //  ConvertidorTemperatura
-//
-//  Created by Aralí Mata on 9/24/2021
-//
 
 import Foundation
 
+///Clase de servicio de crear donación, la cual tiene los métodos que hacen post y get con los endpoints relacionados a la creación de donación e importación de productos
 class CreateDonationService {
     public typealias sendDonationClosure = (String) -> Void
     public typealias sendProductsClosure = (Int) -> Void
     public typealias retrieveDonorsClosure = ([Donador]) -> Void
     public typealias retrieveStoresClosure = ([String]) -> Void
     
+    ///Método para enviar una donación con post al endpoint de crear donación
     func sendDonation(donation: Donation, _ handler: @escaping sendDonationClosure) {
         let createDonationEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/createDonation/create"
         guard let url = URL(string: createDonationEndpoint) else {
@@ -64,6 +63,7 @@ class CreateDonationService {
         
   }
     
+    ///Método para enviar una lista de productos con post al endpoint de importar productos
     func sendProducts(file: String, idDonation: String, _ handler: @escaping sendProductsClosure) {
         let sendProductsEndpoint: String = "https://caritapp-rest.herokuapp.com/donation/createDonation/importProducts/"+idDonation
         guard let url = URL(string: sendProductsEndpoint) else {
@@ -75,13 +75,11 @@ class CreateDonationService {
 
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
+        let decoder = JSONDecoder()
         
         urlRequest.httpMethod = "POST"
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        //let encoder = JSONEncoder()
-        let decoder = JSONDecoder()
         
-        //let jsonData = try! encoder.encode(file)
         urlRequest.httpBody = Data(file.utf8)
         
         let task = session.dataTask(with: urlRequest) {
@@ -103,7 +101,7 @@ class CreateDonationService {
                 
                 if (httpResponse.statusCode == 200) {
                     print(responseData)
-                    /*do{
+                    do{
                         let products = try decoder.decode([Linea].self, from: responseData)
                         
                         print("Http response", httpResponse)
@@ -112,7 +110,7 @@ class CreateDonationService {
                         
                     }catch{
                         print("Nose pudo convertir JSON a Linea")
-                    }*/ //Para cuando pueda hacer push en heroku
+                    }
                     
                     handler(httpResponse.statusCode)
                     
@@ -128,7 +126,7 @@ class CreateDonationService {
         
   }
     
-
+    ///Método para obtener una lista de donadores con get al endpoint de obtener donadores
     func retrieveDonors(_ handler: @escaping retrieveDonorsClosure) {
             let donationEndpoint: String = "https://caritapp-rest.herokuapp.com/donor/getDonors"
             guard let url = URL(string: donationEndpoint) else {
@@ -186,6 +184,7 @@ class CreateDonationService {
             task.resume()
       }
     
+    ///Método para obtener una lista de tiendas con get al endpoint de obtener tiendas, estas se obtienen por medio del id de donador
     func retrieveStores(idDonor: Int, _ handler: @escaping retrieveStoresClosure) {
             let donationEndpoint: String = "https://caritapp-rest.herokuapp.com/donor/getStores/"+String(idDonor)
             guard let url = URL(string: donationEndpoint) else {

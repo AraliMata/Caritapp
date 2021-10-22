@@ -1,12 +1,11 @@
 //
 //  ImportFileTool.swift
 //  Caritapp
-//
-//  Created by Aralí Mata on 10/4/21.
-//
+
 
 import Foundation
 
+///Herramienta para convertir un archivo recibido en algun tipo de dato.
 class FileTool {
     enum Error: Swift.Error {
         case fileAlreadyExists
@@ -20,6 +19,7 @@ class FileTool {
             self.fileManager = fileManager
     }
 
+    ///Función que lee el archivo recibido como tipo Linea
     public func readFileAsLinea(_ url: URL) throws -> [Linea]{
         print("The Url is : \(url)")
         var donatedProducts : [Linea]
@@ -33,6 +33,7 @@ class FileTool {
         return donatedProducts
     }
     
+    ///Función que lee el archivo recibido como tipo String
     public func readFileAsString(_ url: URL) throws -> String {
         print("The Url is : \(url)")
         var strData : String
@@ -44,6 +45,7 @@ class FileTool {
         return strData
     }
     
+    ///Función que lee el archivo recibido como tipo Json
     public func readFileAsJson(_ url: URL) throws -> Any? {
         print("The Url is : \(url)")
         let data = try Data(contentsOf: url)

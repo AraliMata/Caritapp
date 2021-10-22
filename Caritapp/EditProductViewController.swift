@@ -8,6 +8,8 @@
 import UIKit
 import DropDown
 
+///BDA-16
+///Clase que contiene los métodos y variables para controlar lo que ocurre con la escena que muestra un producto a editar
 class EditProductViewController: UIViewController {
     let verificarMercanciaService = VerificarMercanciaService()
     
@@ -21,7 +23,7 @@ class EditProductViewController: UIViewController {
         }
     }
     
-
+    ///Elementos de la interfaz gráfica conectados a la clase
     @IBOutlet weak var upcEdit_textField: UITextField!
     @IBOutlet weak var udmEdit_textField: UITextField!
     @IBOutlet weak var articEdit_textField: UITextField!
@@ -36,19 +38,6 @@ class EditProductViewController: UIViewController {
     
     @IBOutlet weak var destinoLabel: UILabel!
     
-    @IBAction func cambiarEstatus(_ sender: Any) {
-        if(recibidoEditSwitch.isOn){
-            recibido = "Recibido"
-        }else{
-            recibido = "No recibido"
-        }
-        switchChanged = true
-    }
-    
-    @IBAction func seleccionarDestino(_ sender: Any) {
-        dropdownDestino.show()
-    }
-    
     let dropdownDestino = DropDown()
     let almacenes = ["Central de abastos", "Avalos", "No definido"]
     
@@ -58,7 +47,26 @@ class EditProductViewController: UIViewController {
         setupDropdownDestino()
     }
     
+    ///Función que coloca los datos del producto seleccionado en la pantalla anterior en los elementos de la pantalla de editar producto
+    public func updateView(product: Linea?){
+        upcEdit_textField.text = product?.upc
+        cantSupEdit_textField.text = String(product?.cantidadSupuesta ?? 0)
+        cantRecEdit_textField.text = String(product?.cantidadRecibida ?? 0)
+        
+        
+        if(product?.status == "Recibido" || product?.status == "recibido" ){
+            recibidoEditSwitch.setOn(true, animated: true)
+        }else{
+            recibidoEditSwitch.setOn(false, animated :true)
+        }
+        
+        precioTotEdit_textField.text = String(product?.precioTotal ?? 0)
+        precioUnEdit_textField.text = String(product?.precioUnitario ?? 0)
+        destinoLabel.text = product?.destino ?? "Selecciona un destino"
+        
+    }
     
+    ///Función que asigna la configuración para que funcione correctamente al dropdown en donde se selecciona el destino del producto
     func setupDropdownDestino(){
         dropdownDestino.anchorView = dropdownDestView
         dropdownDestino.bottomOffset = CGPoint(x: 0, y:( dropdownDestino.anchorView?.plainView.bounds.height)!)
@@ -76,6 +84,22 @@ class EditProductViewController: UIViewController {
 
     }
     
+    ///Función que maneja los cambios del switch de estatus de productos
+    @IBAction func cambiarEstatus(_ sender: Any) {
+        if(recibidoEditSwitch.isOn){
+            recibido = "Recibido"
+        }else{
+            recibido = "No recibido"
+        }
+        switchChanged = true
+    }
+    
+    ///Función que muestra las opciones del dropdown cuando se le da click
+    @IBAction func seleccionarDestino(_ sender: Any) {
+        dropdownDestino.show()
+    }
+    
+    ///Función que guarda los cambios hechos al producto a actualizar y llama al servicio para que lo envíe al endpoint y se actualice
     @IBAction func guardar(_ sender: Any) {
         print(recibido)
         
@@ -109,28 +133,6 @@ class EditProductViewController: UIViewController {
         
     }
     
-    
-    
-    public func updateView(product: Linea?){
-        upcEdit_textField.text = product?.upc
-        cantSupEdit_textField.text = String(product?.cantidadSupuesta ?? 0)
-        cantRecEdit_textField.text = String(product?.cantidadRecibida ?? 0)
-        
-        
-        if(product?.status == "Recibido" || product?.status == "recibido" ){
-            recibidoEditSwitch.setOn(true, animated: true)
-        }else{
-            recibidoEditSwitch.setOn(false, animated :true)
-        }
-        
-        precioTotEdit_textField.text = String(product?.precioTotal ?? 0)
-        precioUnEdit_textField.text = String(product?.precioUnitario ?? 0)
-        destinoLabel.text = product?.destino ?? "Selecciona un destino"
-        
-    }
-    
-    
-
 
 }
 

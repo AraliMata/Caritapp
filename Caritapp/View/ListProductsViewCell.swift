@@ -19,7 +19,11 @@ class ListProductsViewCell: UITableViewCell {
     func updateCell(product: Linea) {
         upc.text = product.upc
         destino.text = "Destino: "+product.destino
-        status.text = "Estatus: "+product.status! 
+        if(product.status != nil){
+            status.text = "Estatus: "+(product.status)!
+        }else{
+            status.text = "Estatus: "+"No recibido"
+        }
     }
     
 }

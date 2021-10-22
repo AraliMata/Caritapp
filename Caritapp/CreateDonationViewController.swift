@@ -2,12 +2,14 @@
 //  newDonationViewController.swift
 //  Caritapp
 //
-//  Created by user189928 on 9/9/
 
 import UIKit
 import UniformTypeIdentifiers
 import DropDown
 
+
+///BDA-1
+///Clase para realizar las operaciones relacionadas con la escena de crear donación
 class CreateDonationViewController: UIViewController {
     let createDonationService = CreateDonationService()
     var idDonation = "0"
@@ -15,6 +17,7 @@ class CreateDonationViewController: UIViewController {
     var donors = [Donador]()
 
     
+    ///Elementos de la interfaz gráfica conectados a la clase
     @IBOutlet weak var dropDownDonador: UIView!
     
     @IBOutlet weak var donadorLabel: UILabel!
@@ -35,7 +38,6 @@ class CreateDonationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setupToolbar()
         setupDropdownDonador()
         setupDropdownTiendas()
@@ -43,6 +45,7 @@ class CreateDonationViewController: UIViewController {
     }
     
     
+    ///Función que asigna la configuración para que funcione correctamente al dropdown en donde se selecciona el donador
     func setupDropdownDonador(){
         dropdownDon.anchorView = dropDownDonador
         dropdownDon.bottomOffset = CGPoint(x: 0, y:(dropdownDon.anchorView?.plainView.bounds.height)!)
@@ -69,6 +72,7 @@ class CreateDonationViewController: UIViewController {
         
     }
     
+    ///Función que asigna la configuración para que funcione correctamente al dropdown en donde se selecciona la tienda
     func setupDropdownTiendas(){
         dropdownTien.anchorView = dropDownTienda
         dropdownTien.dataSource = dropDownTienValues
@@ -82,17 +86,18 @@ class CreateDonationViewController: UIViewController {
     }
     
     
+    ///Función para que al presionar el dropdown de donadores se muestren los donadores
     @IBAction func mostrarDonadores(_ sender: Any) {
         dropdownDon.show()
     }
     
+    ///Función para que al presionar el dropdown de donadores se muestren las tiendas
     @IBAction func mostrarTiendas(_ sender: Any) {
         dropdownTien.show()
     }
     
+    ///Función que al presionar el botón de crear donación, crea una nueva donación con los valores seleccionados en los dropdowns y campos de texto y llama al servicio que manda la donación, finalmente se cambia de pantalla a la de importar donación
     @IBAction func crearDonacion(_ sender: UIButton) {
-        
-        
         
         if let donadorValue = donadorLabel.text, donadorValue != "Seleccionar donador"{
             
@@ -105,7 +110,7 @@ class CreateDonationViewController: UIViewController {
                                 
                     let fecha: String = dateFormatter.string(from: self.fechaDatePicker.date) as String
                                 
-                    let donationReceived = Donation(donador: String("Soriana"), tienda: String("Jardines"), kilos_donados: Float16(kilosValue)!, kilos_recibidos: Float16(0),  fecha: fecha)
+                    let donationReceived = Donation(donador: donadorLabel.text!, tienda: tiendaLabel.text!, kilos_donados: Float16(kilosValue)!, kilos_recibidos: Float16(0),  fecha: fecha)
                                 
                     print("Fecha:", fecha)
                                 
@@ -115,15 +120,11 @@ class CreateDonationViewController: UIViewController {
                                     self!.idDonation = idReceived
                         
                         DispatchQueue.main.async {
-                           // UI work here
                             let importProductsView = self!.storyboard?.instantiateViewController(withIdentifier: "ImportProductsViewController") as! ImportProductsViewController
                             importProductsView.idDonation = idReceived
                             self!.present(importProductsView, animated: true, completion: nil)
                         }
-                        
-                        
                     }
-                            
                         
                 }else{
                     print("Entré al else")
@@ -144,6 +145,7 @@ class CreateDonationViewController: UIViewController {
       
     }
     
+    ///Función para pasar el id de la donación recien creada a la siguiente pantalla
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "importacionProductos" {
             let controller = (segue.destination as! ImportProductsViewController)
@@ -154,6 +156,7 @@ class CreateDonationViewController: UIViewController {
     }
     
     
+    ///Función para agregar el botón Done al teclado y que cuando se le presione, el teclado se quite
     func setupToolbar(){
         let bar = UIToolbar()
        
@@ -177,14 +180,5 @@ extension ViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
-    /*public func textFieldDidEndEditing(_ textField: UITextField) {
-        if (Double(textField.text!) == nil) {
-            textField.text = ""
-            let alertController = UIAlertController(title: "Error", message: "Invalid Value", preferredStyle: UIAlertController.Style.alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            present(alertController, animated: true, completion: nil)
-        }
-    }*/
 }
 
