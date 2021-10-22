@@ -12,6 +12,7 @@ import Foundation
 class CalendarService {
     public typealias RetrieveDonationClosure = ([Donation]) -> Void
 
+    //llamar al servicio para que entregue todos los registros
     func retrieveCalendar(_ handler: @escaping RetrieveDonationClosure) {
             let donationEndpoint: String = "https://caritapp-rest.herokuapp.com/calendar/history"
             guard let url = URL(string: donationEndpoint) else {

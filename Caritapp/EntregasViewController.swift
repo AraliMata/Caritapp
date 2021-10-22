@@ -32,7 +32,7 @@ class EntregasViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return entrega?.count ?? 0
     }
-    
+    //por cada fila de la lista entrega, llenar los datos en la celda
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as? EntregaTableViewCell {
             let temperatureConversion = entrega?[indexPath.row]
