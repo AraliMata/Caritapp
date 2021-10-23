@@ -10,6 +10,7 @@ import Foundation
 class EntregasService {
     public typealias RetrieveEntregasClosure = ([Entrega]) -> Void
 
+    //llamar al servicio para que entregue todos los registros
     func retrieveEntregas(_ handler: @escaping RetrieveEntregasClosure) {
             let entregasEndpoint: String = "https://caritapp-rest.herokuapp.com/entrega/getEntregas"
             guard let url = URL(string: entregasEndpoint) else {

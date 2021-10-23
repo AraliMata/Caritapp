@@ -31,6 +31,7 @@ class CalendarioViewController: UIViewController, UITableViewDelegate, UITableVi
         return donacion?.count ?? 0
     }
     
+    //por cada fila de la lista entrega, llenar los datos en la celda
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CalendarTableViewCell {
             let temperatureConversion = donacion?[indexPath.row]

@@ -45,11 +45,13 @@ class CreateDonationViewController: UIViewController {
     }
     
     
-    ///Función que asigna la configuración para que funcione correctamente al dropdown en donde se selecciona el donador
+    ///Función que asigna la configuración para que funcione correctamente al dropdown en donde se selecciona el donador y llama a las funciones del servicio para obtener donadores y las tiendas asignadas al donador elegido
     func setupDropdownDonador(){
         dropdownDon.anchorView = dropDownDonador
+        
         dropdownDon.bottomOffset = CGPoint(x: 0, y:(dropdownDon.anchorView?.plainView.bounds.height)!)
         dropdownDon.direction = .bottom
+        
         createDonationService.retrieveDonors {[weak self](donors) in
             self?.donors = donors
             var donorsName = [String]()
