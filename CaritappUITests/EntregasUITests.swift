@@ -53,7 +53,7 @@ class EntregasUITests: XCTestCase {
         let gotoCalendarButton = app.buttons["Calendario"]
         gotoCalendarButton.tap()
         // Wait to change screen
-        let label = app.staticTexts["titleCalenadrio"]
+        let label = app.staticTexts["titleCalendario"]
         let exists = NSPredicate(format: "exists == 1")
         expectation(for: exists, evaluatedWith: label, handler: nil)
         waitForExpectations(timeout: 5, handler: nil)
