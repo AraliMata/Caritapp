@@ -10,23 +10,28 @@ import XCTest
 @testable import Caritapp
 
 class LineaServiceIntegrationTests: XCTestCase {
+    // products service
     let lineaService = LineaService()
 
+    // Test for correct retrieval of list of products by donation id
     func testRetrieveProducts() throws {
         // When
         let productExpectation = expectation(description: "Products Retrieved")
+        // Call service
         lineaService.retrieveProducts() {
             (products) in
 
+            // Assert that retrieved list is expected size
             XCTAssertEqual(products.count, 10)
             print("Number of retrieved products: ", products.count)
             
+            // Fulfill expectation
             productExpectation.fulfill()
-            
-            
         }
         
         // Then
+        
+        // Wait for possible timeout
         waitForExpectations(timeout: 20) {
             (error) in
 
@@ -38,8 +43,11 @@ class LineaServiceIntegrationTests: XCTestCase {
         }
     }
     
+    // Test for correct decodification from json to products list
     func testDecodeProductJsonList() throws {
         // Given
+        
+        // Json to convert
         let json = """
             [
                 {
@@ -61,12 +69,17 @@ class LineaServiceIntegrationTests: XCTestCase {
                 }
             ]
         """.data(using: .utf8)!
+        
+        // Set up decoder and date formatter
         let decoder = JSONDecoder()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         decoder.dateDecodingStrategy = .formatted(dateFormatter)
+        
+        // Try to convert to list of products objects
         let products = try decoder.decode([Linea].self, from: json)
-                   
+        
+        // Assert that it object was created correctly
         XCTAssertEqual(products[0].id, 227)
         XCTAssertEqual(products[0].donation?.donador, "Prueba1")
     }
