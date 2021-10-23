@@ -54,6 +54,7 @@
 		AB31D5112724AD8300D8D25B /* CalendarServicePerformanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31D5102724AD8300D8D25B /* CalendarServicePerformanceTest.swift */; };
 		AB31D5192724B34000D8D25B /* CalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31D5182724B34000D8D25B /* CalendarUITests.swift */; };
 		AB31D5242724BC2D00D8D25B /* EntregasServicePerformanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31D5232724BC2D00D8D25B /* EntregasServicePerformanceTest.swift */; };
+		AB31D5292724BE2900D8D25B /* EntregasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31D5282724BE2900D8D25B /* EntregasUITests.swift */; };
 		AB5BA614271742A600F7E960 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */; };
 		AB7EC4622713E60400517C5D /* CalendarServiceIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */; };
 		ABA3F4C92722392E003D3445 /* EntregaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3F4C82722392E003D3445 /* EntregaTableViewCell.swift */; };
@@ -144,6 +145,7 @@
 		AB31D5102724AD8300D8D25B /* CalendarServicePerformanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarServicePerformanceTest.swift; sourceTree = "<group>"; };
 		AB31D5182724B34000D8D25B /* CalendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarUITests.swift; sourceTree = "<group>"; };
 		AB31D5232724BC2D00D8D25B /* EntregasServicePerformanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntregasServicePerformanceTest.swift; sourceTree = "<group>"; };
+		AB31D5282724BE2900D8D25B /* EntregasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntregasUITests.swift; sourceTree = "<group>"; };
 		AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarServiceIntegrationTest.swift; sourceTree = "<group>"; };
 		ABA3F4C82722392E003D3445 /* EntregaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntregaTableViewCell.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				8D06FF9D26EADC6500782CD8 /* CaritappUITests.swift */,
 				8D06FF9F26EADC6500782CD8 /* Info.plist */,
 				AB31D5182724B34000D8D25B /* CalendarUITests.swift */,
+				AB31D5282724BE2900D8D25B /* EntregasUITests.swift */,
 			);
 			path = CaritappUITests;
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 			files = (
 				8D06FF9E26EADC6500782CD8 /* CaritappUITests.swift in Sources */,
 				2C24A7382722605500740B9E /* ExportUITests.swift in Sources */,
+				AB31D5292724BE2900D8D25B /* EntregasUITests.swift in Sources */,
 				AB31D5192724B34000D8D25B /* CalendarUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
