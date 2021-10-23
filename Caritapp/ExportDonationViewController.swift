@@ -8,7 +8,9 @@
 import UIKit
 
 class ExportDonationViewController: UIViewController {
+    // Products service
     let productsService = LineaService()
+    // Variable to store the products that will be exported
     var exportedProducts: [Linea] = []
 
     // UI labels
@@ -20,19 +22,24 @@ class ExportDonationViewController: UIViewController {
     @IBOutlet weak var destinoLabel: UILabel!
     @IBOutlet weak var statusSwitch: UISwitch!
     
+    // On loading the view
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Use a semaphore to wait to recieve an answer from the backend
+        // before continuing
         let semaphore = DispatchSemaphore(value: 0)
+        // Call products service
         productsService.retrieveProducts() {
             (products) in
             print("Products exported")
             // Set products list
             self.exportedProducts = products
-
+            // Show number of exported products
             print("Number of products:", self.exportedProducts.count)
+            // Signal semaphore
             semaphore.signal()
         }
+        // Wait for signal
         semaphore.wait()
         
         // Update labels
@@ -42,7 +49,7 @@ class ExportDonationViewController: UIViewController {
         self.kilosDonadosLabel.text = String(self.exportedProducts[0].donation!.kilosDonados)
         self.kilosRecibidosLabel.text = String(self.exportedProducts[0].donation!.kilosRecibidos)
         self.destinoLabel.text = self.exportedProducts[0].destino
-        
+        // Update switch
         if self.exportedProducts[0].status == "Recibido" {
             self.statusSwitch.isOn = true
         }
@@ -51,9 +58,10 @@ class ExportDonationViewController: UIViewController {
         }
     }
 
+    // Create a json file after pressing export button
     @IBAction func exportDonation(_ sender: UIButton) {
+        // Show that button was pressed
         print("button pressed")
-        
         
         // Decode JSON and create file
         let fileTool = FileTool()

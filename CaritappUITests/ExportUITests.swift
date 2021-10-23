@@ -31,10 +31,15 @@ class ExportUITests: XCTestCase {
         }
     }
     
+    // Test UI for export functionality
     func testExport() {
         // Given
+        
+        //Launch the app
         let app = XCUIApplication()
         app.launch()
+        
+        // Set up variables for labels
         let donadorValueLabel = app.staticTexts["donadorValueLabel"]
         let tiendaValueLabel = app.staticTexts["tiendaValueLabel"]
         let fechaValueLabel = app.staticTexts["fechaValueLabel"]
@@ -54,7 +59,7 @@ class ExportUITests: XCTestCase {
         expectation(for: exists, evaluatedWith: label, handler: nil)
         waitForExpectations(timeout: 5, handler: nil)
         // Wait to load values
-        let notEqualPredicate = NSPredicate(format: "label != %@", "")
+        let notEqualPredicate = NSPredicate(format: "label != %@", "---")
         let serviceExpectation = XCTNSPredicateExpectation(predicate: notEqualPredicate, object: donadorValueLabel)
         wait(for: [serviceExpectation], timeout: 10.0)
         
