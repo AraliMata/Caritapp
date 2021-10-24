@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C24A73027225A7900740B9E /* LineaServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C24A72F27225A7900740B9E /* LineaServiceIntegrationTests.swift */; };
 		2C24A7382722605500740B9E /* ExportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C24A7372722605500740B9E /* ExportUITests.swift */; };
+		2C3C474027250F96006FB47A /* LineaServicePerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C473F27250F96006FB47A /* LineaServicePerformanceTests.swift */; };
 		2CF4F24227121B54004DE3EE /* ExportDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */; };
 		2CF4F24727121D4A004DE3EE /* DonationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24627121D4A004DE3EE /* DonationService.swift */; };
 		2CF4F24C271227FF004DE3EE /* DonationServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4F24B271227FF004DE3EE /* DonationServiceIntegrationTests.swift */; };
@@ -91,6 +92,7 @@
 		1B08494E491987AEC538760C /* Pods-Caritapp-CaritappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caritapp-CaritappUITests.debug.xcconfig"; path = "Target Support Files/Pods-Caritapp-CaritappUITests/Pods-Caritapp-CaritappUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C24A72F27225A7900740B9E /* LineaServiceIntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineaServiceIntegrationTests.swift; sourceTree = "<group>"; };
 		2C24A7372722605500740B9E /* ExportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportUITests.swift; sourceTree = "<group>"; };
+		2C3C473F27250F96006FB47A /* LineaServicePerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineaServicePerformanceTests.swift; sourceTree = "<group>"; };
 		2CF4F24127121B54004DE3EE /* ExportDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportDonationViewController.swift; sourceTree = "<group>"; };
 		2CF4F24627121D4A004DE3EE /* DonationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationService.swift; sourceTree = "<group>"; };
 		2CF4F24B271227FF004DE3EE /* DonationServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationServiceIntegrationTests.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 		8D06FF9126EADC6500782CD8 /* CaritappTests */ = {
 			isa = PBXGroup;
 			children = (
+				2C3C473F27250F96006FB47A /* LineaServicePerformanceTests.swift */,
 				2C24A72F27225A7900740B9E /* LineaServiceIntegrationTests.swift */,
 				8D06FF9226EADC6500782CD8 /* CaritappTests.swift */,
 				8D06FF9426EADC6500782CD8 /* Info.plist */,
@@ -643,6 +646,7 @@
 				2C24A73027225A7900740B9E /* LineaServiceIntegrationTests.swift in Sources */,
 				AB31D5112724AD8300D8D25B /* CalendarServicePerformanceTest.swift in Sources */,
 				8DC167C02704DD7400AD188F /* CaritappTestsServices.swift in Sources */,
+				2C3C474027250F96006FB47A /* LineaServicePerformanceTests.swift in Sources */,
 				7BE74BA9271A46FD005D83ED /* StatusServiceIntegrationTest.swift in Sources */,
 				AB31D5242724BC2D00D8D25B /* EntregasServicePerformanceTest.swift in Sources */,
 				8D06FF9326EADC6500782CD8 /* CaritappTests.swift in Sources */,
