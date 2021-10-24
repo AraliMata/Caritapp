@@ -44,6 +44,11 @@
 		8D9D78282710B083002F5049 /* ImportProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D78272710B083002F5049 /* ImportProductsViewController.swift */; };
 		8DACBCDD270F6AC40059BE77 /* appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DACBCDB270F6AC40059BE77 /* appstore.png */; };
 		8DACBCDE270F6AC40059BE77 /* playstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DACBCDC270F6AC40059BE77 /* playstore.png */; };
+		8DB71C5427250290007234AB /* CreateDonationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB71C5327250290007234AB /* CreateDonationUITests.swift */; };
+		8DB71C59272509EA007234AB /* VerificarMercanciaUITestst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB71C58272509EA007234AB /* VerificarMercanciaUITestst.swift */; };
+		8DB71C5E272522BC007234AB /* VerificarMercanciaServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB71C5D272522BC007234AB /* VerificarMercanciaServiceIntegrationTests.swift */; };
+		8DB71C6327252746007234AB /* CreateDonationPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB71C6227252746007234AB /* CreateDonationPerformanceTests.swift */; };
+		8DB71C6B27252B1C007234AB /* VerificarMercanciaPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB71C6A27252B1C007234AB /* VerificarMercanciaPerformanceTests.swift */; };
 		8DC167C02704DD7400AD188F /* CaritappTestsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC167BF2704DD7400AD188F /* CaritappTestsServices.swift */; };
 		8DC1B256271A0204006D3EB4 /* Donador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC1B255271A0204006D3EB4 /* Donador.swift */; };
 		8DDF02E927174F4600214477 /* ListDonationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF02E827174F4600214477 /* ListDonationViewCell.swift */; };
@@ -135,6 +140,11 @@
 		8D9D78272710B083002F5049 /* ImportProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportProductsViewController.swift; sourceTree = "<group>"; };
 		8DACBCDB270F6AC40059BE77 /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
 		8DACBCDC270F6AC40059BE77 /* playstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playstore.png; sourceTree = "<group>"; };
+		8DB71C5327250290007234AB /* CreateDonationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDonationUITests.swift; sourceTree = "<group>"; };
+		8DB71C58272509EA007234AB /* VerificarMercanciaUITestst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificarMercanciaUITestst.swift; sourceTree = "<group>"; };
+		8DB71C5D272522BC007234AB /* VerificarMercanciaServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificarMercanciaServiceIntegrationTests.swift; sourceTree = "<group>"; };
+		8DB71C6227252746007234AB /* CreateDonationPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDonationPerformanceTests.swift; sourceTree = "<group>"; };
+		8DB71C6A27252B1C007234AB /* VerificarMercanciaPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificarMercanciaPerformanceTests.swift; sourceTree = "<group>"; };
 		8DC167BF2704DD7400AD188F /* CaritappTestsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaritappTestsServices.swift; sourceTree = "<group>"; };
 		8DC1B255271A0204006D3EB4 /* Donador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donador.swift; sourceTree = "<group>"; };
 		8DDF02E827174F4600214477 /* ListDonationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDonationViewCell.swift; sourceTree = "<group>"; };
@@ -257,6 +267,9 @@
 				7BE74BA8271A46FD005D83ED /* StatusServiceIntegrationTest.swift */,
 				AB31D5102724AD8300D8D25B /* CalendarServicePerformanceTest.swift */,
 				AB31D5232724BC2D00D8D25B /* EntregasServicePerformanceTest.swift */,
+				8DB71C5D272522BC007234AB /* VerificarMercanciaServiceIntegrationTests.swift */,
+				8DB71C6227252746007234AB /* CreateDonationPerformanceTests.swift */,
+				8DB71C6A27252B1C007234AB /* VerificarMercanciaPerformanceTests.swift */,
 			);
 			path = CaritappTests;
 			sourceTree = "<group>";
@@ -269,6 +282,8 @@
 				8D06FF9F26EADC6500782CD8 /* Info.plist */,
 				AB31D5182724B34000D8D25B /* CalendarUITests.swift */,
 				AB31D5282724BE2900D8D25B /* EntregasUITests.swift */,
+				8DB71C5327250290007234AB /* CreateDonationUITests.swift */,
+				8DB71C58272509EA007234AB /* VerificarMercanciaUITestst.swift */,
 			);
 			path = CaritappUITests;
 			sourceTree = "<group>";
@@ -636,14 +651,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DF2A7C12717E1FE0080F61A /* ImportProductsTests.swift in Sources */,
+				8DB71C6327252746007234AB /* CreateDonationPerformanceTests.swift in Sources */,
 				8D587C992715154E004DC660 /* CreateDonationServiceIntegrationTest.swift in Sources */,
 				2CF4F24C271227FF004DE3EE /* DonationServiceIntegrationTests.swift in Sources */,
+				8DB71C6B27252B1C007234AB /* VerificarMercanciaPerformanceTests.swift in Sources */,
 				8DF2A7C62717E2CF0080F61A /* FileToolTests.swift in Sources */,
 				AB7EC4622713E60400517C5D /* CalendarServiceIntegrationTest.swift in Sources */,
 				2C24A73027225A7900740B9E /* LineaServiceIntegrationTests.swift in Sources */,
 				AB31D5112724AD8300D8D25B /* CalendarServicePerformanceTest.swift in Sources */,
 				8DC167C02704DD7400AD188F /* CaritappTestsServices.swift in Sources */,
 				7BE74BA9271A46FD005D83ED /* StatusServiceIntegrationTest.swift in Sources */,
+				8DB71C5E272522BC007234AB /* VerificarMercanciaServiceIntegrationTests.swift in Sources */,
 				AB31D5242724BC2D00D8D25B /* EntregasServicePerformanceTest.swift in Sources */,
 				8D06FF9326EADC6500782CD8 /* CaritappTests.swift in Sources */,
 			);
@@ -653,9 +671,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB71C59272509EA007234AB /* VerificarMercanciaUITestst.swift in Sources */,
 				8D06FF9E26EADC6500782CD8 /* CaritappUITests.swift in Sources */,
 				2C24A7382722605500740B9E /* ExportUITests.swift in Sources */,
 				AB31D5292724BE2900D8D25B /* EntregasUITests.swift in Sources */,
+				8DB71C5427250290007234AB /* CreateDonationUITests.swift in Sources */,
 				AB31D5192724B34000D8D25B /* CalendarUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

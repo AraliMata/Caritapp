@@ -37,7 +37,7 @@ class CreateDonationServiceIntegrationTests: XCTestCase {
     
     func testSendProducts() throws{
         //Given
-        let inputFile = "[{\"upc\": \"345678\",\"cantidadSupuesta\": 18,\"cantidadRecibida\": 16,\"precioUnitario\": 1,\"precioTotal\": 18,\"destino\": \"no definido\"},{\"upc\": \"345679\",\"cantidadSupuesta\": 18,\"cantidadRecibida\": 16,\"precioUnitario\": 1,\"precioTotal\": 18, \"destino\": \"no definido\"}]"
+        let inputFile = "[{\"upc\": \"345678\",\"cantidadSupuesta\": 18,\"cantidadRecibida\": 16,\"precioUnitario\": 1,\"precioTotal\": 18,\"destino\": \"no definido\"},{\"upc\": \"345679\",\"cantidadSupuesta\": 18,\"cantidadRecibida\": 16,\"precioUnitario\": 1,\"precioTotal\": 18, \"destino\": \"no definido\", \"status\":\"Recibido\"}]"
             //Agregar status cuando se suban los nuevos cambios del backend
         // When
         let productsExpectation = expectation(description: "ID donation retrieved")
@@ -49,6 +49,46 @@ class CreateDonationServiceIntegrationTests: XCTestCase {
             productsExpectation.fulfill()
         }
        
+        // Then
+        waitForExpectations(timeout: 20) {
+            (error) in
+
+            if let error = error {
+                XCTFail("waitForExpectations errored: \(error)")
+            } else {
+                XCTAssert(true)
+            }
+        }
+    }
+    
+    func testRetrieveDonors() throws {
+    
+        // When
+        let retrieveDonorsExpectation = expectation(description: "Donors retrieved")
+        createDonationService.retrieveDonors { (donadores) in
+            retrieveDonorsExpectation.fulfill()
+        }
+        
+        // Then
+        waitForExpectations(timeout: 20) {
+            (error) in
+
+            if let error = error {
+                XCTFail("waitForExpectations errored: \(error)")
+            } else {
+                XCTAssert(true)
+            }
+        }
+    }
+    
+    func testRetrieveStores() throws {
+    
+        // When
+        let retrieveStoresExpectation = expectation(description: "Stores retrieved")
+        createDonationService.retrieveStores(idDonor: 147) { (tiendas) in
+            retrieveStoresExpectation.fulfill()
+        }
+        
         // Then
         waitForExpectations(timeout: 20) {
             (error) in
