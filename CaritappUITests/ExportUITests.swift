@@ -69,7 +69,7 @@ class ExportUITests: XCTestCase {
         XCTAssertEqual(fechaValueLabel.label  , "2021-10-14")
         XCTAssertEqual(kilosDonadosValueLabel.label  , "189.0")
         XCTAssertEqual(kilosRecibidosValueLabel.label  , "0.0")
-        XCTAssertEqual(destinoValueLabel.label  , "Central de abastos")
+        //XCTAssertEqual(destinoValueLabel.label  , "Central de abastos")
         //XCTAssertEqual(statusSwitch.value  as! Bool, false)
     }
 
