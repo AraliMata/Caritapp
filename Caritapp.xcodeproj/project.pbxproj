@@ -54,7 +54,6 @@
 		8DC1B256271A0204006D3EB4 /* Donador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC1B255271A0204006D3EB4 /* Donador.swift */; };
 		8DDF02E927174F4600214477 /* ListDonationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF02E827174F4600214477 /* ListDonationViewCell.swift */; };
 		8DDF02F427175CB800214477 /* ListProductsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF02F327175CB800214477 /* ListProductsViewCell.swift */; };
-		8DF2A7C12717E1FE0080F61A /* ImportProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A7C02717E1FE0080F61A /* ImportProductsTests.swift */; };
 		8DF2A7C62717E2CF0080F61A /* FileToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A7C52717E2CF0080F61A /* FileToolTests.swift */; };
 		A81C2ABD680576BB8C0D1D5B /* Pods_Caritapp_CaritappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E9AA32944BF09A0D264636 /* Pods_Caritapp_CaritappUITests.framework */; };
 		AB31D5112724AD8300D8D25B /* CalendarServicePerformanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31D5102724AD8300D8D25B /* CalendarServicePerformanceTest.swift */; };
@@ -653,7 +652,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DF2A7C12717E1FE0080F61A /* ImportProductsTests.swift in Sources */,
 				8DB71C6327252746007234AB /* CreateDonationPerformanceTests.swift in Sources */,
 				8D587C992715154E004DC660 /* CreateDonationServiceIntegrationTest.swift in Sources */,
 				2CF4F24C271227FF004DE3EE /* DonationServiceIntegrationTests.swift in Sources */,
