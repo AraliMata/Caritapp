@@ -150,7 +150,6 @@
 		8DC1B255271A0204006D3EB4 /* Donador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donador.swift; sourceTree = "<group>"; };
 		8DDF02E827174F4600214477 /* ListDonationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDonationViewCell.swift; sourceTree = "<group>"; };
 		8DDF02F327175CB800214477 /* ListProductsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductsViewCell.swift; sourceTree = "<group>"; };
-		8DF2A7C02717E1FE0080F61A /* ImportProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportProductsTests.swift; sourceTree = "<group>"; };
 		8DF2A7C52717E2CF0080F61A /* FileToolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileToolTests.swift; sourceTree = "<group>"; };
 		AA70F5AAC34B14B49299F86E /* Pods-Caritapp-CaritappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caritapp-CaritappUITests.release.xcconfig"; path = "Target Support Files/Pods-Caritapp-CaritappUITests/Pods-Caritapp-CaritappUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AB31D5102724AD8300D8D25B /* CalendarServicePerformanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarServicePerformanceTest.swift; sourceTree = "<group>"; };
@@ -264,7 +263,6 @@
 				2CF4F24B271227FF004DE3EE /* DonationServiceIntegrationTests.swift */,
 				8D587C982715154E004DC660 /* CreateDonationServiceIntegrationTest.swift */,
 				AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */,
-				8DF2A7C02717E1FE0080F61A /* ImportProductsTests.swift */,
 				8DF2A7C52717E2CF0080F61A /* FileToolTests.swift */,
 				7BE74BA8271A46FD005D83ED /* StatusServiceIntegrationTest.swift */,
 				AB31D5102724AD8300D8D25B /* CalendarServicePerformanceTest.swift */,
