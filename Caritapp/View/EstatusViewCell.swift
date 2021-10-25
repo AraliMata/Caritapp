@@ -13,11 +13,11 @@ class EstatusViewCell: UITableViewCell {
     
     //@IBOutlet weak var estatusValue: UITextField!
     
-    func updateCellStatus(donation: Donation) {
-        tiendaValue.text = String(donation.tienda)
-        donadorValue.text = String(donation.donador)
-           
-       }
+    
+    func updateCellStatus(donation: Donation){
+            tiendaValue.text = String(donation.tienda )
+            donadorValue.text = String(donation.donador)
+        }
 
 }
     
