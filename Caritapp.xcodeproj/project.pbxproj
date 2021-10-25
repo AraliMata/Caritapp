@@ -19,7 +19,6 @@
 		7BE74B9A271A45F8005D83ED /* EstatusDonacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE74B99271A45F8005D83ED /* EstatusDonacionViewController.swift */; };
 		7BE74B9F271A4643005D83ED /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE74B9E271A4643005D83ED /* Status.swift */; };
 		7BE74BA4271A4690005D83ED /* StatusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE74BA3271A4690005D83ED /* StatusService.swift */; };
-		7BE74BA9271A46FD005D83ED /* StatusServiceIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE74BA8271A46FD005D83ED /* StatusServiceIntegrationTest.swift */; };
 		8D06FF7C26EADC6500782CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF7B26EADC6500782CD8 /* AppDelegate.swift */; };
 		8D06FF7E26EADC6500782CD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF7D26EADC6500782CD8 /* SceneDelegate.swift */; };
 		8D06FF8026EADC6500782CD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF7F26EADC6500782CD8 /* ViewController.swift */; };
@@ -61,6 +60,7 @@
 		AB31D5242724BC2D00D8D25B /* EntregasServicePerformanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31D5232724BC2D00D8D25B /* EntregasServicePerformanceTest.swift */; };
 		AB31D5292724BE2900D8D25B /* EntregasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31D5282724BE2900D8D25B /* EntregasUITests.swift */; };
 		AB5BA614271742A600F7E960 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */; };
+		AB5BF4C127272734002AD4F6 /* EntregasServiceIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5BF4C027272734002AD4F6 /* EntregasServiceIntegrationTest.swift */; };
 		AB7EC4622713E60400517C5D /* CalendarServiceIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */; };
 		ABA3F4C92722392E003D3445 /* EntregaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3F4C82722392E003D3445 /* EntregaTableViewCell.swift */; };
 		ABA3F4CE27223965003D3445 /* EntregasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3F4CD27223965003D3445 /* EntregasViewController.swift */; };
@@ -158,6 +158,7 @@
 		AB31D5232724BC2D00D8D25B /* EntregasServicePerformanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntregasServicePerformanceTest.swift; sourceTree = "<group>"; };
 		AB31D5282724BE2900D8D25B /* EntregasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntregasUITests.swift; sourceTree = "<group>"; };
 		AB5BA613271742A600F7E960 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
+		AB5BF4C027272734002AD4F6 /* EntregasServiceIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntregasServiceIntegrationTest.swift; sourceTree = "<group>"; };
 		AB7EC4612713E60400517C5D /* CalendarServiceIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarServiceIntegrationTest.swift; sourceTree = "<group>"; };
 		ABA3F4C82722392E003D3445 /* EntregaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntregaTableViewCell.swift; sourceTree = "<group>"; };
 		ABA3F4CD27223965003D3445 /* EntregasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntregasViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +273,7 @@
 				8DB71C5D272522BC007234AB /* VerificarMercanciaServiceIntegrationTests.swift */,
 				8DB71C6227252746007234AB /* CreateDonationPerformanceTests.swift */,
 				8DB71C6A27252B1C007234AB /* VerificarMercanciaPerformanceTests.swift */,
+				AB5BF4C027272734002AD4F6 /* EntregasServiceIntegrationTest.swift */,
 			);
 			path = CaritappTests;
 			sourceTree = "<group>";
@@ -658,11 +660,11 @@
 				8DB71C6B27252B1C007234AB /* VerificarMercanciaPerformanceTests.swift in Sources */,
 				8DF2A7C62717E2CF0080F61A /* FileToolTests.swift in Sources */,
 				AB7EC4622713E60400517C5D /* CalendarServiceIntegrationTest.swift in Sources */,
+				AB5BF4C127272734002AD4F6 /* EntregasServiceIntegrationTest.swift in Sources */,
 				2C24A73027225A7900740B9E /* LineaServiceIntegrationTests.swift in Sources */,
 				AB31D5112724AD8300D8D25B /* CalendarServicePerformanceTest.swift in Sources */,
 				8DC167C02704DD7400AD188F /* CaritappTestsServices.swift in Sources */,
 				2C3C474027250F96006FB47A /* LineaServicePerformanceTests.swift in Sources */,
-				7BE74BA9271A46FD005D83ED /* StatusServiceIntegrationTest.swift in Sources */,
 				8DB71C5E272522BC007234AB /* VerificarMercanciaServiceIntegrationTests.swift in Sources */,
 				AB31D5242724BC2D00D8D25B /* EntregasServicePerformanceTest.swift in Sources */,
 				8D06FF9326EADC6500782CD8 /* CaritappTests.swift in Sources */,
