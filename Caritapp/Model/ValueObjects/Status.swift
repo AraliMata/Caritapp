@@ -7,13 +7,16 @@
 import Foundation
 
 public class Status: Codable{
+    public let donacion: Donation?
     public let estado: String
-    let fechaStatus: String
+    let fecha: String?
     
-    public init(estado: String, fecha: String){
+    public init(donacion: Donation,estado: String, fecha: String){
+        self.donacion = donacion
         self.estado = estado
-        self.fechaStatus = fecha
+        self.fecha = fecha
         
     }
     
 }
+
