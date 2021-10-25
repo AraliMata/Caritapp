@@ -37,7 +37,7 @@ class EditProductViewController: UIViewController {
     @IBOutlet weak var destinoLabel: UILabel!
     
     let dropdownDestino = DropDown()
-    let almacenes = ["Central de abastos", "Avalos", "No definido"]
+    let almacenes = ["Central de abastos", "Avalos", "desecho", "No definido"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
