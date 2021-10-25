@@ -19,7 +19,6 @@
 		7BE74B9A271A45F8005D83ED /* EstatusDonacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE74B99271A45F8005D83ED /* EstatusDonacionViewController.swift */; };
 		7BE74B9F271A4643005D83ED /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE74B9E271A4643005D83ED /* Status.swift */; };
 		7BE74BA4271A4690005D83ED /* StatusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE74BA3271A4690005D83ED /* StatusService.swift */; };
-		7BE74BA9271A46FD005D83ED /* StatusServiceIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE74BA8271A46FD005D83ED /* StatusServiceIntegrationTest.swift */; };
 		8D06FF7C26EADC6500782CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF7B26EADC6500782CD8 /* AppDelegate.swift */; };
 		8D06FF7E26EADC6500782CD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF7D26EADC6500782CD8 /* SceneDelegate.swift */; };
 		8D06FF8026EADC6500782CD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06FF7F26EADC6500782CD8 /* ViewController.swift */; };
@@ -660,7 +659,6 @@
 				AB31D5112724AD8300D8D25B /* CalendarServicePerformanceTest.swift in Sources */,
 				8DC167C02704DD7400AD188F /* CaritappTestsServices.swift in Sources */,
 				2C3C474027250F96006FB47A /* LineaServicePerformanceTests.swift in Sources */,
-				7BE74BA9271A46FD005D83ED /* StatusServiceIntegrationTest.swift in Sources */,
 				8DB71C5E272522BC007234AB /* VerificarMercanciaServiceIntegrationTests.swift in Sources */,
 				AB31D5242724BC2D00D8D25B /* EntregasServicePerformanceTest.swift in Sources */,
 				8D06FF9326EADC6500782CD8 /* CaritappTests.swift in Sources */,
