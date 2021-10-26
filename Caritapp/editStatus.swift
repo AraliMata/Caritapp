@@ -18,6 +18,25 @@ class editStatus: UIViewController {
 
         }
     }
+    var showStatus : Status? {	
+        didSet{	
+            	
+        }	
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        if let status = updateStatus {
+            donadorStatus.text = String(status.donador)
+            tiendaStatus.text = String(status.tienda)
+            
+        }
+        estado.text = showStatus?.estado ?? "En tienda"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        fechaStatus.text = showStatus?.fecha ?? "2021-10-13"
+    }
+    
     
     @IBAction func actualizarEstado(_ sender: UIButton) {
         if estado.text == "En tienda"{
@@ -27,19 +46,6 @@ class editStatus: UIViewController {
                 } else if estado.text == "En almacen"{
                     estado.text = "En tienda"
                 }
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        if let status = updateStatus {
-            donadorStatus.text = String(status.donador)
-            tiendaStatus.text = String(status.tienda)
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "YYYY-MM-dd"
-            fechaStatus.text = status.fecha
-            
-        }
-        //donadorStatus.text = "Strip"
     }
     
    
