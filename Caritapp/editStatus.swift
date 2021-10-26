@@ -18,6 +18,11 @@ class editStatus: UIViewController {
 
         }
     }
+    var showStatus : Status? {	
+        didSet{	
+            	
+        }	
+    }
     
     @IBAction func actualizarEstado(_ sender: UIButton) {
         if estado.text == "En tienda"{
@@ -39,7 +44,7 @@ class editStatus: UIViewController {
             fechaStatus.text = status.fecha
             
         }
-        //donadorStatus.text = "Strip"
+        estado.text = showStatus?.estado ?? "En tienda"
     }
     
    
