@@ -2527,12 +2527,6 @@
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </label>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Estatus" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wZ3-W5-X9B">
-                                                                    <rect key="frame" x="175" y="4.5" width="123" height="76"/>
-                                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <textInputTraits key="textInputTraits"/>
-                                                                </textField>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrv-I1-fo3">
                                                                     <rect key="frame" x="8" y="42.5" width="308" height="42.5"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
@@ -2542,16 +2536,12 @@
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.1647058824" green="0.61568627450000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
-                                                                <constraint firstItem="wZ3-W5-X9B" firstAttribute="width" secondItem="PdA-IV-ijK" secondAttribute="width" multiplier="0.4" id="7rU-WU-gIc"/>
-                                                                <constraint firstItem="wZ3-W5-X9B" firstAttribute="height" secondItem="PdA-IV-ijK" secondAttribute="height" multiplier="0.899281" id="FR4-yd-Tn3"/>
                                                                 <constraint firstItem="jYO-n4-SK6" firstAttribute="leading" secondItem="PdA-IV-ijK" secondAttribute="leading" constant="8" id="HlI-MW-uq1"/>
                                                                 <constraint firstItem="Nrv-I1-fo3" firstAttribute="top" secondItem="jYO-n4-SK6" secondAttribute="bottom" constant="-5" id="Hm5-3F-DR8"/>
                                                                 <constraint firstItem="jYO-n4-SK6" firstAttribute="height" secondItem="PdA-IV-ijK" secondAttribute="height" multiplier="0.5" id="SQ4-dI-uha"/>
-                                                                <constraint firstItem="wZ3-W5-X9B" firstAttribute="centerY" secondItem="PdA-IV-ijK" secondAttribute="centerY" id="TVb-RM-bR1"/>
                                                                 <constraint firstItem="Nrv-I1-fo3" firstAttribute="height" secondItem="PdA-IV-ijK" secondAttribute="height" multiplier="0.5" id="Z6b-xY-gS4"/>
                                                                 <constraint firstItem="Nrv-I1-fo3" firstAttribute="leading" secondItem="PdA-IV-ijK" secondAttribute="leading" constant="8" id="aVy-o7-tFL"/>
                                                                 <constraint firstItem="jYO-n4-SK6" firstAttribute="top" secondItem="PdA-IV-ijK" secondAttribute="top" constant="5" id="hUh-ED-dYj"/>
-                                                                <constraint firstAttribute="trailing" secondItem="wZ3-W5-X9B" secondAttribute="trailing" constant="10" id="hua-24-pbq"/>
                                                                 <constraint firstItem="Nrv-I1-fo3" firstAttribute="width" secondItem="PdA-IV-ijK" secondAttribute="width" id="pKE-mO-1Pl"/>
                                                                 <constraint firstItem="jYO-n4-SK6" firstAttribute="width" secondItem="PdA-IV-ijK" secondAttribute="width" id="rUn-Pr-SGO"/>
                                                             </constraints>
@@ -2748,12 +2738,12 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYd-LR-GaO">
-                                        <rect key="frame" x="142" y="361" width="64" height="30"/>
+                                        <rect key="frame" x="139" y="361" width="71" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.1647058824" green="0.61568627450000002" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <color key="tintColor" red="0.1647058824" green="0.61568627450000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Regresar">
+                                        <state key="normal" title="Actualizar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
