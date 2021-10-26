@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     let calendarService = CalendarService()
     let verificarMercanciaService = VerificarMercanciaService()
     let entregasService = EntregasService()
-
+    let statusService = StatusService()
 
 
     @IBOutlet weak var registrarRecepcion: UIButton!
@@ -56,6 +56,12 @@ class HomeViewController: UIViewController {
                 (donation) in
                 DispatchQueue.main.async {
                     controller.historyStatus = donation
+                    controller.tableViewStatus.reloadData()
+                }
+            }
+            statusService.retrieveStatus(){
+                (status) in DispatchQueue.main.async {
+                    controller.newStatus = status
                     controller.tableViewStatus.reloadData()
                 }
             }
