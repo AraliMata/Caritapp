@@ -79,8 +79,8 @@ class VerificarMercanciaServiceIntegration: XCTestCase {
     func updateProduct() throws {
         
         //Given
-        let donation = Donation(donador: "Prueba1", tienda: "Chida", kilos_donados: 189, kilos_recibidos: 0, fecha: "2021-10-14")
-        let product = Linea(id: 227, upc: "189087", cant_s: 34.5, cant_r: 34.5, precio_unit: 5, precio_tot: 40, donacion: donation)
+        let donation = Donation(donador: "Soriana", tienda: "Jardines", kilos_donados: 67, kilos_recibidos: 0, fecha: "2021-10-15")
+        let product = Linea(id: 255, upc: "345679", cant_s: 18, cant_r: 16, precio_unit: 1, precio_tot: 18, donacion: donation)
         
     
         // When
