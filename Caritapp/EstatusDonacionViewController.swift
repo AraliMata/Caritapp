@@ -13,6 +13,11 @@ class EstatusDonationViewController: UIViewController, UITableViewDelegate, UITa
 
         }
     }
+    var newStatus : [Status]? {
+        didSet{
+            
+        }
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +57,8 @@ class EstatusDonationViewController: UIViewController, UITableViewDelegate, UITa
             if let indexPath = tableViewStatus.indexPathForSelectedRow {
                 let selectedStatus = historyStatus?[indexPath.row]
                 controller.updateStatus = selectedStatus
+                let actualStatus = newStatus?[indexPath.row]
+                controller.showStatus = actualStatus
             }
             
         }
